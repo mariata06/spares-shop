@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Интернет-магазин Автозапчестей. Главная страница">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Интернет-магазин Автозапчастей: Главная</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="page-header__navigation navigation navigation--main">
+      <div class="page-header__mobile-menu mobile-menu">
+        <ul class="mobile-menu__list">
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Регистрация</a></li>
+          <li><a href="#">Избранное</a></li>
+          <li><a href="#">Магазины</a></li>
+          <li><a href="#">Акции</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">Каталог запчастей</a></li>
+          <li><a href="#">Каталог ТО</a></li>
+          <li><a href="#">Шины</a></li>
+          <li><a href="#">Диски</a></li>
+          <li><a href="#">Аккумуляторы</a></li>
+          <li><a href="#">Автомасла</a></li>
+          <li><a href="#">Автолампы</a></li>
+          <li><a href="#">Аксессуары</a></li>
+          <li>Санкт-Петербург, ул Большая Конюшенная, д 19</li>
+        </ul>
+        <button>
+          <svg width="33" height="27">
+            <use xlink:href="img/sprite.svg#burger-icon"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="page-header__logo logo">
+        <img src="img/logo.svg" alt="Логотип магазина Запчасти" width="102" height="51">
+      </div>
+      <p class="page-header__adress">
+        Санкт-Петербург, ул Большая Конюшенная, д 19
+      </p>
+      <ul class="page-header__user-navigation user-navigation">
+        <li>
+          <button type="button">
+            <svg width="25" height="22">
+              <use xlink:href="img/sprite.svg#heart-icon"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button">
+            <svg width="22" height="23">
+              <use xlink:href="img/sprite.svg#user-icon"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button type="button">
+            <svg width="29" height="26">
+              <use xlink:href="img/sprite.svg#cart-icon"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Slider main container -->
+      <div class="swiper-container page-header__store-navigation store-navigation">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><a href="#">Каталог запчастей</a></div>
+          <div class="swiper-slide"><a href="#">Каталог ТО</a></div>
+          <div class="swiper-slide"><a href="#">Шины</a></div>
+          <div class="swiper-slide"><a href="#">Диски</a></div>
+          <div class="swiper-slide"><a href="#">Аккумуляторы</a></div>
+          <div class="swiper-slide"><a href="#">Автомасла</a></div>
+          <div class="swiper-slide"><a href="#">Автолампы</a></div>
+          <div class="swiper-slide"><a href="#">Аксессуары</a></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="promo">
+      <h1 class="visually-hidden">Интернет-магазин Автозапчасти</h1>
+      <div class="promo__wrapper">
+        <!-- Slider main container -->
+        <div class="swiper-container promo__slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
+                  height="397"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
+                  height="397"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
+                  height="397"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
+                  height="397"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
+                  height="397"></a></div>
+            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
+                  height="397"></a></div>
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide promo__product action">
+              <a href="#">
+                <figure>
+                  <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
+                  <figcaption>
+                    Лампочка mini...
+                  </figcaption>
+                </figure>
+                <div class="action__timer timer">
+                  <div>До конца акции осталось:</div>
+                  <div class="timer-wrapper">
+                    <div class="timer__hours-wrapper">
+                      <span class="timer__hours">00</span>
+                      <span class="timer__hours-label">часов</span>
+                    </div>
+                    <span class="timer__sep">:</span>
+                    <div class="timer__minutes-wrapper">
+                      <span class="timer__minutes">20</span>
+                      <span class="timer__minutes-label">минут</span>
+                    </div>
+                    <span class="timer__sep">:</span>
+                    <div class="timer__seconds-wrapper">
+                      <span class="timer__seconds">00</span>
+                      <span class="timer__seconds-label">секунд</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="action__label">акция</div>
+                <div class="action__price">
+                  <span class="action__price-discount">200 P</span>
+                  <span class="action__price-full">500 P</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide promo__product action">
+              <a href="#">
+                <figure>
+                  <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
+                  <figcaption>
+                    Лампочка mini...
+                  </figcaption>
+                </figure>
+                <div class="action__timer timer">
+                  <div>До конца акции осталось:</div>
+                  <div class="timer-wrapper">
+                    <div class="timer__hours-wrapper">
+                      <span class="timer__hours">00</span>
+                      <span class="timer__hours-label">часов</span>
+                    </div>
+                    <span class="timer__sep">:</span>
+                    <div class="timer__minutes-wrapper">
+                      <span class="timer__minutes">20</span>
+                      <span class="timer__minutes-label">минут</span>
+                    </div>
+                    <span class="timer__sep">:</span>
+                    <div class="timer__seconds-wrapper">
+                      <span class="timer__seconds">00</span>
+                      <span class="timer__seconds-label">секунд</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="action__label">акция</div>
+                <div class="action__price">
+                  <span class="action__price-discount">200 P</span>
+                  <span class="action__price-full">500 P</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide promo__product action">
+              <a href="#">
+                <figure>
+                  <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
+                  <figcaption>
+                    Лампочка mini...
+                  </figcaption>
+                </figure>
+                <div class="action__timer timer">
+                  <div>До конца акции осталось:</div>
+                  <div class="timer-wrapper">
+                    <div class="timer__hours-wrapper">
+                      <span class="timer__hours">00</span>
+                      <span class="timer__hours-label">часов</span>
+                    </div>
+                    <span class="timer__sep">:</span>
+                    <div class="timer__minutes-wrapper">
+                      <span class="timer__minutes">20</span>
+                      <span class="timer__minutes-label">минут</span>
+                    </div>
+                    <span class="timer__sep">:</span>
+                    <div class="timer__seconds-wrapper">
+                      <span class="timer__seconds">00</span>
+                      <span class="timer__seconds-label">секунд</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="action__label">акция</div>
+                <div class="action__price">
+                  <span class="action__price-discount">200 P</span>
+                  <span class="action__price-full">500 P</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="search">
+      <h2 class="visually-hidden">Поиск</h2>
+      <div class="search__filter filter filter--search">
+        <form action="/" method="POST">
+          <div class="filter__search-type">
+            <button type="button">Поиск по Vin</button>
+            <button type="button">Поиск по марке</button>
+            <button type="button">Поиск по названию товара</button>
+            <button type="button">Поиск по артикулу</button>
+          </div>
+          <input type="text" placeholder="Введите марку автомобиля">
+          <button type="submit">Искать</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="store-sections">
+      <h2 class="visually-hidden">Разделы магазина</h2>
+      <div class="store-sections__item">
+        <a href="#">
+          <span>Автохимия</span>
+          <span>Перейти ></span>
+        </a>
+      </div>
+      <div class="store-sections__item">
+        <a href="#">
+          <span>Шины и диски</span>
+          <span>Перейти ></span>
+        </a>
+      </div>
+      <div class="store-sections__item">
+        <a href="#">
+          <span>Инструменты</span>
+          <span>Перейти ></span>
+        </a>
+      </div>
+      <div class="store-sections__item">
+        <a href="#">
+          <span>Запчасти на ТО</span>
+          <span>Перейти ></span>
+        </a>
+      </div>
+      <div class="store-sections__item">
+        <a href="#">
+          <span>Автоэлектроника</span>
+          <span>Перейти ></span>
+        </a>
+      </div>
+      <div class="store-sections__item">
+        <a href="#">
+          <span>Аксессуары и другое</span>
+          <span>Перейти ></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="bestsellers">
+      <h2 class="visually-hidden">Популярные товары</h2>
+      <div class="bestsellers__filter filter filter--bestseller">
+        <div class="swiper-container bestsellers__categories">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><button type="button">запчасти</button></div>
+            <div class="swiper-slide"><button type="button">автохимия</button></div>
+            <div class="swiper-slide"><button type="button">шины и диски</button></div>
+            <div class="swiper-slide"><button type="button">автоэлектроника</button></div>
+            <div class="swiper-slide"><button type="button">инструменты</button></div>
+            <div class="swiper-slide"><button type="button">аксессуары и другое</button></div>
+          </div>
+        </div>
+
+        <div class="swiper-container bestsellers__list">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide bestsellers__product-card product-card">
+              <a href="#">
+                <figure>
+                  <img src="img/belt-desktop@1x.png" alt="Ремень" width="230" height="215">
+                  <figcaption>
+                    ремень
+                  </figcaption>
+                  <div class="product-card__price">
+                    <span>440 P</span>
+                    <span>нет в наличии</span>
+                    <button type="button">сообщить о поступлении</button>
+                  </div>
+                </figure>
+                <span class="product-card__sale-label">
+                  sale
+                </span>
+                <button type="button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="20" height="24">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button class="product-card__quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <svg width="25" height="22">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide popular-products__product-card product-card">
+              <a href="#">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                    height="181">
+                  <figcaption>
+                    ремень
+                  </figcaption>
+                  <div class="product-card__price">
+                    <span>440 P</span>
+                    <span>нет в наличии</span>
+                    <button type="button">сообщить о поступлении</button>
+                  </div>
+                </figure>
+                <span class="product-card__sale-label">
+                  sale
+                </span>
+                <button type="button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="20" height="24">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button class="product-card__quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <svg width="25" height="22">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide popular-products__product-card product-card">
+              <a href="#">
+                <figure>
+                  <img src="img/headlight-nokian-desktop@1x.png" alt="Фара Nokian 2025" width="232" height="174">
+                  <figcaption>
+                    ремень
+                  </figcaption>
+                  <div class="product-card__price">
+                    <span>440 P</span>
+                    <span>нет в наличии</span>
+                    <button type="button">сообщить о поступлении</button>
+                  </div>
+                </figure>
+                <span class="product-card__sale-label">
+                  sale
+                </span>
+                <button type="button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="20" height="24">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button class="product-card__quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <svg width="25" height="22">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide popular-products__product-card product-card">
+              <a href="#">
+                <figure>
+                  <img src="img/tire-contyther-desktop@1x.png" alt="Шина 245/60 R18 105T Contyther Crosh Conta..."
+                    width="151" height="181">
+                  <figcaption>
+                    ремень
+                  </figcaption>
+                  <div class="product-card__price">
+                    <span>440 P</span>
+                    <span>нет в наличии</span>
+                    <button type="button">сообщить о поступлении</button>
+                  </div>
+                </figure>
+                <span class="product-card__sale-label">
+                  sale
+                </span>
+                <button type="button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="20" height="24">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button class="product-card__quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <svg width="25" height="22">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <button type="submit">Смотреть еще</button>
+      </div>
+    </section>
+
+    <section class="sale-banner">
+      <h2 class="visually-hidden">Sale</h2>
+      <div class="sale-banner__image">
+      </div>
+    </section>
+
+    <section class="relevants">
+      <h2 class="visually-hidden">Популярные товары</h2>
+      <div class="relevants__filter filter filter--relevants">
+        <div class="swiper-container relevants__categories">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><button type="button">запчасти</button></div>
+            <div class="swiper-slide"><button type="button">автохимия</button></div>
+            <div class="swiper-slide"><button type="button">шины и диски</button></div>
+            <div class="swiper-slide"><button type="button">автоэлектроника</button></div>
+            <div class="swiper-slide"><button type="button">инструменты</button></div>
+            <div class="swiper-slide"><button type="button">аксессуары и другое</button></div>
+          </div>
+        </div>
+
+        <div class="swiper-container relevants__list">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide relevants__product-card product-card">
+              <a href="#">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                    height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                  <div class="product-card__price">
+                    <span>440 P</span>
+                    <span>нет в наличии</span>
+                    <button type="button">сообщить о поступлении</button>
+                  </div>
+                </figure>
+                <span class="product-card__sale-label">
+                  sale
+                </span>
+                <button type="button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="20" height="24">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button class="product-card__quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <svg width="25" height="22">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide popular-products__product-card product-card">
+              <a href="#">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                    height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                  <div class="product-card__price">
+                    <span>440 P</span>
+                    <span>нет в наличии</span>
+                    <button type="button">сообщить о поступлении</button>
+                  </div>
+                </figure>
+                <span class="product-card__sale-label">
+                  sale
+                </span>
+                <button type="button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="20" height="24">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button class="product-card__quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <svg width="25" height="22">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide popular-products__product-card product-card">
+              <a href="#">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                    height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                  <div class="product-card__price">
+                    <span>440 P</span>
+                    <span>нет в наличии</span>
+                    <button type="button">сообщить о поступлении</button>
+                  </div>
+                </figure>
+                <span class="product-card__sale-label">
+                  sale
+                </span>
+                <button type="button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="20" height="24">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button class="product-card__quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <svg width="25" height="22">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide popular-products__product-card product-card">
+              <a href="#">
+                <figure>
+                  <img src="img/tire-contyther-desktop@1x.png" alt="Шина 245/60 R18 105T Contyther Crosh Conta..."
+                    width="151" height="181">
+                  <figcaption>
+                    ремень
+                  </figcaption>
+                  <div class="product-card__price">
+                    <span>440 P</span>
+                    <span>нет в наличии</span>
+                    <button type="button">сообщить о поступлении</button>
+                  </div>
+                </figure>
+                <span class="product-card__sale-label">
+                  sale
+                </span>
+                <button type="button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="20" height="24">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button class="product-card__quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <svg width="25" height="22">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-next"></div>
+        </div>
+        <button type="submit">Показать еще</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <section class="page-footer__mailing mailing">
+        <h2>Подпишитесь на нашу рассылку и узнавайте об акция быстрее</h2>
+        <form action="/" method="POST">
+          <input type="text" placeholder="Введите ваш e-mail:">
+          <button type="submit">Отправить</button>
+        </form>
+      </section>
+
+      <section class="page-footer__navigation">
+        <div class="page-footer__navigation-accordeon accordeon">
+          <div class="accordeon__item">
+            <h3 class="accordeon__heading">Информация</h3>
+            <ul class="accordeon__content">
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Реквизиты</a></li>
+              <li><a href="#">Магазины</a></li>
+            </ul>
+          </div>
+          <div class="accordeon__item">
+            <h3 class="accordeon__heading">Сервисный центр</h3>
+            <ul class="accordeon__content">
+              <li><a href="#">Доставка и самовывоз</a></li>
+              <li><a href="#">Оплата</a></li>
+              <li><a href="#">Возврат-обмен</a></li>
+              <li><a href="#">Новости</a></li>
+            </ul>
+          </div>
+          <div class="accordeon__item">
+            <h3 class="accordeon__heading">Интернет-магазин</h3>
+            <ul class="accordeon__content">
+              <li><a href="#">Доставка и самовывоз</a></li>
+              <li><a href="#">Оплата</a></li>
+              <li><a href="#">Возврат-обмен</a></li>
+              <li><a href="#">Новости</a></li>
+            </ul>
+          </div>
+          <div class="accordeon__item">
+            <h3 class="accordeon__heading visually-hidden">Разное</h3>
+            <ul class="accordeon__content">
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Договор оферты</a></li>
+              <li><a href="#">Политика обработки персональных данных</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="page-footer__copyright">
+        Интернет-магазин автозапчастей
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+
+</html>
