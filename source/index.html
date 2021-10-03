@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Интернет-магазин Автозапчастей: Главная</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -41,7 +41,10 @@
         </button>
       </div>
       <div class="page-header__logo logo">
-        <img src="img/logo.svg" alt="Логотип магазина Запчасти" width="102" height="51">
+        <svg width="102" height="51">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+        <!-- <img src="img/logo.svg" alt="Логотип магазина Запчасти" width="102" height="51"> -->
       </div>
       <p class="page-header__adress">
         Санкт-Петербург, ул Большая Конюшенная, д 19

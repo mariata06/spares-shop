@@ -1,1 +1,1 @@
-{"version":3,"sources":["blocks/_page-header.scss"],"names":[],"mappings":"AAAA,Y,CACE,sB,CACA,c,CACA,U","file":"style.min.css","sourcesContent":[".page-header {\n  background-color: green;\n  font-size: 20px;\n  color: black;\n}\n"]}
+{"version":3,"sources":["blocks/_page-header.scss"],"names":[],"mappings":"AAAA,Y,CACE,sB,CACA,c,CACA,U","file":"style.min.css","sourcesContent":[".page-header {\r\n  background-color: green;\r\n  font-size: 20px;\r\n  color: black;\r\n}\r\n"]}

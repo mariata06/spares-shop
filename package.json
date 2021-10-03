@@ -1,27 +1,29 @@
 {
   "name": "spares-shop",
   "version": "1.0.0",
-  "description": "Магазин Автозапчасти",
-  "main": "gulpfile.js",
-  "author": "Turmasova Mariya",
-  "license": "ISC",
+  "private": true,
+  "description": "Личный проект «Магазин запчастей»",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
     "autoprefixer": "^9.7.5",
     "browser-sync": "^2.26.12",
     "del": "^5.1.0",
+    "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^7.1.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-minify": "^3.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-posthtml": "^3.0.5",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-svgstore": "^8.0.0",
-    "gulp-webp": "^4.0.1",
+    "gulp-svgstore": "^7.0.1",
     "posthtml-include": "^1.7.1",
-    "sass": "^1.37.5",
-    "stylelint": "^13.2.1"
+    "stylelint": "^13.2.1",
+    "stylelint-config-htmlacademy": "^0.1.4"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -30,6 +32,11 @@
     "build": "gulp build",
     "start": "gulp start"
   },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "editorconfig-cli": [
     "*.json",
     "*.js",
@@ -39,16 +46,10 @@
     "source/sass/**/*.{sass,scss}"
   ],
   "engines": {
-    "node": "10.16.0"
+    "node": "8.16"
   },
   "dependencies": {
     "pump": "^3.0.0",
-    "svgxuse": "^1.2.6",
-    "swiper": "^6.4.0"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
-  ]
+    "svgxuse": "^1.2.6"
+  }
 }
