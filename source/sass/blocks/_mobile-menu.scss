@@ -1,0 +1,41 @@
+.mobile-menu__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+
+  @media (max-width: $viewport--md) {
+    font-weight: 700;
+    width: 242px;
+    display: none;
+  }
+}
+
+.mobile-menu__list-item {
+  display: none;
+}
+
+.mobile-menu__list-item--stores {
+  order: 1;
+  display: block;
+}
+
+.mobile-menu__list-item--promo {
+  order: 2;
+  display: block;
+
+}
+
+.mobile-menu__list-item--delivery {
+  order: 3;
+  display: block;
+}
+
+.mobile-menu__button {
+  display: none;
+
+  @media (max-width: $viewport--md) {
+    display: block;
+  }
+}

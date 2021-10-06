@@ -1,0 +1,40 @@
+.promo-product {
+  position: relative;
+  border: 1px solid $light-grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  // figure {
+  //   margin: 0;
+  // }
+  img {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  figcaption {
+    text-align: center;
+    color: $black;
+    margin-bottom: 16px;
+  }
+}
+
+.promo-product__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-100%);
+}
+
+.promo-product__price {
+  position: absolute;
+  top: 15px;
+  right: 19px;
+}
+
+.promo-product__timer {
+  align-self: end;
+}

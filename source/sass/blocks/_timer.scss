@@ -1,0 +1,35 @@
+.timer {
+  background-color: $medium-grey;
+  padding: 15px 20px 8px;
+  font-size: 18px;
+}
+
+.timer__wrapper {
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  svg {
+    position: absolute;
+    left: 25px;
+  }
+}
+
+.timer__hours-label,
+.timer__min-label,
+.timer__sec-label {
+  font-size: 10px;
+  color: $light-grey;
+}
+.timer__hours-wrapper,
+.timer__min-wrapper,
+.timer__sec-wrapper {
+  text-align: center;
+}
+.timer__hours,
+.timer__min,
+.timer__sec {
+  display: block;
+}

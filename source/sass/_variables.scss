@@ -1,18 +1,28 @@
 //COLOR VARIABLES
-$light-grey: #e5e5e5;
-$white: #ffffff;
-$black: #1d1613;  // основной цвет текста
-$trueblack: #000000;
-$medium-grey: #9b9997; //дополнительный цвет текста
-$brown: brown; // замещающий цвет фона
-$beige: #a87b62; // бежевый цвет меню, кнопок
-$light-beige: #f0eae4;
-$light-grey: #f6f5f4;
+$white: #ffffff; //основной фоновый цвет
+$black: #48494d;  // основной цвет текста
+$trueblack: #000000; // доп цвет текста
+$light-grey: #c4c4c4; // доп цвет текста
+$medium-grey: #f0f0f4; //фоновый цвет
+$grey-2: #bdbec2; //доп цвет серого текста
+$dark-grey: #656464; //доп цвет темно-серого текста
+$orange: #ff7931; // основной цвет декоративных элементов
+$blue: #6CA7FF; // голубой цвет декоративных элементов
+$gray66: #a8a8a8;
 
-$max-tablet-width: 1023px; // максимум для версии пишем когда идем от desktop к mobile (768px - 1023px;)
-$min-tablet-width: 768px;
-$max-mobile-width: 767px; // максимум для версии пишем когда идем от desktop к mobile (320px - 767px;)
-$min-mobile-width: 320px;
+// $max-tablet-width: 1023px; // максимум для версии пишем когда идем от desktop к mobile (768px - 1023px;)
+// $min-tablet-width: 768px;
+// $max-mobile-width: 767px; // максимум для версии пишем когда идем от desktop к mobile (320px - 767px;)
+// $min-mobile-width: 320px;
+
+// Viewports
+//---------------------------------
+
+$viewport--sm:                      320px;
+$viewport--md:                      768px;
+$viewport--lg:                      1024px;
+$viewport--xl:                      1360px;
+$viewport--xxl:                     1920px;
 
 //RETINA VARIABLES
 $retina-dpi: 144dpi;

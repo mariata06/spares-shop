@@ -1,0 +1,36 @@
+.navigation {
+  display: flex;
+  padding-top: 34px;
+  justify-content: space-between;
+
+  @media (max-width: $viewport--md) {
+    //justify-content: unset;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+}
+
+.navigation__adress {
+  position: relative;
+  width: 320px;
+  display: flex;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  svg {
+    display: block;
+    fill: $white;
+    min-width: 35px;
+    margin-right: 5px;
+  }
+
+  @media (max-width: $viewport--md) {
+    display: none;
+  }
+}
+
+.navigation__product-navigation {
+  padding: 15px 0;
+}

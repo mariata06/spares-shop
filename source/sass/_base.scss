@@ -32,9 +32,9 @@ html {
 body {
   padding: 0;
   margin: 0 auto;
-  font-family: "poppins", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+  //line-height: auto;
   font-weight: 400;
   color: $black;
   background-color: $white;
@@ -51,22 +51,22 @@ a {
 
   &:hover,
   &:active {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }
 
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
+// .page-wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100%;
+// }
 
-.page-main,
-.page-catalog,
-.page-card {
-  flex: 1 0 auto;
-}
+// .page-main,
+// .page-catalog,
+// .page-card {
+//   flex: 1 0 auto;
+// }
 
-.page-header {
-  flex: 1 0 auto;
-}
+// .page-header {
+//   flex: 1 0 auto;
+// }

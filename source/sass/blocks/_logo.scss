@@ -1,0 +1,25 @@
+.logo {
+  position: relative;
+  @media (max-width: $viewport--md) {
+    width: 69px;
+    height: 38px;
+  }
+
+  img {
+    @media (max-width: $viewport--md) {
+      width: 69px;
+      height: 38px;
+    }
+  }
+
+  svg {
+    position: absolute;
+      top: 0;
+      left: 0;
+    @media (max-width: $viewport--md) {
+      // width: 69px;
+      // height: 38px;
+      //transform: scale(0.68, 0.74);
+    }
+  }
+}

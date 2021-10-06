@@ -1,0 +1,29 @@
+.price {
+  display: flex;
+  flex-direction: column;
+}
+
+.price__discount {
+  color: $orange;
+  font-size: 27px;
+  text-align: right;
+}
+
+.price__full {
+  color: $gray66;
+  font-size: 20px;
+  position: relative;
+  text-align: right;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 70px;
+    background-color: $gray66;
+    top: 10px;
+    left: 10px;
+    transform: rotate(-20deg);
+  }
+}

@@ -1,0 +1,12 @@
+.action-slider {
+  width: 270px;
+  height: 397px;
+}
+
+.action-slider .swiper-pagination {
+  display: none;
+
+  @media (max-width: $viewport--md) {
+    display: block;
+  }
+}

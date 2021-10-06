@@ -1,0 +1,16 @@
+.promo {
+  padding-top: 78px;
+  padding-bottom: 80px;
+}
+
+.promo__wrapper {
+  display: flex;
+
+  @media (max-width: $viewport--md) {
+    display: block;
+  }
+}
+
+.promo__promo-slider {
+  justify-content: space-between;
+}

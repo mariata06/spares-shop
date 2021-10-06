@@ -8,125 +8,214 @@
   <title>Интернет-магазин Автозапчастей: Главная</title>
 
   <!-- <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" /> -->
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <header class="page-header">
-    <nav class="page-header__navigation navigation navigation--main">
-      <div class="page-header__mobile-menu mobile-menu">
-        <ul class="mobile-menu__list">
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Регистрация</a></li>
-          <li><a href="#">Избранное</a></li>
-          <li><a href="#">Магазины</a></li>
-          <li><a href="#">Акции</a></li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">Каталог запчастей</a></li>
-          <li><a href="#">Каталог ТО</a></li>
-          <li><a href="#">Шины</a></li>
-          <li><a href="#">Диски</a></li>
-          <li><a href="#">Аккумуляторы</a></li>
-          <li><a href="#">Автомасла</a></li>
-          <li><a href="#">Автолампы</a></li>
-          <li><a href="#">Аксессуары</a></li>
-          <li>Санкт-Петербург, ул Большая Конюшенная, д 19</li>
-        </ul>
-        <button>
-          <svg width="33" height="27">
-            <use xlink:href="img/sprite.svg#burger-icon"></use>
+    <div class="page-header__navigation-wrapper">
+      <nav class="page-header__navigation navigation navigation--main container">
+        <div class="navigation__mobile-menu mobile-menu">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__list-item"><a href="#">Войти</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Регистрация</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Избранное</a></li>
+            <li class="mobile-menu__list-item mobile-menu__list-item--stores"><a href="#">Магазины</a></li>
+            <li class="mobile-menu__list-item mobile-menu__list-item--promo"><a href="#">Акции</a></li>
+            <li class="mobile-menu__list-item mobile-menu__list-item--delivery"><a href="#">Доставка и оплата</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Каталог запчастей</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Каталог ТО</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Шины</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Диски</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Аккумуляторы</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Автомасла</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Автолампы</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Аксессуары</a></li>
+            <li class="mobile-menu__list-item">Санкт-Петербург, ул Большая Конюшенная, д 19</li>
+          </ul>
+          <button class="mobile-menu__button button">
+            <svg width="33" height="27">
+              <use xlink:href="img/sprite.svg#burger-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="navigation__logo logo">
+          <picture>
+            <source srcset="img/logo-mobile.png" media="(min-width: 768px)">
+            <img src="img/logo-desktop.png" width="102" height="51" alt="Логотип магазина Запчасти">
+          </picture>
+        </div>
+        <p class="navigation__adress">
+          <svg width="35" height="35">
+            <use xlink:href="img/sprite.svg#navigate-icon"></use>
           </svg>
-        </button>
-      </div>
-      <div class="page-header__logo logo">
-        <svg width="102" height="51">
-          <use xlink:href="img/sprite.svg#logo"></use>
-        </svg>
-        <!-- <img src="img/logo.svg" alt="Логотип магазина Запчасти" width="102" height="51"> -->
-      </div>
-      <p class="page-header__adress">
-        Санкт-Петербург, ул Большая Конюшенная, д 19
-      </p>
-      <ul class="page-header__user-navigation user-navigation">
-        <li>
-          <button type="button">
-            <svg width="25" height="22">
+          Санкт-Петербург, ул Большая&nbsp;Конюшенная, д 19
+        </p>
+        <div class="navigation__user-navigation user-navigation">
+          <button type="button" class="button">
+            <svg width="29" height="24">
               <use xlink:href="img/sprite.svg#heart-icon"></use>
             </svg>
           </button>
-        </li>
-        <li>
-          <button type="button">
-            <svg width="22" height="23">
+          <button type="button" class="button">
+            <svg width="24" height="25">
               <use xlink:href="img/sprite.svg#user-icon"></use>
             </svg>
           </button>
-        </li>
-        <li>
-          <button type="button">
-            <svg width="29" height="26">
+          <button type="button" class="button">
+            <svg width="31" height="28">
               <use xlink:href="img/sprite.svg#cart-icon"></use>
             </svg>
           </button>
-        </li>
-      </ul>
-
+        </div>
+      </nav>
+    </div>
+    <div class="page-header__navigation-wrapper">
       <!-- Slider main container -->
-      <div class="swiper-container page-header__store-navigation store-navigation">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide"><a href="#">Каталог запчастей</a></div>
-          <div class="swiper-slide"><a href="#">Каталог ТО</a></div>
-          <div class="swiper-slide"><a href="#">Шины</a></div>
-          <div class="swiper-slide"><a href="#">Диски</a></div>
-          <div class="swiper-slide"><a href="#">Аккумуляторы</a></div>
-          <div class="swiper-slide"><a href="#">Автомасла</a></div>
-          <div class="swiper-slide"><a href="#">Автолампы</a></div>
-          <div class="swiper-slide"><a href="#">Аксессуары</a></div>
+      <div  class="navigation__product-navigation product-navigation container">
+        <div class="swiper swiper--product-navigation">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><a href="#">Каталог запчастей</a></div>
+            <div class="swiper-slide"><a href="#">Каталог ТО</a></div>
+            <div class="swiper-slide"><a href="#">Шины</a></div>
+            <div class="swiper-slide"><a href="#">Диски</a></div>
+            <div class="swiper-slide"><a href="#">Аккумуляторы</a></div>
+            <div class="swiper-slide"><a href="#">Автомасла</a></div>
+            <div class="swiper-slide"><a href="#">Автолампы</a></div>
+            <div class="swiper-slide"><a href="#">Аксессуары</a></div>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <main class="main">
+  <main class="main container">
     <section class="promo">
       <h1 class="visually-hidden">Интернет-магазин Автозапчасти</h1>
       <div class="promo__wrapper">
         <!-- Slider main container -->
-        <div class="swiper-container promo__slider">
+        <div class="swiper swiper--promo promo__promo-slider promo-slider">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
-                  height="397"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
-                  height="397"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
-                  height="397"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
-                  height="397"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
-                  height="397"></a></div>
-            <div class="swiper-slide"><a href="#"><img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870"
-                  height="397"></a></div>
+            <div class="swiper-slide">
+              <a href="#">
+              <picture>
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
+                <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
+                <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
+              </picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+              <picture>
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
+                <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
+                <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
+              </picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+              <picture>
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
+                <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
+                <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
+              </picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+              <picture>
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
+                <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
+                <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
+              </picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+              <picture>
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
+                <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
+                <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
+              </picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="#">
+              <picture>
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
+                <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
+                <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
+              </picture>
+              </a>
+            </div>
           </div>
           <!-- pagination -->
           <div class="swiper-pagination"></div>
 
           <!-- navigation buttons -->
-          <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
 
         <!-- Slider main container -->
-        <div class="swiper-container">
+        <div class="swiper swiper--action action-slider">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide promo__product action">
+            <div class="swiper-slide promo__product promo-product">
+              <a href="#">
+                <figure>
+                  <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
+                  <figcaption>
+                    Лампочка mini...
+                  </figcaption>
+                </figure>
+                <div class="promo__timer timer">
+                  <span>До конца акции осталось:</span>
+                  <div class="timer__wrapper">
+                    <svg width="28" height="28">
+                      <use xlink:href="img/sprite.svg#timer-icon"></use>
+                    </svg>
+                    <div class="timer__hours-wrapper">
+                      <span class="timer__hours">00</span>
+                      <span class="timer__hours-label">часов</span>
+                    </div>
+                    <span class="timer__sep">:</span>
+                    <div class="timer__min-wrapper">
+                      <span class="timer__min">20</span>
+                      <span class="timer__min-label">минут</span>
+                    </div>
+                    <span class="timer__sep">:</span>
+                    <div class="timer__sec-wrapper">
+                      <span class="timer__sec">00</span>
+                      <span class="timer__sec-label">секунд</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="promo-product__label promo-lable">акция</div>
+                <div class="promo-product__price price">
+                  <span class="price__discount">200 P</span>
+                  <span class="price__full">500 P</span>
+                </div>
+              </a>
+            </div>
+
+            <div class="swiper-slide promo__product promo-product">
               <a href="#">
                 <figure>
                   <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
@@ -161,42 +250,7 @@
               </a>
             </div>
 
-            <div class="swiper-slide promo__product action">
-              <a href="#">
-                <figure>
-                  <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
-                  <figcaption>
-                    Лампочка mini...
-                  </figcaption>
-                </figure>
-                <div class="action__timer timer">
-                  <div>До конца акции осталось:</div>
-                  <div class="timer-wrapper">
-                    <div class="timer__hours-wrapper">
-                      <span class="timer__hours">00</span>
-                      <span class="timer__hours-label">часов</span>
-                    </div>
-                    <span class="timer__sep">:</span>
-                    <div class="timer__minutes-wrapper">
-                      <span class="timer__minutes">20</span>
-                      <span class="timer__minutes-label">минут</span>
-                    </div>
-                    <span class="timer__sep">:</span>
-                    <div class="timer__seconds-wrapper">
-                      <span class="timer__seconds">00</span>
-                      <span class="timer__seconds-label">секунд</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="action__label">акция</div>
-                <div class="action__price">
-                  <span class="action__price-discount">200 P</span>
-                  <span class="action__price-full">500 P</span>
-                </div>
-              </a>
-            </div>
-
-            <div class="swiper-slide promo__product action">
+            <div class="swiper-slide promo__product promo-product">
               <a href="#">
                 <figure>
                   <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
@@ -243,13 +297,13 @@
       <div class="search__filter filter filter--search">
         <form action="/" method="POST">
           <div class="filter__search-type">
-            <button type="button">Поиск по Vin</button>
-            <button type="button">Поиск по марке</button>
-            <button type="button">Поиск по названию товара</button>
-            <button type="button">Поиск по артикулу</button>
+            <button type="button" class="button">Поиск по Vin</button>
+            <button type="button" class="button">Поиск по марке</button>
+            <button type="button" class="button">Поиск по названию товара</button>
+            <button type="button" class="button">Поиск по артикулу</button>
           </div>
           <input type="text" placeholder="Введите марку автомобиля">
-          <button type="submit">Искать</button>
+          <button type="submit" class="button">Искать</button>
         </form>
       </div>
     </section>
@@ -297,19 +351,19 @@
     <section class="bestsellers">
       <h2 class="visually-hidden">Популярные товары</h2>
       <div class="bestsellers__filter filter filter--bestseller">
-        <div class="swiper-container bestsellers__categories">
+        <div class="swiper swiper--bestsellers bestsellers__categories">
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><button type="button">запчасти</button></div>
-            <div class="swiper-slide"><button type="button">автохимия</button></div>
-            <div class="swiper-slide"><button type="button">шины и диски</button></div>
-            <div class="swiper-slide"><button type="button">автоэлектроника</button></div>
-            <div class="swiper-slide"><button type="button">инструменты</button></div>
-            <div class="swiper-slide"><button type="button">аксессуары и другое</button></div>
+            <div class="swiper-slide"><button type="button" class="button">запчасти</button></div>
+            <div class="swiper-slide"><button type="button" class="button">автохимия</button></div>
+            <div class="swiper-slide"><button type="button" class="button">шины и диски</button></div>
+            <div class="swiper-slide"><button type="button" class="button">автоэлектроника</button></div>
+            <div class="swiper-slide"><button type="button" class="button">инструменты</button></div>
+            <div class="swiper-slide"><button type="button" class="button">аксессуары и другое</button></div>
           </div>
         </div>
 
-        <div class="swiper-container bestsellers__list">
+        <div class="swiper swiper--bestsellers-list bestsellers__list">
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide bestsellers__product-card product-card">
@@ -322,19 +376,19 @@
                   <div class="product-card__price">
                     <span>440 P</span>
                     <span>нет в наличии</span>
-                    <button type="button">сообщить о поступлении</button>
+                    <button type="button" class="button">сообщить о поступлении</button>
                   </div>
                 </figure>
                 <span class="product-card__sale-label">
                   sale
                 </span>
-                <button type="button">
+                <button type="button" class="button">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20" height="24">
                     <use xlink:href="img/sprite.svg#bag-icon"></use>
                   </svg>
                 </button>
-                <button class="product-card__quick-view" type="button">
+                <button class="product-card__quick-view button" type="button">
                   быстрый просмотр
                 </button>
                 <div class="product-card__icon-box">
@@ -356,19 +410,19 @@
                   <div class="product-card__price">
                     <span>440 P</span>
                     <span>нет в наличии</span>
-                    <button type="button">сообщить о поступлении</button>
+                    <button type="button" class="button">сообщить о поступлении</button>
                   </div>
                 </figure>
                 <span class="product-card__sale-label">
                   sale
                 </span>
-                <button type="button">
+                <button type="button" class="button">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20" height="24">
                     <use xlink:href="img/sprite.svg#bag-icon"></use>
                   </svg>
                 </button>
-                <button class="product-card__quick-view" type="button">
+                <button class="product-card__quick-view button" type="button">
                   быстрый просмотр
                 </button>
                 <div class="product-card__icon-box">
@@ -389,19 +443,19 @@
                   <div class="product-card__price">
                     <span>440 P</span>
                     <span>нет в наличии</span>
-                    <button type="button">сообщить о поступлении</button>
+                    <button type="button" class="button">сообщить о поступлении</button>
                   </div>
                 </figure>
                 <span class="product-card__sale-label">
                   sale
                 </span>
-                <button type="button">
+                <button type="button" class="button">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20" height="24">
                     <use xlink:href="img/sprite.svg#bag-icon"></use>
                   </svg>
                 </button>
-                <button class="product-card__quick-view" type="button">
+                <button class="product-card__quick-view button" type="button">
                   быстрый просмотр
                 </button>
                 <div class="product-card__icon-box">
@@ -423,19 +477,19 @@
                   <div class="product-card__price">
                     <span>440 P</span>
                     <span>нет в наличии</span>
-                    <button type="button">сообщить о поступлении</button>
+                    <button type="button" class="button">сообщить о поступлении</button>
                   </div>
                 </figure>
                 <span class="product-card__sale-label">
                   sale
                 </span>
-                <button type="button">
+                <button type="button" class="button">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20" height="24">
                     <use xlink:href="img/sprite.svg#bag-icon"></use>
                   </svg>
                 </button>
-                <button class="product-card__quick-view" type="button">
+                <button class="product-card__quick-view button" type="button">
                   быстрый просмотр
                 </button>
                 <div class="product-card__icon-box">
@@ -449,7 +503,7 @@
           <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
         </div>
-        <button type="submit">Смотреть еще</button>
+        <button type="submit" class="button">Смотреть еще</button>
       </div>
     </section>
 
@@ -462,19 +516,19 @@
     <section class="relevants">
       <h2 class="visually-hidden">Популярные товары</h2>
       <div class="relevants__filter filter filter--relevants">
-        <div class="swiper-container relevants__categories">
+        <div class="swiper swiper--relevants relevants__categories">
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><button type="button">запчасти</button></div>
-            <div class="swiper-slide"><button type="button">автохимия</button></div>
-            <div class="swiper-slide"><button type="button">шины и диски</button></div>
-            <div class="swiper-slide"><button type="button">автоэлектроника</button></div>
-            <div class="swiper-slide"><button type="button">инструменты</button></div>
-            <div class="swiper-slide"><button type="button">аксессуары и другое</button></div>
+            <div class="swiper-slide"><button type="button" class="button">запчасти</button></div>
+            <div class="swiper-slide"><button type="button" class="button">автохимия</button></div>
+            <div class="swiper-slide"><button type="button" class="button">шины и диски</button></div>
+            <div class="swiper-slide"><button type="button" class="button">автоэлектроника</button></div>
+            <div class="swiper-slide"><button type="button" class="button">инструменты</button></div>
+            <div class="swiper-slide"><button type="button" class="button">аксессуары и другое</button></div>
           </div>
         </div>
 
-        <div class="swiper-container relevants__list">
+        <div class="swiper swiper--relevants-list relevants__list">
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide relevants__product-card product-card">
@@ -488,19 +542,19 @@
                   <div class="product-card__price">
                     <span>440 P</span>
                     <span>нет в наличии</span>
-                    <button type="button">сообщить о поступлении</button>
+                    <button type="button" class="button">сообщить о поступлении</button>
                   </div>
                 </figure>
                 <span class="product-card__sale-label">
                   sale
                 </span>
-                <button type="button">
+                <button type="button" class="button">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20" height="24">
                     <use xlink:href="img/sprite.svg#bag-icon"></use>
                   </svg>
                 </button>
-                <button class="product-card__quick-view" type="button">
+                <button class="product-card__quick-view button" type="button">
                   быстрый просмотр
                 </button>
                 <div class="product-card__icon-box">
@@ -522,19 +576,19 @@
                   <div class="product-card__price">
                     <span>440 P</span>
                     <span>нет в наличии</span>
-                    <button type="button">сообщить о поступлении</button>
+                    <button type="button" class="button">сообщить о поступлении</button>
                   </div>
                 </figure>
                 <span class="product-card__sale-label">
                   sale
                 </span>
-                <button type="button">
+                <button type="button" class="button">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20" height="24">
                     <use xlink:href="img/sprite.svg#bag-icon"></use>
                   </svg>
                 </button>
-                <button class="product-card__quick-view" type="button">
+                <button class="product-card__quick-view button" type="button">
                   быстрый просмотр
                 </button>
                 <div class="product-card__icon-box">
@@ -556,19 +610,19 @@
                   <div class="product-card__price">
                     <span>440 P</span>
                     <span>нет в наличии</span>
-                    <button type="button">сообщить о поступлении</button>
+                    <button type="button" class="button">сообщить о поступлении</button>
                   </div>
                 </figure>
                 <span class="product-card__sale-label">
                   sale
                 </span>
-                <button type="button">
+                <button type="button" class="button">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20" height="24">
                     <use xlink:href="img/sprite.svg#bag-icon"></use>
                   </svg>
                 </button>
-                <button class="product-card__quick-view" type="button">
+                <button class="product-card__quick-view button" type="button">
                   быстрый просмотр
                 </button>
                 <div class="product-card__icon-box">
@@ -590,19 +644,19 @@
                   <div class="product-card__price">
                     <span>440 P</span>
                     <span>нет в наличии</span>
-                    <button type="button">сообщить о поступлении</button>
+                    <button type="button" class="button">сообщить о поступлении</button>
                   </div>
                 </figure>
                 <span class="product-card__sale-label">
                   sale
                 </span>
-                <button type="button">
+                <button type="button" class="button">
                   <span class="visually-hidden">Положить в корзину</span>
                   <svg width="20" height="24">
                     <use xlink:href="img/sprite.svg#bag-icon"></use>
                   </svg>
                 </button>
-                <button class="product-card__quick-view" type="button">
+                <button class="product-card__quick-view button" type="button">
                   быстрый просмотр
                 </button>
                 <div class="product-card__icon-box">
@@ -618,18 +672,18 @@
           <!-- If we need navigation buttons -->
           <div class="swiper-button-next"></div>
         </div>
-        <button type="submit">Показать еще</button>
+        <button type="submit" class="button">Показать еще</button>
       </div>
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer container">
     <div class="page-footer__wrapper">
       <section class="page-footer__mailing mailing">
         <h2>Подпишитесь на нашу рассылку и узнавайте об акция быстрее</h2>
         <form action="/" method="POST">
           <input type="text" placeholder="Введите ваш e-mail:">
-          <button type="submit">Отправить</button>
+          <button type="submit" class="button">Отправить</button>
         </form>
       </section>
 
@@ -680,8 +734,10 @@
 
   </footer>
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/sliders.js"></script>
 </body>
 
 </html>
