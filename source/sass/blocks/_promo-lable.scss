@@ -4,4 +4,9 @@
   color: $white;
   text-transform: uppercase;
   padding: 5px 15px;
+  display: none;
+
+  &--active {
+    display: block;
+  }
 }

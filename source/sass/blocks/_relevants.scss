@@ -1,0 +1,31 @@
+.relevants {
+  padding-top: 40px;
+  padding-bottom: 98px;
+}
+
+.relevants__list {
+  .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .swiper-slide {
+    width: 270px;
+  }
+}
+
+.relevants__button {
+  margin: 0 auto;
+  display: none;
+
+  @media (max-width: $viewport--md) {
+    display: block;
+  }
+}
+
+.relevants__title {
+  margin-bottom: 25px;
+  font-weight: 700;
+}

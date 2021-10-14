@@ -41,10 +41,6 @@ var swiperAction = new Swiper(".swiper--action", {
 var breakpointDesktop = window.matchMedia( '(min-width: 1200px)' );
 
 var swiperStores = new Swiper(".swiper--product-navigation", {
-  // loop: true,
-  // slidesPerView: auto,
-  //autoplayDisableOnInteraction: false,
-
   breakpoints: {
     768: {
       loop: true,
@@ -57,14 +53,26 @@ var swiperStores = new Swiper(".swiper--product-navigation", {
     },
   },
 
-  //   1280: {
-  //     loop: false,
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //       clickable: false,
-  //     },
-  //   },
-  // },
+  debugger: true,
+});
+
+var swiperFilter = new Swiper(".swiper--filter", {
+  breakpoints: {
+    1200: {
+      loop: false,
+      slidesPerView: "auto",
+    },
+
+    768: {
+      loop: true,
+      slidesPerView: "auto",
+    },
+
+    320: {
+      loop: true,
+      slidesPerView: "auto",
+    },
+  },
 
   debugger: true,
 });
@@ -83,8 +91,6 @@ var breakpointChecker = function() {
      return swiperStores;
   }
 };
-
-//swiperStores.autoplay.stop();
 
 // var swiper = new Swiper('.swiper', {
 //   // Default parameters

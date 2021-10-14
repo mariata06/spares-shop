@@ -1,0 +1,82 @@
+.stores {
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.stores__item {
+  padding: 16px 25px;
+  margin-bottom: 30px;
+  font-size: 23px;
+  width: 370px;
+  border-radius: 3px;
+  border: 1px solid $very-light-grey;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+  }
+}
+
+.stores__name {
+  font-weight: 700;
+  margin-bottom: 38px;
+}
+
+.stores__link {
+  color: $weathered-stone;
+}
+
+.stores__item .stores__img-lable {
+  position: absolute;
+  top: 16px;
+  right: 25px;
+}
+
+.stores__img-lable--shampoo {
+  &::before {
+    content: url("../img/shampoo.svg");
+  }
+}
+
+.stores__img-lable--tires {
+  &::before {
+    content: url("../img/tires.svg");
+  }
+}
+
+.stores__img-lable--tools {
+  &::before {
+    content: url("../img/tools.svg");
+  }
+}
+
+.stores__img-lable--shampoo {
+  &::before {
+    content: url("../img/shampoo.svg");
+  }
+}
+
+.stores__img-lable--spares {
+  &::before {
+    content: url("../img/spares.svg");
+  }
+}
+
+.stores__img-lable--battery {
+  &::before {
+    content: url("../img/battery.svg");
+  }
+}
+
+.stores__img-lable--accessoire {
+  &::before {
+    content: url("../img/accessoire.svg");
+  }
+}

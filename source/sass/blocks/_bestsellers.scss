@@ -1,0 +1,27 @@
+.bestsellers {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.bestsellers__list {
+  .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .swiper-slide {
+    width: 270px;
+  }
+}
+
+.bestsellers__button {
+  margin: 0 auto;
+  display: block;
+}
+
+.bestsellers__title {
+  margin-bottom: 25px;
+  font-weight: 700;
+}

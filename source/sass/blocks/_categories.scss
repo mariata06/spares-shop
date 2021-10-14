@@ -1,0 +1,37 @@
+.categories  .swiper-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.categories  .swiper-slide {
+  width: auto;
+  margin-right: 40px;
+  font-size: 15px;
+}
+
+.categories__button {
+  position: relative;
+  font-size: 15px;
+  text-align: center;
+  padding: 11px 5px;
+  border-bottom: 2px solid transparent;
+  width: auto;
+  border: 2px solid green;
+  min-width: fit-content;
+
+  &:hover,
+  &:focus {
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 2px solid $crusta;
+    left: -2px;
+    //transform: translate(-2%, 0);
+  }
+}
+
+.categories__button--active {
+  font-size: 15px;
+  font-weight: 700;
+  border-bottom: 2px solid $crusta;
+}
+

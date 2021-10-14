@@ -1,5 +1,5 @@
 .timer {
-  background-color: $medium-grey;
+  background-color: $lavender;
   padding: 15px 20px 8px;
   font-size: 18px;
 }
@@ -13,7 +13,7 @@
 
   svg {
     position: absolute;
-    left: 25px;
+    left: 5px;
   }
 }
 
@@ -21,7 +21,7 @@
 .timer__min-label,
 .timer__sec-label {
   font-size: 10px;
-  color: $light-grey;
+  color: $weathered-stone;
 }
 .timer__hours-wrapper,
 .timer__min-wrapper,

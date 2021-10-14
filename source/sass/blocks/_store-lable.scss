@@ -1,0 +1,16 @@
+.store-lable {
+  display: block;
+  width: 97px;
+  height: 97px;
+  border-radius: 100%;
+  background-color: $crusta;
+  position: relative;
+
+  &::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

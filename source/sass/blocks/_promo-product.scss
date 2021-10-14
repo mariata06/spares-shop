@@ -1,13 +1,12 @@
 .promo-product {
   position: relative;
-  border: 1px solid $light-grey;
+  border: 1px solid $weathered-stone;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 268px;
+  border-radius: 3px;
 
-  // figure {
-  //   margin: 0;
-  // }
   img {
     margin: 0 auto;
     display: block;
@@ -21,7 +20,7 @@
   }
 }
 
-.promo-product__label {
+.promo-product__lable {
   position: absolute;
   top: 0;
   left: 0;

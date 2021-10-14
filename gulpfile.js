@@ -58,14 +58,13 @@ gulp.task("images", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src(["source/img/*-icon.svg", "source/img/*.svg"])
+  return gulp.src(["source/img/*.svg"])
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
 });
-
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
@@ -78,9 +77,9 @@ gulp.task("html", function () {
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
+      "source/img/*.{png,jpg,svg}",
       "source/js/**",
-      "source/*.ico",
-      "source/img/*.{png, jpg, svg}"
+      "source/*.ico"
     ], {
       base: "source"
     })
@@ -111,8 +110,8 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{sass,scss}", gulp.series("css"));
   gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/js/**/*.js", gulp.series("js"));
-  gulp.watch("source/img/*-icon.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
@@ -121,13 +120,30 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-/*сборка в продакшн*/
 gulp.task("build", gulp.series("clean", "copy", "css", "html", "sprite", "copy_css"));
 gulp.task("start", gulp.series("build", "server"));
 
-//github pages
 // function deploy(cb) {
 //   ghPages.publish(path.join(process.cwd(), './build'), cb);
 // }
 // exports.deploy = deploy;
 
+/*
+var imagemin = require("imagemin"); // The imagemin module.
+var webp = require("imagemin-webp"); // imagemin's WebP plugin.
+var outputFolder = "./img"; // Output folder
+var PNGImages = "./img/*.png"; // PNG images
+var JPEGImages = "./img/*.jpg"; // JPEG images
+
+imagemin([PNGImages], outputFolder, {
+  plugins: [webp({
+    lossless: true // Losslessly encode images
+  })]
+});
+
+imagemin([JPEGImages], outputFolder, {
+  plugins: [webp({
+    quality: 65 // Quality setting from 0 to 100
+  })]
+});
+*/

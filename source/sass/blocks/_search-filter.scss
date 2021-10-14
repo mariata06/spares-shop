@@ -1,0 +1,25 @@
+.search-filter .swiper-wrapper {
+  display: flex;
+  //justify-content: space-between;
+  justify-content: start;
+}
+
+.search-filter {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.search-filter__type {
+  margin-bottom: 25px;
+}
+
+.search-filter .swiper-slide {
+  //font-weight: 400;
+  width: auto;
+  //margin-right: 46px;
+
+  @media (max-width: $viewport--md) {
+    font-size: 18px;
+    margin-right: 13px;
+  }
+}
