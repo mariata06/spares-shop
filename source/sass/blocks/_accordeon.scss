@@ -1,0 +1,38 @@
+.accordeon {
+  display: flex;
+  justify-content: space-between;
+
+  h3,
+  li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  ul:first-child {
+    width: 97px;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+    width: 147px;
+  }
+}
+
+.accordeon__item:first-child {
+  width: 97px;
+}
+
+.accordeon__item:last-child {
+  align-self: flex-end;
+}
+
+.accordeon__content {
+  margin: 0;
+}

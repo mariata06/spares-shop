@@ -1,0 +1,32 @@
+.mailing {
+  width: 294px;
+
+  h2 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 35px;
+  }
+
+  form {
+    width: 100%;
+    position: relative;
+  }
+
+  input {
+    padding: 8px 0px 8px 12px;
+    width: 100%;
+  }
+}
+
+.mailing__button {
+  background-color: $crusta;
+  padding: 10px 20px 10px 19px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

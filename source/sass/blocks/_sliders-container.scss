@@ -1,4 +1,15 @@
 .sliders-container {
   width: 1302px;
   margin: 0 auto;
+
+  @media (max-width: 1280px) {
+    //width: 100%;
+    width: 100%;
+  }
+
+  @media (max-width: $viewport--md) {
+    //width: 100%;
+    //width: 1170px;
+    width: 736px;
+  }
 }

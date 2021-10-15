@@ -1,6 +1,21 @@
 .action-slider {
   width: 270px;
-  height: 397px;
+  //height: 397px;
+  // border: 1px solid $weathered-stone;
+
+  .swiper-wrapper {
+    width: 100%;
+  }
+
+  @media (max-width: $viewport--md) {
+    height: 431px;
+  }
+
+  .swiper-slide {
+    //height: 397px;
+    width: 100%;
+    //width: 270px;
+  }
 }
 
 .action-slider .swiper-pagination {
@@ -8,5 +23,6 @@
 
   @media (max-width: $viewport--md) {
     display: block;
+    bottom: 0;
   }
 }

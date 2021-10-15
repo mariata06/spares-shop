@@ -13,23 +13,28 @@
 
   svg {
     position: absolute;
-    left: 5px;
+    left: 25px;
   }
 }
 
-.timer__hours-label,
-.timer__min-label,
-.timer__sec-label {
+.timer__hours-lable,
+.timer__min-lable,
+.timer__sec-lable {
   font-size: 10px;
   color: $weathered-stone;
 }
+
 .timer__hours-wrapper,
 .timer__min-wrapper,
 .timer__sec-wrapper {
   text-align: center;
 }
+
 .timer__hours,
 .timer__min,
 .timer__sec {
   display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: $tuna;
 }

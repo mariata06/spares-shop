@@ -14,6 +14,62 @@ var swiperPromo = new Swiper(".swiper--promo", {
   debugger: true,
 });
 
+// var swiperBestsellers = new Swiper(".swiper--bestsellers-list", {
+//   // slidesPerView: 4,
+//   // loop: true,
+//   // pagination: {
+//   //   el: ".swiper-pagination",
+//   //   clickable: true,
+//   // },
+
+//   breakpoints: {
+//     1920: {
+//       slidesPerView: 4,
+//       spaceBetween: 30,
+//       loop: true,
+//       pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//       },
+//     },
+
+//     1440: {
+//       slidesPerView: 4,
+//       spaceBetween: 30,
+//       loop: true,
+//       pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//       },
+//     },
+
+//     768: {
+//       slidesPerView: 1,
+//       loop: true,
+//       pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//       },
+//     },
+
+//     // 1440: {
+//     //   slidesPerView: 4,
+//     //   loop: true,
+//     //   pagination: {
+//     //     el: ".swiper-pagination",
+//     //     clickable: true,
+//     //   },
+//     // },
+//   },
+
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   debugger: true,
+// });
+
 var swiperAction = new Swiper(".swiper--action", {
   breakpoints: {
     768: {

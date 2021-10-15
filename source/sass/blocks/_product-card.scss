@@ -9,6 +9,14 @@
   display: flex;
   //flex-direction: column;
 
+  // @media (max-width: 1280px) {
+  //   margin: 0 auto;
+  // }
+
+  @media (max-width: $viewport--md) {
+    margin: 0 auto;
+  }
+
   &:hover,
   &:focus {
     box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);

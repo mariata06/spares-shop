@@ -17,6 +17,57 @@
   </header>
 
   <main class="main">
+    <ul class="breadcrumbs container">
+      <li>
+        <a href="index.html">Главная</a>
+      </li>
+      <li>
+        <a href="catalog.html">Шины</a>
+      </li>
+      <li  class="breadcrumbs-current">
+        <a href="catalog.html">Шины зимние</a>
+      </li>
+    </ul>
+
+    <section class="sort container">
+      <h1 class="container">Нешипованные шины</h1>
+      <div class="sort__wrapper">
+        <div class="sort__class">
+          <button class="button">Поноприводные</button>
+          <button class="button">от 5000</button>
+          <button class="button">Nokian</button>
+          <button class="button">от 5000</button>
+          <button class="button">еще</button>
+        </div>
+
+        <select name="" id="" class="sort__types">
+          <option selected value="По популярности">По популярности</option>
+          <option value="В алфавитном порядке">В алфавитном порядке</option>
+          <option value="По размеру скидки">По размеру скидки</option>
+          <option value="По цене по возрастанию">По цене по возврастанию</option>
+          <option value="По цене по убыванию">По цене по убыванию</option>
+        </select>
+        <button class="button sort__table">
+          <svg width="23" height="21">
+            <use xlink:href="img/sprite.svg#table-icon"></use>
+          </svg>
+        </button>
+        <button class="button sort__list">
+          <svg width="25" height="19">
+            <use xlink:href="img/sprite.svg#list-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="tire-catalog">
+      <div class="tire-catalog__filter tire-filter">
+
+      </div>
+      <div class="tire-catalog__list">
+
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">

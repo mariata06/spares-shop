@@ -1,0 +1,25 @@
+.breadcrumbs {
+  padding: 0;
+  padding-top: 44px;
+  padding-bottom: 41px;
+  list-style: none;
+  display: flex;
+
+  li {
+    margin-right: 30px;
+  }
+
+  li>a {
+    font-size: 15px;
+    color: $very-light-grey;
+    position: relative;
+  }
+
+  li>a:after {
+    content: url("../img/right-icon.svg");
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -15px;
+  }
+}

@@ -1,0 +1,42 @@
+.sort {
+  padding-bottom: 50px;
+}
+
+.sort h1 {
+  font-size: 30px;
+  margin-bottom: 31px;
+}
+
+.sort__class button {
+  padding: 4px 22px;
+  font-size: 14px;
+  color: $tuna;
+  border-radius: 150px;
+  background-color: $ghost-white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}
+
+.sort__wrapper {
+  display: flex;
+}
+
+.sort__types {
+  font-size: 14px;
+  margin-right: 21px;
+  margin-left: auto;
+  padding: 8px 46px 8px 20px;
+  border: 1.5px solid $hawkes-blue;
+}
+.sort__table,
+.sort__list {
+  margin-left: 10px;
+
+  svg {
+    fill: $tuna;
+    fill: none;
+  }
+}

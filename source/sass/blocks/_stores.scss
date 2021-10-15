@@ -11,11 +11,16 @@
   margin-bottom: 30px;
   font-size: 23px;
   width: 370px;
+  height: 129px;
   border-radius: 3px;
   border: 1px solid $very-light-grey;
   position: relative;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $viewport--md) {
+    width: 350px;
+  }
 
   &:hover,
   &:focus {
@@ -26,11 +31,24 @@
 
 .stores__name {
   font-weight: 700;
-  margin-bottom: 38px;
+  //margin-bottom: 38px;
+  width: 198px;
+  margin-bottom: 12px;
 }
 
 .stores__link {
   color: $weathered-stone;
+  margin-top: auto;
+  position: relative;
+  align-self: baseline;
+
+  &::after {
+    content: url("../img/right-icon.svg");
+    display: block;
+    position: absolute;
+    right: -15px;
+    top: 0;
+  }
 }
 
 .stores__item .stores__img-lable {

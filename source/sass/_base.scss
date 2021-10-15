@@ -34,9 +34,8 @@ body {
   margin: 0 auto;
   font-family: "Arial", sans-serif;
   font-size: 20px;
-  //line-height: auto;
   font-weight: 400;
-  color: $black;
+  color: $tuna;
   background-color: $white;
   height: 100%;
 }
@@ -47,7 +46,7 @@ img {
 
 a {
   text-decoration: none;
-  color: $black;
+  color: $tuna;
 
   &:hover,
   &:active {

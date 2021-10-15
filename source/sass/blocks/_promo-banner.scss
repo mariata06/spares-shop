@@ -1,0 +1,8 @@
+.promo-banner {
+  width: 1170px;
+  margin: 0 auto;
+
+  @media (max-width: $viewport--md) {
+    width: 768px;
+  }
+}

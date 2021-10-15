@@ -28,7 +28,7 @@
             <li class="mobile-menu__list-item mobile-menu__list-item--delivery"><a href="#">Доставка и оплата</a></li>
             <li class="mobile-menu__list-item"><a href="#">Каталог запчастей</a></li>
             <li class="mobile-menu__list-item"><a href="#">Каталог ТО</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Шины</a></li>
+            <li class="mobile-menu__list-item"><a href="catalog.html">Шины</a></li>
             <li class="mobile-menu__list-item"><a href="#">Диски</a></li>
             <li class="mobile-menu__list-item"><a href="#">Аккумуляторы</a></li>
             <li class="mobile-menu__list-item"><a href="#">Автомасла</a></li>
@@ -82,7 +82,7 @@
             <!-- Slides -->
             <div class="swiper-slide"><a href="#">Каталог запчастей</a></div>
             <div class="swiper-slide"><a href="#">Каталог ТО</a></div>
-            <div class="swiper-slide"><a href="#">Шины</a></div>
+            <div class="swiper-slide"><a href="catalog.html">Шины</a></div>
             <div class="swiper-slide"><a href="#">Диски</a></div>
             <div class="swiper-slide"><a href="#">Аккумуляторы</a></div>
             <div class="swiper-slide"><a href="#">Автомасла</a></div>
@@ -95,7 +95,7 @@
   </header>
 
   <main class="main">
-    <section class="promo container">
+    <section class="promo">
       <h1 class="visually-hidden">Интернет-магазин Автозапчасти</h1>
       <div class="promo__wrapper">
         <!-- Slider main container -->
@@ -106,7 +106,7 @@
             <div class="swiper-slide">
               <a href="#">
               <picture>
-                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 320px)">
                 <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
                 <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
                 <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
@@ -116,7 +116,7 @@
             <div class="swiper-slide">
               <a href="#">
               <picture>
-                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 320px)">
                 <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
                 <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
                 <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
@@ -126,7 +126,7 @@
             <div class="swiper-slide">
               <a href="#">
               <picture>
-                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 320px)">
                 <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
                 <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
                 <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
@@ -136,7 +136,7 @@
             <div class="swiper-slide">
               <a href="#">
               <picture>
-                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 320px)">
                 <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
                 <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
                 <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
@@ -146,7 +146,7 @@
             <div class="swiper-slide">
               <a href="#">
               <picture>
-                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 320px)">
                 <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
                 <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
                 <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
@@ -156,7 +156,7 @@
             <div class="swiper-slide">
               <a href="#">
               <picture>
-                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 768px)">
+                <source srcset="img/slide-1-mobile@1x.png" media="(max-width: 320px)">
                 <img src="img/slide-1-desktop@1x.png" alt="Запчасти" width="870" height="397">
                 <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
                 <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
@@ -173,19 +173,19 @@
         </div>
 
         <!-- Slider main container -->
-        <div class="swiper swiper--action action-slider">
+        <div class="swiper swiper--action promo__action-slider action-slider">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide promo__product promo-product">
-              <a href="#">
+            <div class="swiper-slide">
+              <a href="#" class="promo__product promo-product">
                 <figure>
                   <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
                   <figcaption>
                     Лампочка mini...
                   </figcaption>
                 </figure>
-                <div class="promo__timer timer">
+                <div class="promo-product__timer timer">
                   <span>До конца акции осталось:</span>
                   <div class="timer__wrapper">
                     <svg width="28" height="28">
@@ -215,15 +215,15 @@
               </a>
             </div>
 
-            <div class="swiper-slide promo__product promo-product">
-              <a href="#">
+            <div class="swiper-slide">
+              <a href="#" class="promo__product promo-product">
                 <figure>
                   <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
                   <figcaption>
                     Лампочка mini...
                   </figcaption>
                 </figure>
-                <div class="promo__timer timer">
+                <div class="promo-product__timer timer">
                   <span>До конца акции осталось:</span>
                   <div class="timer__wrapper">
                     <svg width="28" height="28">
@@ -253,15 +253,15 @@
               </a>
             </div>
 
-            <div class="swiper-slide promo__product promo-product">
-              <a href="#">
+            <div class="swiper-slide">
+              <a href="#" class="promo__product promo-product">
                 <figure>
                   <img src="img/minilamp-desktop@1x.png" alt="Лампочка мини" width="150" height="187">
                   <figcaption>
                     Лампочка mini...
                   </figcaption>
                 </figure>
-                <div class="promo__timer timer">
+                <div class="promo-product__timer timer">
                   <span>До конца акции осталось:</span>
                   <div class="timer__wrapper">
                     <svg width="28" height="28">
@@ -304,7 +304,7 @@
         <div class="swiper swiper--filter">
           <div class="swiper-wrapper search-filter__type">
             <div class="swiper-slide">
-              <button type="button" class="swiper-slide form__button button">Поиск по Vin</button>
+              <button type="button" class="swiper-slide form__button form__button--active button">Поиск по Vin</button>
             </div>
             <div class="swiper-slide">
               <button type="button" class="swiper-slide form__button button">Поиск по марке</button>
@@ -318,7 +318,11 @@
           </div>
         </div>
         <input type="text" placeholder="Введите марку автомобиля">
-        <button type="submit" class="form__button form__button--search button">Искать</button>
+        <button type="submit" class="form__button form__button--search button">
+          <svg width="23" height="24">
+            <use xlink:href="img/sprite.svg#search-icon"></use>
+          </svg>
+          <span>Искать</span></button>
       </form>
     </section>
 
@@ -326,42 +330,42 @@
       <h2 class="visually-hidden">Разделы магазина</h2>
       <a href="#" class="stores__item">
         <span class="stores__name">Автохимия</span>
-          <span class="stores__link">Перейти ></span>
+          <span class="stores__link">Перейти</span>
           <span class="stores__img-lable stores__img-lable--shampoo store-lable">
             <!-- фоновая картинка отдела -->
           </span>
       </a>
       <a href="#" class="stores__item">
         <span class="stores__name">Шины и диски</span>
-          <span class="stores__link">Перейти ></span>
+          <span class="stores__link">Перейти</span>
           <span class="stores__img-lable stores__img-lable--tires store-lable">
             <!-- фоновая картинка отдела -->
           </span>
       </a>
       <a href="#" class="stores__item">
         <span class="stores__name">Инструменты</span>
-          <span class="stores__link">Перейти ></span>
+          <span class="stores__link">Перейти</span>
           <span class="stores__img-lable stores__img-lable--tools store-lable">
             <!-- фоновая картинка отдела -->
           </span>
       </a>
       <a href="#" class="stores__item">
         <span class="stores__name">Запчасти на ТО</span>
-          <span class="stores__link">Перейти ></span>
+          <span class="stores__link">Перейти</span>
           <span class="stores__img-lable stores__img-lable--spares store-lable">
             <!-- фоновая картинка отдела -->
           </span>
       </a>
       <a href="#" class="stores__item">
         <span class="stores__name">Автоэлектроника</span>
-        <span class="stores__link">Перейти ></span>
+        <span class="stores__link">Перейти</span>
         <span class="stores__img-lable stores__img-lable--battery store-lable">
           <!-- фоновая картинка отдела -->
         </span>
       </a>
       <a href="#"class="stores__item">
         <span class="stores__name">Аксессуары и другое</span>
-          <span class="stores__link">Перейти ></span>
+          <span class="stores__link">Перейти</span>
           <span class="stores__img-lable stores__img-lable--accessoire store-lable">
             <!-- фоновая картинка отдела -->
           </span>
@@ -545,11 +549,11 @@
       </div>
     </section>
 
-    <section class="promo-banner container">
+    <section class="promo-banner">
       <h2 class="visually-hidden">Sale</h2>
       <div class="promo-banner__image">
         <picture>
-          <source srcset="img/sale-mobile@1x.png" media="(max-width: 768px)">
+          <source srcset="img/sale-mobile@1x.png" media="(max-width: 320px)">
           <img src="img/sale-desktop@1x.png" alt="sale" width="1170" height="165">
           <!-- <source srcset="img/slide-1-desktop@1x.png" media="(min-width: 1200px)">
           <img src="img/slide-1-mobile@1x.png" alt="Запчасти" width="320" height="164"> -->
@@ -743,13 +747,13 @@
     </section>
   </main>
 
-  <footer class="page-footer container">
-    <div class="page-footer__wrapper">
+  <footer class="page-footer">
+    <div class="page-footer__wrapper container">
       <section class="page-footer__mailing mailing">
         <h2>Подпишитесь на нашу рассылку и узнавайте об акция быстрее</h2>
         <form action="/" method="POST">
           <input type="text" placeholder="Введите ваш e-mail:">
-          <button type="submit" class="button">Отправить</button>
+          <button type="submit" class="mailing__button button">Отправить</button>
         </form>
       </section>
 
@@ -787,15 +791,14 @@
             <ul class="accordeon__content">
               <li><a href="#">Акции</a></li>
               <li><a href="#">Договор оферты</a></li>
-              <li><a href="#">Политика обработки персональных данных</a></li>
+              <li><a href="#">Политика обработки персональных&nbsp;данных</a></li>
             </ul>
           </div>
         </div>
       </section>
-
-      <div class="page-footer__copyright">
-        Интернет-магазин автозапчастей
-      </div>
+    </div>
+    <div class="page-footer__copyright container">
+      Интернет-магазин автозапчастей
     </div>
 
   </footer>

@@ -4,13 +4,26 @@
 }
 
 .promo__wrapper {
+  width: 1170px;
+  margin: 0 auto;
   display: flex;
 
   @media (max-width: $viewport--md) {
     display: block;
+    width: 100%;
   }
 }
 
 .promo__promo-slider {
   justify-content: space-between;
+}
+
+.promo__action-slider {
+  margin: 0;
+  margin-left: auto;
+
+  @media (max-width: $viewport--md) {
+    margin: 0 auto;
+    margin-top: 50px;
+  }
 }

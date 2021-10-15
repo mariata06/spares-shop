@@ -5,7 +5,8 @@
   width: 114px;
 
   svg {
-    fill: $white;
+    fill: none;
+    stroke: $gray66;
   }
 
   @media (max-width: $viewport--md) {
