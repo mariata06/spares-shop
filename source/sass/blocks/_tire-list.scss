@@ -1,0 +1,10 @@
+.tire-list {
+  width: 870px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tire-list__product-card {
+  margin-bottom: 30px;
+}

@@ -2,8 +2,10 @@
   background: linear-gradient(91.1deg, #9710E9 1.17%, #FD8D43 99.31%);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   color: $white;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  padding: 5px 15px;
+  padding: 6px 15px 5px;
   display: none;
 
   &--active {

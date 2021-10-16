@@ -1,6 +1,5 @@
 .search-filter .swiper-wrapper {
   display: flex;
-  //justify-content: space-between;
   justify-content: flex-start;
 }
 
@@ -14,9 +13,7 @@
 }
 
 .search-filter .swiper-slide {
-  //font-weight: 400;
   width: auto;
-  //margin-right: 46px;
 
   @media (max-width: $viewport--md) {
     font-size: 18px;

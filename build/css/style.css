@@ -945,6 +945,9 @@ input {
     top: 0;
     right: -15px; }
 
+.sort {
+  padding-bottom: 50px; }
+
 .sort h1 {
   font-size: 30px;
   margin-bottom: 31px; }
@@ -965,13 +968,15 @@ input {
 
 .sort__types {
   font-size: 14px;
+  margin-right: 21px;
   margin-left: auto;
   padding: 8px 46px 8px 20px;
   border: 1.5px solid #d7d9df; }
 
 .sort__table,
 .sort__list {
-  background-color: pink; }
+  margin-left: 10px; }
   .sort__table svg,
   .sort__list svg {
-    fill: #48494d; }
+    fill: #48494d;
+    fill: none; }

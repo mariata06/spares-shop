@@ -2,16 +2,9 @@
   width: 1170px;
   margin: 0 auto;
 
-  // @media (max-width: 1280px) {
-  //   //width: 100%;
-  //   width: 1000px;
-  // }
-
   @media (max-width: $viewport--md) {
     width: 740px;
     margin: 0 auto;
-    //margin-left: 14px;
-    //margin-right: 14px;
   }
 
   @media (max-width: $viewport--sm) {

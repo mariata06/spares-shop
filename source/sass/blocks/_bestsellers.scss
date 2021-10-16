@@ -30,13 +30,7 @@
     width: 270px;
     margin-right: 0;
 
-    // @media (max-width: 1280px) {
-    //   //width: 270px;
-    //   width: 100%;
-    // }
-
     @media (max-width: $viewport--md) {
-      //margin: 0 auto;
       width: 100%;
     }
   }
@@ -55,6 +49,5 @@
 .bestsellers__product-card {
   @media (max-width: $viewport--md) {
     width: 270px;
-    //margin: 0 auto;
   }
 }

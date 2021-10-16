@@ -1,17 +1,11 @@
 .product-card {
   width: 268px;
   min-height: 401px;
-  //padding: 50px 20px 32px;
   border: 1px solid $very-light-grey;
   border-radius: 3px;
   text-align: center;
   position: relative;
   display: flex;
-  //flex-direction: column;
-
-  // @media (max-width: 1280px) {
-  //   margin: 0 auto;
-  // }
 
   @media (max-width: $viewport--md) {
     margin: 0 auto;
@@ -29,10 +23,10 @@
 
   figure {
     margin: 0 auto;
-    //margin-top: 50px;
-    height: 100%;
-    align-self: flex-end;
+    align-self: flex-start;
     margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
   }
 
   &:hover,
@@ -51,7 +45,7 @@
   }
 
   img {
-    margin-bottom: 27px;
+    margin: 53px auto 27px;
   }
 }
 
@@ -92,10 +86,6 @@
   position: absolute;
   top: 20px;
   right: 20px;
-
-  // svg {
-  //   fill: none;
-  // }
 }
 
 .product-card__like {
