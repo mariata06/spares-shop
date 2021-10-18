@@ -36,6 +36,20 @@
   border-bottom: 1px solid rgba(255, 121, 49, 0.2);
 }
 
+.button--loadmore {
+  font-size: 14px;
+  background-color: transparent;
+  color: $crusta;
+  border-bottom: 1px solid rgba(255, 121, 49, 0.2);
+}
+
+.button--reset {
+  font-size: 13px;
+  background-color: transparent;
+  color: $french-grey;
+  border-bottom: 1px solid $french-grey;
+}
+
 .button--like {
   svg {
     fill: none;
@@ -48,4 +62,43 @@
     fill: $crusta;
     stroke: $crusta;
   }
+}
+
+.button--promo {
+  color: $french-grey;
+  background-color: $lavender;
+  padding: 6px 15px 5px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.button--promo--active {
+  background: linear-gradient(91.1deg, #9710E9 1.17%, #FD8D43 99.31%);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: $white;
+}
+
+.button--sort-class,
+.button--tireradius {
+  padding: 4px 22px;
+  font-size: 14px;
+  color: $tuna;
+  border-radius: 150px;
+  background-color: $ghost-white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &--active {
+    color: $white;
+    background-color: $crusta;
+  }
+}
+
+.button--axis {
+  font-size: 14px;
+  padding: 4px 12px;
 }

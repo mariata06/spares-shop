@@ -13,3 +13,122 @@
   margin: 0 auto;
   margin-right: 39px;
 }
+
+// input[type="checkbox"] {
+//   background-color: $crusta;
+// }
+
+select {
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  //font-size: inherit;
+  font-size: 14px;
+  cursor: inherit;
+  line-height: inherit;
+  overflow-y: auto;
+  scrollbar-width: none; /*For Firefox*/;
+  -ms-overflow-style: none;  /*For Internet Explorer 10+*/;
+}
+
+// select {
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+// }
+
+// select::-ms-expand {
+//   display: none;
+// }
+
+.tire-filter__tirepromo-content {
+  display: flex;
+  flex-wrap: wrap;
+
+  button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.tire-filter__tireradius-trigger {
+  width: 100%;
+}
+
+.tire-filter__tireradius  {
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+  button {
+    margin-bottom: 15px;
+    margin-right: 20px;
+  }
+}
+
+.tire-filter__tireradius--R17 {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tire-filter__tireradius-trigger {
+    width: 100%;
+  }
+
+  ul {
+    padding: 0;
+    width: 50%;
+  }
+}
+
+.tire-filter__diametr,
+.tire-filter__profile,
+.tire-filter__width {
+  display: flex;
+  justify-content: space-between;
+
+  option {
+    height: 10px;
+  }
+
+  select {
+    width: 68px;
+  }
+}
+
+.tire-filter__season-content,
+.tire-filter__tiretype-content,
+.tire-filter__tirebrand-content,
+.tire-filter__tiremodel-content,
+.tire-filter__tiretech-content,
+.tire-filter__tirecountry-content {
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-between;
+}
+
+.tire-filter__input-wrapper--search {
+  width: 100%;
+}
+
+.tire-filter__input-wrapper:not(.tire-filter__input-wrapper--search) {
+  margin-right: 10px;
+}
+
+select>option {
+  font-size: 14px;
+}
+
+// select::-ms-expand {
+//   display: none;
+//   border-radius: 0;
+//   background-color: $white;
+// }
+
+option {
+  padding: 0;
+}

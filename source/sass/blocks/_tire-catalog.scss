@@ -1,6 +1,7 @@
 .tire-catalog {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .tire-catalog__list {
