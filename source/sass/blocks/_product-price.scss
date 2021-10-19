@@ -1,6 +1,7 @@
 .product-price {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .product-price__full {
@@ -15,16 +16,5 @@
 
   &--active {
     display: block;
-  }
-}
-
-.product-price__inform {
-  display: none;
-  width: 190px;
-  margin: 0 auto;
-  margin-top: 17px;
-
-  &--active {
-    display: inline;
   }
 }

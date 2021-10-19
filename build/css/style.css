@@ -77,6 +77,18 @@ a {
   color: #ff7931;
   border-bottom: 1px solid rgba(255, 121, 49, 0.2); }
 
+.button--loadmore {
+  font-size: 14px;
+  background-color: transparent;
+  color: #ff7931;
+  border-bottom: 1px solid rgba(255, 121, 49, 0.2); }
+
+.button--reset {
+  font-size: 13px;
+  background-color: transparent;
+  color: #bdbec2;
+  border-bottom: 1px solid #bdbec2; }
+
 .button--like svg {
   fill: none;
   stroke: #a8a8a8; }
@@ -85,6 +97,40 @@ a {
   fill: #ff7931;
   stroke: #ff7931; }
 
+.button--promo {
+  color: #bdbec2;
+  background-color: #f0f0f4;
+  padding: 6px 15px 5px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.button--promo--active {
+  background: linear-gradient(91.1deg, #9710E9 1.17%, #FD8D43 99.31%);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #ffffff; }
+
+.button--sort-class,
+.button--tireradius {
+  padding: 4px 22px;
+  font-size: 14px;
+  color: #48494d;
+  border-radius: 150px;
+  background-color: #f4f4f6; }
+  .button--sort-class:hover, .button--sort-class:focus,
+  .button--tireradius:hover,
+  .button--tireradius:focus {
+    opacity: 0.8; }
+  .button--sort-class--active,
+  .button--tireradius--active {
+    color: #ffffff;
+    background-color: #ff7931; }
+
+.button--axis {
+  font-size: 14px;
+  padding: 4px 12px; }
+
 .page-header {
   font-size: 20px;
   font-weight: 700;
@@ -92,6 +138,9 @@ a {
 
 .page-header__navigation-wrapper {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.page-header__product-navigation {
+  padding: 15px 0; }
 
 .container {
   width: 1170px;
@@ -187,9 +236,6 @@ a {
   @media (max-width: 768px) {
     .navigation__adress {
       display: none; } }
-
-.navigation__product-navigation {
-  padding: 15px 0; }
 
 .user-navigation {
   list-style: none;
@@ -304,7 +350,7 @@ a {
 
 .timer {
   background-color: #f0f0f4;
-  padding: 15px 20px 8px;
+  padding: 15px 0 8px;
   font-size: 18px; }
 
 .timer__wrapper {
@@ -339,6 +385,10 @@ a {
   font-size: 20px;
   font-weight: 700;
   color: #48494d; }
+
+.timer__note {
+  display: block;
+  text-align: center; }
 
 .logo {
   position: relative; }
@@ -408,11 +458,11 @@ a {
   right: 19px; }
 
 .promo-product__timer {
-  display: block;
   -ms-flex-item-align: end;
       align-self: end;
-  width: 100%;
-  z-index: -1; }
+  z-index: -1;
+  margin: 0;
+  width: 100%; }
 
 .price {
   display: -webkit-box;
@@ -715,14 +765,16 @@ input {
 
 .product-card {
   width: 268px;
-  min-height: 401px;
+  height: 401px;
   border: 1px solid #cdcdcd;
   border-radius: 3px;
   text-align: center;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   @media (max-width: 768px) {
     .product-card {
       margin: 0 auto; } }
@@ -730,13 +782,11 @@ input {
     -webkit-box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
             box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25); }
   .product-card figcaption {
-    text-transform: capitalize;
-    margin-bottom: 20px; }
+    text-transform: capitalize; }
   .product-card figure {
     margin: 0 auto;
     -ms-flex-item-align: start;
         align-self: flex-start;
-    margin-bottom: 32px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -789,8 +839,19 @@ input {
   top: 20px;
   right: 20px; }
 
+.product-card__link {
+  width: 100%; }
+
 .product-card__like {
   background-color: transparent; }
+
+.product-card__inform {
+  display: none;
+  width: 190px;
+  margin: 0 auto;
+  margin-top: 17px; }
+  .product-card__inform--active {
+    display: inline; }
 
 .product-price {
   display: -webkit-box;
@@ -799,7 +860,8 @@ input {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  margin: 0 auto; }
 
 .product-price__full {
   font-size: 30px;
@@ -811,14 +873,6 @@ input {
   font-weight: 700; }
   .product-price__notavailable--active {
     display: block; }
-
-.product-price__inform {
-  display: none;
-  width: 190px;
-  margin: 0 auto;
-  margin-top: 17px; }
-  .product-price__inform--active {
-    display: inline; }
 
 .relevants {
   padding-top: 40px;
@@ -960,15 +1014,6 @@ input {
   font-size: 30px;
   margin-bottom: 31px; }
 
-.sort__class button {
-  padding: 4px 22px;
-  font-size: 14px;
-  color: #48494d;
-  border-radius: 150px;
-  background-color: #f4f4f6; }
-  .sort__class button:hover, .sort__class button:focus {
-    opacity: 0.8; }
-
 .sort__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -994,7 +1039,10 @@ input {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .tire-catalog__list {
   margin-left: auto; }
@@ -1008,7 +1056,8 @@ input {
       flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding-bottom: 40px; }
 
 .tire-list__product-card {
   margin-bottom: 30px; }
@@ -1024,3 +1073,181 @@ input {
   text-transform: uppercase;
   margin: 0 auto;
   margin-right: 39px; }
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: inherit;
+  line-height: inherit;
+  overflow-y: auto;
+  scrollbar-width: none;
+  /*For Firefox*/
+  -ms-overflow-style: none;
+  /*For Internet Explorer 10+*/ }
+
+.tire-filter__tirepromo-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .tire-filter__tirepromo-content button {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+
+.tire-filter__tireradius-trigger {
+  width: 100%; }
+
+.tire-filter__tireradius {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .tire-filter__tireradius button {
+    margin-bottom: 15px;
+    margin-right: 20px; }
+
+.tire-filter__tireradius--R17 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .tire-filter__tireradius--R17 .tire-filter__tireradius-trigger {
+    width: 100%; }
+  .tire-filter__tireradius--R17 .tire-filter__radius-buttons {
+    padding: 0;
+    width: 50%; }
+
+.tire-filter__diametr,
+.tire-filter__profile,
+.tire-filter__width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .tire-filter__diametr option,
+  .tire-filter__profile option,
+  .tire-filter__width option {
+    height: 10px; }
+  .tire-filter__diametr select,
+  .tire-filter__profile select,
+  .tire-filter__width select {
+    width: 68px; }
+
+.tire-filter__season-content,
+.tire-filter__tiretype-content,
+.tire-filter__tirebrand-content,
+.tire-filter__tiremodel-content,
+.tire-filter__tiretech-content,
+.tire-filter__tirecountry-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+
+.tire-filter__input-wrapper--search {
+  width: 100%; }
+
+.tire-filter__input-wrapper:not(.tire-filter__input-wrapper--search) {
+  margin-right: 10px; }
+
+select > option {
+  font-size: 14px; }
+
+option {
+  padding: 0; }
+
+.pagination {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 100px; }
+
+.pagination__list {
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  text-align: center; }
+
+.pagination__page {
+  padding: 10px 13px 8px 15px;
+  border: 2px solid transparent;
+  margin-right: 5px; }
+
+.pagination__page--active {
+  padding: 9px 12px 7px 14px;
+  color: #ff7931;
+  border: 2px solid #ff7931; }
+
+.product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.product__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative; }
+  .product__img img {
+    margin: 0 auto;
+    margin-top: 44px; }
+
+.product__price {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.product__credit-lable {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.product__promo-lable {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.product__icon-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }

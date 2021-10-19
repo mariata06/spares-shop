@@ -1,11 +1,12 @@
 .product-card {
   width: 268px;
-  min-height: 401px;
+  height: 401px;
   border: 1px solid $very-light-grey;
   border-radius: 3px;
   text-align: center;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
 
   @media (max-width: $viewport--md) {
     margin: 0 auto;
@@ -18,13 +19,13 @@
 
   figcaption {
     text-transform: capitalize;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
   }
 
   figure {
     margin: 0 auto;
     align-self: flex-start;
-    margin-bottom: 32px;
+    //margin-bottom: 32px;
     display: flex;
     flex-direction: column;
   }
@@ -88,6 +89,21 @@
   right: 20px;
 }
 
+.product-card__link {
+  width: 100%;
+}
+
 .product-card__like {
   background-color: transparent;
+}
+
+.product-card__inform {
+  display: none;
+  width: 190px;
+  margin: 0 auto;
+  margin-top: 17px;
+
+  &--active {
+    display: inline;
+  }
 }

@@ -1,0 +1,51 @@
+.product {
+  display: flex;
+}
+
+.product__desc {
+  display: flex;
+  //flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.product__img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  flex-direction: column;
+  position: relative;
+
+  img {
+    margin: 0 auto;
+    margin-top: 44px;
+  }
+}
+
+.product__price {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.product__credit-lable {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.product__promo-lable {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product__icon-box {
+  display: flex;
+}
+
+.product__buy {
+  margin-right: auto;
+}

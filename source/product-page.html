@@ -16,46 +16,80 @@
   </header>
 
   <main class="main">
-    <section class="product container">
-      <div class="product__wrapper">
+    <section class="product-page container">
+      <!-- <h2 class="visually-hidden">Страница Продукта</h2> -->
+      <div class="product__wrapper product">
         <div class="product__img">
-          <figure>
-            <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+          <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
               height="181">
-            <figcaption>
-              Шина 205/80 R16 104Q Misha RF Power Grum
-            </figcaption>
-            <div class="product__price product-price">
-              <!-- <span class="product-price__full">440 P</span> -->
-              <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-            </div>
-          </figure>
-          <div class="product-card__lable promo-lable promo-lable--active">
-            sale
+          <span class="product__price">
+            <span class="product__price-full">15 981 ₽</span>
+            <span class="product__price-discount">12 981 ₽</span>
+          </span>
+          <div class="product__promo-lable">
+            <div class="product__promo-sale">sale</div>
+            <div class="product__promo-gift">+ подарок</div>
           </div>
-          <!-- <button type="button" class="product-card__buy button">
-            <span class="visually-hidden">Положить в корзину</span>
-            <svg width="22" height="26">
-              <use xlink:href="img/sprite.svg#bag-icon"></use>
-            </svg>
-          </button> -->
-          <button class="product-card__quick-view button button--quick-view" type="button">
-            быстрый просмотр
-          </button>
-          <div class="product-card__icon-box">
+          <div class="product__credit-lable">
+            <span>0/0/24</span>
+            <span>625 ₽ в месяц</span>
+          </div>
+        </div>
+        <div class="product__desc">
+          <h3 class="product__title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
+          <span>Код товара: 1380198269 </span>
+          <div class="product__icon-box">
             <button class="product-card__like button button--like">
               <svg width="27" height="25">
                 <use xlink:href="img/sprite.svg#heart-icon"></use>
               </svg>
             </button>
-            <svg width="31" height="31">
-              <use xlink:href="img/sprite.svg#sun-icon"></use>
+            <svg width="20" height="27">
+              <use xlink:href="img/sprite.svg#amount-icon"></use>
             </svg>
+            <div class="product__rate">
+              <svg width="23" height="21">
+                <use xlink:href="img/sprite.svg#star-icon"></use>
+              </svg>
+              <svg width="23" height="21">
+                <use xlink:href="img/sprite.svg#star-icon"></use>
+              </svg>
+              <svg width="23" height="21">
+                <use xlink:href="img/sprite.svg#star-icon"></use>
+              </svg>
+              <svg width="23" height="21">
+                <use xlink:href="img/sprite.svg#star-icon"></use>
+              </svg>
+              <svg width="23" height="21">
+                <use xlink:href="img/sprite.svg#star-icon"></use>
+              </svg>
+            </div>
           </div>
-        </div>
-        <div class="product__desc">
-
+          <div class="product__info">
+            <button type="button">Характеристики</button>
+            <button type="button">Наличие в автосалоне</button>
+          </div>
+          <div class="product__features">
+            <table>
+              <tr>
+                <td>Производитель</td><td>Кама</td>
+              </tr>
+              <tr>
+                <td>Диаметр</td><td>20</td>
+              </tr>
+              <tr>
+                <td>Сезон</td><td>Всесезонная</td>
+              </tr>
+              <tr>
+                <td>Индекс скорости нагрузки</td><td>141/139L</td>
+              </tr>
+              <tr>
+                <td>Серия</td><td>HN 06</td>
+              </tr>
+            </table>
+            <button type="button" class="button button--loadmore">Показать еще</button>
+          </div>
+          <button type="button" class="product__buy button">Купить шину</button>
         </div>
       </div>
     </section>

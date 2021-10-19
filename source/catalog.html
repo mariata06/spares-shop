@@ -74,7 +74,7 @@
     </div>
     <div class="page-header__navigation-wrapper">
       <!-- Slider main container -->
-      <div  class="navigation__product-navigation product-navigation container">
+      <div  class="page-header__product-navigation product-navigation container">
         <div class="swiper swiper--product-navigation">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
@@ -138,6 +138,7 @@
     </section>
 
     <section class="tire-catalog container">
+      <h2 class="visually-hidden">Каталог шин</h2>
       <div class="tire-catalog__filter tire-filter">
         <form action="/" method="POST">
           <div class="tire-filter__params">
@@ -205,7 +206,7 @@
             </div>
             <div class="tire-filter__diametr">
               Диаметр
-              <select name="" id="">
+              <select name="tire-diametr" id="tire-diametr">
                 <option selected value="16">16</option>
                 <option value="10">10</option>
                 <option value="12">12</option>
@@ -232,7 +233,7 @@
             </div>
             <div class="tire-filter__profile">
               Профиль
-              <select name="" id="">
+              <select name="tire-profile" id="tire-profile">
                 <option selected value="35">35</option>
                 <option value="40">40</option>
                 <option value="45">45</option>
@@ -244,7 +245,7 @@
             </div>
             <div class="tire-filter__width">
               Ширина
-              <select name="" id="">
+              <select name="tire-width" id="tire-width">
                 <option selected value="155">155</option>
                 <option value="165">165</option>
                 <option value="175">175</option>
@@ -304,7 +305,7 @@
               </div>
               <div class="tire-filter__tiremodel-content">
                 <div class="tire-filter__input-wrapper tire-filter__input-wrapper--search">
-                  <input id="tirebrand-search" type="search" placeholder="Введите модель шины">
+                  <input id="tiremodel-search" type="search" placeholder="Введите модель шины">
                 </div>
                 <div class="tire-filter__input-wrapper">
                   <input type="checkbox">
@@ -406,7 +407,7 @@
                 Марка
               </div>
               <div class="tire-filter__autobrand-content">
-                <select name="" id="">
+                <select name="tire-autobrand" id="tire-autobrand">
                   <option selected value="BMW">BMW</option>
                   <option value="Audi">Audi</option>
                   <option value="Mazda">Mazda</option>
@@ -420,7 +421,7 @@
                 Марка
               </div>
               <div class="tire-filter__automodel-content">
-                <select name="" id="">
+                <select name="tire-automodel" id="tire-automodel">
                   <option selected value="1-series">1-series</option>
                   <option value="X5">X5</option>
                   <option value="3">3</option>
@@ -434,7 +435,7 @@
                 Кузов
               </div>
               <div class="tire-filter__carcase-content">
-                <select name="" id="">
+                <select name="tire-carcase" id="tire-carcase">
                   <option selected value="E81 3d">E81 3d</option>
                   <option value="E81 3d">E81 3d</option>
                   <option value="E81 3d">E81 3d</option>
@@ -446,7 +447,7 @@
                 Модификация
               </div>
               <div class="tire-filter__automodification-content">
-                <select name="" id="">
+                <select name="tire-automodif" id="tire-automodif">
                   <option selected value="116 d">116 d</option>
                   <option value="116 d">116 d</option>
                   <option value="116 d">116 d</option>
@@ -466,21 +467,21 @@
               <div class="tire-filter__tireradius-trigger">
                 R17
               </div>
-              <ul>
+              <div class="tire-filter__radius-buttons">
                 <button type="button" class="button button--axis">Передняя ось</button>
                 <button type="button" class="button button--tireradius">215/45 R17</button>
                 <button type="button" class="button button--tireradius">215/50 R17</button>
                 <button type="button" class="button button--tireradius">205/50 R17</button>
                 <button type="button" class="button button--tireradius">195/55 R17</button>
                 <button type="button" class="button button--tireradius">225/55 R17</button>
-              </ul>
-              <ul>
+              </div>
+              <div class="tire-filter__radius-buttons">
                 <button type="button" class="button button--axis">Задняя ось</button>
                 <button type="button" class="button button--tireradius">225/45 R17</button>
                 <button type="button" class="button button--tireradius button--tireradius--active">225/50 R17</button>
                 <button type="button" class="button button--tireradius">245/50 R17</button>
                 <button type="button" class="button button--tireradius">205/55 R17</button>
-              </ul>
+              </div>
 
             </div>
             <div class="tire-filter__tireradius tire-filter__tireradius--R18">
@@ -503,21 +504,23 @@
           <button class="button button--reset" type="button">Сбросить фильтр</button>
         </form>
       </div>
+
       <div class="tire-catalog__wrapper">
         <div class="tire-catalog__list tire-list">
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <!-- <span class="product-price__full">11 680 P</span> -->
                 <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-                <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <div class="product-card__lable promo-lable promo-lable--active">
               sale
             </div>
@@ -527,6 +530,7 @@
                 <use xlink:href="img/sprite.svg#bag-icon"></use>
               </svg>
             </button> -->
+            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
             <button class="product-card__quick-view button button--quick-view" type="button">
               быстрый просмотр
             </button>
@@ -540,56 +544,61 @@
                 <use xlink:href="img/sprite.svg#sun-icon"></use>
               </svg>
             </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <span class="product-price__full">11 680 P</span>
                 <span class="product-price__notavailable">нет в наличии</span>
-                <button type="button" class="product-price__inform button">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <!-- <div class="product-card__lable promo-lable promo-lable--active">
-              sale
-            </div> -->
-            <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
+                sale
+              </div> -->
+              <button type="button" class="product-card__buy button">
+                <span class="visually-hidden">Положить в корзину</span>
+                <svg width="22" height="26">
+                  <use xlink:href="img/sprite.svg#bag-icon"></use>
                 </svg>
               </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+              <button type="button" class="product-card__inform button">сообщить о поступлении</button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <!-- <span class="product-price__full">11 680 P</span> -->
                 <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-                <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <div class="product-card__lable promo-lable promo-lable--active">
               sale
             </div>
@@ -599,6 +608,7 @@
                 <use xlink:href="img/sprite.svg#bag-icon"></use>
               </svg>
             </button> -->
+            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
             <button class="product-card__quick-view button button--quick-view" type="button">
               быстрый просмотр
             </button>
@@ -612,20 +622,22 @@
                 <use xlink:href="img/sprite.svg#sun-icon"></use>
               </svg>
             </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <!-- <span class="product-price__full">11 680 P</span> -->
                 <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-                <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <div class="product-card__lable promo-lable promo-lable--active">
               sale
             </div>
@@ -635,6 +647,7 @@
                 <use xlink:href="img/sprite.svg#bag-icon"></use>
               </svg>
             </button> -->
+            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
             <button class="product-card__quick-view button button--quick-view" type="button">
               быстрый просмотр
             </button>
@@ -648,56 +661,61 @@
                 <use xlink:href="img/sprite.svg#sun-icon"></use>
               </svg>
             </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <span class="product-price__full">11 680 P</span>
                 <span class="product-price__notavailable">нет в наличии</span>
-                <button type="button" class="product-price__inform button">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <!-- <div class="product-card__lable promo-lable promo-lable--active">
-              sale
-            </div> -->
-            <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
+                sale
+              </div> -->
+              <button type="button" class="product-card__buy button">
+                <span class="visually-hidden">Положить в корзину</span>
+                <svg width="22" height="26">
+                  <use xlink:href="img/sprite.svg#bag-icon"></use>
                 </svg>
               </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+              <button type="button" class="product-card__inform button">сообщить о поступлении</button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <!-- <span class="product-price__full">11 680 P</span> -->
                 <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-                <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <div class="product-card__lable promo-lable promo-lable--active">
               sale
             </div>
@@ -707,6 +725,7 @@
                 <use xlink:href="img/sprite.svg#bag-icon"></use>
               </svg>
             </button> -->
+            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
             <button class="product-card__quick-view button button--quick-view" type="button">
               быстрый просмотр
             </button>
@@ -720,20 +739,22 @@
                 <use xlink:href="img/sprite.svg#sun-icon"></use>
               </svg>
             </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <!-- <span class="product-price__full">11 680 P</span> -->
                 <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-                <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <div class="product-card__lable promo-lable promo-lable--active">
               sale
             </div>
@@ -743,6 +764,7 @@
                 <use xlink:href="img/sprite.svg#bag-icon"></use>
               </svg>
             </button> -->
+            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
             <button class="product-card__quick-view button button--quick-view" type="button">
               быстрый просмотр
             </button>
@@ -756,56 +778,61 @@
                 <use xlink:href="img/sprite.svg#sun-icon"></use>
               </svg>
             </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <span class="product-price__full">11 680 P</span>
                 <span class="product-price__notavailable">нет в наличии</span>
-                <button type="button" class="product-price__inform button">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <!-- <div class="product-card__lable promo-lable promo-lable--active">
-              sale
-            </div> -->
-            <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
+                sale
+              </div> -->
+              <button type="button" class="product-card__buy button">
+                <span class="visually-hidden">Положить в корзину</span>
+                <svg width="22" height="26">
+                  <use xlink:href="img/sprite.svg#bag-icon"></use>
                 </svg>
               </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+              <button type="button" class="product-card__inform button">сообщить о поступлении</button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <!-- <span class="product-price__full">11 680 P</span> -->
                 <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-                <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <div class="product-card__lable promo-lable promo-lable--active">
               sale
             </div>
@@ -815,6 +842,7 @@
                 <use xlink:href="img/sprite.svg#bag-icon"></use>
               </svg>
             </button> -->
+            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
             <button class="product-card__quick-view button button--quick-view" type="button">
               быстрый просмотр
             </button>
@@ -828,20 +856,22 @@
                 <use xlink:href="img/sprite.svg#sun-icon"></use>
               </svg>
             </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <!-- <span class="product-price__full">11 680 P</span> -->
                 <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-                <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <div class="product-card__lable promo-lable promo-lable--active">
               sale
             </div>
@@ -851,6 +881,7 @@
                 <use xlink:href="img/sprite.svg#bag-icon"></use>
               </svg>
             </button> -->
+            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
             <button class="product-card__quick-view button button--quick-view" type="button">
               быстрый просмотр
             </button>
@@ -864,56 +895,61 @@
                 <use xlink:href="img/sprite.svg#sun-icon"></use>
               </svg>
             </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <span class="product-price__full">11 680 P</span>
                 <span class="product-price__notavailable">нет в наличии</span>
-                <button type="button" class="product-price__inform button">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <!-- <div class="product-card__lable promo-lable promo-lable--active">
-              sale
-            </div> -->
-            <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
+                sale
+              </div> -->
+              <button type="button" class="product-card__buy button">
+                <span class="visually-hidden">Положить в корзину</span>
+                <svg width="22" height="26">
+                  <use xlink:href="img/sprite.svg#bag-icon"></use>
                 </svg>
               </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </a>
-          <a href="product-page.html" class="tire-list__product-card product-card">
-            <figure>
-              <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
-                height="181">
-              <figcaption>
-                Шина 205/80 R16 104Q Misha RF Power Grum
-              </figcaption>
-              <div class="product-card__price product-price">
+              <button type="button" class="product-card__inform button">сообщить о поступлении</button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+          </div>
+
+          <div class="tire-list__product-card product-card">
+            <a href="product-page.html" class="product-card__link">
+              <figure>
+                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                  height="181">
+                <figcaption>
+                  Шина 205/80 R16 104Q Misha RF Power Grum
+                </figcaption>
+              </figure>
+              <span class="product-card__price product-price">
                 <!-- <span class="product-price__full">11 680 P</span> -->
                 <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-                <button type="button" class="product-price__inform product-price__inform--active button button--inform">сообщить о поступлении</button>
-              </div>
-            </figure>
+              </span>
+            </a>
             <div class="product-card__lable promo-lable promo-lable--active">
               sale
             </div>
@@ -923,6 +959,7 @@
                 <use xlink:href="img/sprite.svg#bag-icon"></use>
               </svg>
             </button> -->
+            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
             <button class="product-card__quick-view button button--quick-view" type="button">
               быстрый просмотр
             </button>
@@ -936,7 +973,8 @@
                 <use xlink:href="img/sprite.svg#sun-icon"></use>
               </svg>
             </div>
-          </a>
+          </div>
+
         </div>
         <div class="tire-catalog__pagination pagination">
           <ul class="pagination__list">
