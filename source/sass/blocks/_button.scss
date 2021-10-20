@@ -31,21 +31,25 @@
 
 .button--inform {
   font-size: 16px;
-  background-color: transparent;
-  color: $crusta;
-  border-bottom: 1px solid rgba(255, 121, 49, 0.2);
 }
 
 .button--loadmore {
   font-size: 14px;
-  background-color: transparent;
+}
+
+.button--lowerprice {
+  font-size: 15px;
+}
+
+.button--inform,
+.button--loadmore,
+.button--lowerprice {
   color: $crusta;
   border-bottom: 1px solid rgba(255, 121, 49, 0.2);
 }
 
 .button--reset {
   font-size: 13px;
-  background-color: transparent;
   color: $french-grey;
   border-bottom: 1px solid $french-grey;
 }

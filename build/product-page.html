@@ -16,34 +16,40 @@
   </header>
 
   <main class="main">
-    <section class="product-page container">
+    <section class="product container">
       <!-- <h2 class="visually-hidden">Страница Продукта</h2> -->
-      <div class="product__wrapper product">
+      <div class="product__wrapper">
         <div class="product__img">
-          <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+          <img src="img/tire-product-misha-desktop.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="222" height="380">
           <span class="product__price">
-            <span class="product__price-full">15 981 ₽</span>
-            <span class="product__price-discount">12 981 ₽</span>
+            <span class="product__price-full">15 981&nbsp;&#x20bd;</span>
+            <span class="product__price-discount">12 981&nbsp;&#x20bd;</span>
           </span>
-          <div class="product__promo-lable">
+          <div class="product__promo-label">
             <div class="product__promo-sale">sale</div>
             <div class="product__promo-gift">+ подарок</div>
           </div>
-          <div class="product__credit-lable">
+          <div class="product__credit-label">
             <span>0/0/24</span>
-            <span>625 ₽ в месяц</span>
+            <span class="product__credit-payment">625&nbsp;&#x20bd; в месяц</span>
+          </div>
+          <button type="button" class="product__lowerprice button button--lowerprice">Нашли дешевле? Снизим цену!</button>
+          <div class="product__icon-box">
+            <svg width="36" height="40">
+              <use xlink:href="img/sprite.svg#snowflake-icon"></use>
+            </svg>
           </div>
         </div>
         <div class="product__desc">
-          <h3 class="product__title">Шина 205/80 R16 104Q Misha RF Power Grum</h3>
-          <span>Код товара: 1380198269 </span>
-          <div class="product__icon-box">
-            <button class="product-card__like button button--like">
+          <h2 class="product__title">Шина 205/80 R16 104Q Misha RF Power Grum</h2>
+          <span class="product__code">Код товара: 1380198269 </span>
+          <div class="product__desc-icons">
+            <button class="product__like button button--like">
               <svg width="27" height="25">
                 <use xlink:href="img/sprite.svg#heart-icon"></use>
               </svg>
             </button>
-            <svg width="20" height="27">
+            <svg class="product__instock-icon" width="20" height="27">
               <use xlink:href="img/sprite.svg#amount-icon"></use>
             </svg>
             <div class="product__rate">
@@ -65,8 +71,8 @@
             </div>
           </div>
           <div class="product__info">
-            <button type="button">Характеристики</button>
-            <button type="button">Наличие в автосалоне</button>
+            <button class="product__char-button product__char-button--active button" type="button">Характеристики</button>
+            <button class="product__instock-button button" type="button">Наличие в автосалоне</button>
           </div>
           <div class="product__features">
             <table>
@@ -88,8 +94,122 @@
             </table>
             <button type="button" class="button button--loadmore">Показать еще</button>
           </div>
+          <div class="product__instock">
+            Есть в наличии на складе
+          </div>
           <button type="button" class="product__buy button">Купить шину</button>
         </div>
+      </div>
+    </section>
+
+    <section class="product-spec container">
+      <h2 class="visually-hidden">Подробные характеристики товара</h2>
+      <div class="product-spec__part">
+        <button class="product-spec__char-button button" type="button">О товаре</button>
+        <button class="product-spec__char-button button" type="button">Характеристики</button>
+        <button class="product-spec__char-button button" type="button">Отзывы</button>
+        <button class="product-spec__char-button product-spec__char-button--active button" type="button">Самовывоз</button>
+        <button class="product-spec__char-button button" type="button">Доставка</button>
+        <button class="product-spec__char-button button" type="button">Услуги</button>
+        <button class="product-spec__char-button button" type="button">Бизнесу</button>
+      </div>
+      <div class="product-spec__content">
+        <form action="/" method="POST" class="product-spec__store-search-form form">
+          <div class="product-spec__input-wrapper product-spec__input-wrapper--search">
+            <label>Магазин</label>
+            <input id="store-search" type="search" placeholder="">
+            <button class="button" type="submit">
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#search2-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="product-spec__input-wrapper">
+            <input type="checkbox">
+            <label>Забрать сегодня</label>
+          </div>
+          <div class="product-spec__input-wrapper">
+            <input type="checkbox">
+            <label>Забрать завтра и позднее</label>
+          </div>
+        </form>
+        <table>
+          <tr>
+            <th>Адрес</th><th>Режим работы</th><th>Доступно</th><th>Количество</th><th></th>
+          </tr>
+          <tr>
+            <td>Санкт-Петербург, ул Большая&nbsp;Конюшенная, д 19</td>
+            <td>
+              <div class="product-spec__times">
+                <span class="product-spec__times-wrapper">
+                  <span class="product-spec__times-days">пн-сб:</span>
+                  <span>08:00-19:00</span>
+                </span>
+                <span class="product-spec__times-wrapper">
+                  <span class="product-spec__times-days">вс:</span>
+                  <span>09:00-17:00</span>
+                </span>
+              </div>
+            </td>
+            <td>Завтра и позднее</td>
+            <td>Мало</td>
+            <td><button class="product-spec__buy button" type="button">Купить</button></td>
+          </tr>
+          <tr>
+            <td>Санкт-Петербург, ул Большая&nbsp;Конюшенная, д 19</td>
+            <td>
+              <div class="product-spec__times">
+                <span class="product-spec__times-wrapper">
+                  <span class="product-spec__times-days">пн-сб:</span>
+                  <span>08:00-19:00</span>
+                </span>
+                <span class="product-spec__times-wrapper">
+                  <span class="product-spec__times-days">вс:</span>
+                  <span>09:00-17:00</span>
+                </span>
+              </div>
+            </td>
+            <td>Завтра и позднее</td>
+            <td>Много</td>
+            <td><button class="product-spec__buy button" type="button">Купить</button></td>
+          </tr>
+          <tr>
+            <td>Санкт-Петербург, ул Большая&nbsp;Конюшенная, д 19</td>
+            <td>
+              <div class="product-spec__times">
+                <span class="product-spec__times-wrapper">
+                  <span class="product-spec__times-days">пн-сб:</span>
+                  <span>08:00-19:00</span>
+                </span>
+                <span class="product-spec__times-wrapper">
+                  <span class="product-spec__times-days">вс:</span>
+                  <span>09:00-17:00</span>
+                </span>
+              </div>
+            </td>
+            <td>Завтра и позднее</td>
+            <td>Достаточно</td>
+            <td><button class="product-spec__buy button" type="button">Купить</button></td>
+          </tr>
+          <tr>
+            <td>Санкт-Петербург, ул Большая&nbsp;Конюшенная, д 19</td>
+            <td>
+              <div class="product-spec__times">
+                <span class="product-spec__times-wrapper">
+                  <span class="product-spec__times-days">пн-сб:</span>
+                  <span>08:00-19:00</span>
+                </span>
+                <span class="product-spec__times-wrapper">
+                  <span class="product-spec__times-days">вс:</span>
+                  <span>09:00-17:00</span>
+                </span>
+              </div>
+            </td>
+            <td>Завтра и позднее</td>
+            <td>Мало</td>
+            <td><button class="product-spec__buy button" type="button">Купить</button></td>
+          </tr>
+        </table>
       </div>
     </section>
   </main>

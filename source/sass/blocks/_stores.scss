@@ -50,49 +50,49 @@
   }
 }
 
-.stores__item .stores__img-lable {
+.stores__item .stores__img-label {
   position: absolute;
   top: 16px;
   right: 25px;
 }
 
-.stores__img-lable--shampoo {
+.stores__img-label--shampoo {
   &::before {
     content: url("../img/shampoo.svg");
   }
 }
 
-.stores__img-lable--tires {
+.stores__img-label--tires {
   &::before {
     content: url("../img/tires.svg");
   }
 }
 
-.stores__img-lable--tools {
+.stores__img-label--tools {
   &::before {
     content: url("../img/tools.svg");
   }
 }
 
-.stores__img-lable--shampoo {
+.stores__img-label--shampoo {
   &::before {
     content: url("../img/shampoo.svg");
   }
 }
 
-.stores__img-lable--spares {
+.stores__img-label--spares {
   &::before {
     content: url("../img/spares.svg");
   }
 }
 
-.stores__img-lable--battery {
+.stores__img-label--battery {
   &::before {
     content: url("../img/battery.svg");
   }
 }
 
-.stores__img-lable--accessoire {
+.stores__img-label--accessoire {
   &::before {
     content: url("../img/accessoire.svg");
   }

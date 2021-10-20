@@ -1,0 +1,128 @@
+.product-spec__store-search-form {
+  display: flex;
+  justify-content: space-between;
+  //border: 1px solid blue;
+  padding-left: 38px;
+  padding-right: 140px;
+  margin-bottom: 50px;
+
+  input[type="search"] {
+    width: 313px;
+    height: 33px;
+    background-color: $ghost-white;
+    border-radius: 100px;
+    margin-left: 16px;
+    padding-left: 17px;
+  }
+
+  label {
+    font-size: 17px;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 15px;
+  }
+}
+
+.product-spec__input-wrapper--search {
+  position: relative;
+  margin-right: 155px;
+
+  button {
+    position: absolute;
+    right: 9px;
+    top: 7px;
+  }
+}
+
+.product-spec__input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.product-spec {
+  table {
+    width: 1134px;
+    border-collapse: separate;
+    //border: 1px solid green;
+    margin-left: auto;
+  }
+
+  tbody {
+    margin-left: -20px;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  th {
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 21px;
+    padding-top: 0;
+  }
+
+  tr>td:first-child {
+    width: 300px;
+  }
+
+  tr>td:last-child {
+    button {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  th,
+  td {
+    width: 210px;
+    //border: 1px solid red;
+  }
+
+  td {
+    padding: 21px 0;
+    border-bottom: 1px solid rgba(00, 00, 00, 0.1);
+  }
+}
+
+.product-spec__times {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.product-spec__times-wrapper {
+  display: flex;
+}
+
+.product-spec__times-days {
+  display: block;
+  width: 67px;
+}
+
+.product-spec__char-button {
+  padding: 6px 0;
+}
+
+.product-spec__part {
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 38px;
+  background-color: $ghost-white;
+  margin-bottom: 50px;
+}
+
+.product-spec__char-button--active {
+  font-weight: 700;
+  border-bottom: 2px solid $crusta;
+}
+
+.product-spec__buy {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $white;
+  background-color: $crusta;
+  border-radius: 3px;
+  padding: 10px 40px;
+  letter-spacing: 2px;
+}
