@@ -106,3 +106,57 @@
   font-size: 14px;
   padding: 4px 12px;
 }
+
+.button--cart--full  {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 33px;
+    right: -9px;
+    content: "1";
+    padding-top: 5px;
+    font-size: 12px;
+    display: block;
+    width: 23px;
+    height: 23px;
+    border-radius: 100px;
+    background-color: $crusta;
+    color: $white;
+  }
+}
+
+.button--slider-next,
+.button--slider-prev {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  //background: rgba(255, 255, 255, 0.3);
+  //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  //transform: matrix(-1, 0, 0, 1, 0, 0);
+  //content: url("../img/arrow-next.svg");
+  background: $white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  //transform: matrix(-1, 0, 0, 1, 0, 0);
+
+  svg {
+    padding-top: 5px;
+    stroke: $silver;
+    position: absolute;
+  }
+
+  &::after {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $hawkes-blue;
+    svg {
+      stroke: $night-rider;
+    }
+  }
+}
+
+.button--slider-prev {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}

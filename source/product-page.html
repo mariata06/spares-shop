@@ -8,14 +8,106 @@
   <title>Интернет-магазин Автозапчастей: Продукт</title>
 
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
   <header class="page-header">
+    <div class="page-header__navigation-wrapper">
+      <nav class="page-header__navigation navigation navigation--main container">
+        <div class="navigation__mobile-menu mobile-menu">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__list-item"><a href="#">Войти</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Регистрация</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Избранное</a></li>
+            <li class="mobile-menu__list-item mobile-menu__list-item--stores"><a href="#">Магазины</a></li>
+            <li class="mobile-menu__list-item mobile-menu__list-item--promo"><a href="#">Акции</a></li>
+            <li class="mobile-menu__list-item mobile-menu__list-item--delivery"><a href="#">Доставка и оплата</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Каталог запчастей</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Каталог ТО</a></li>
+            <li class="mobile-menu__list-item"><a href="catalog.html">Шины</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Диски</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Аккумуляторы</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Автомасла</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Автолампы</a></li>
+            <li class="mobile-menu__list-item"><a href="#">Аксессуары</a></li>
+            <li class="mobile-menu__list-item">Санкт-Петербург, ул Большая Конюшенная, д 19</li>
+          </ul>
+          <button class="mobile-menu__button button">
+            <svg width="33" height="27">
+              <use xlink:href="img/sprite.svg#burger-icon"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="navigation__logo logo">
+          <a href="index.html">
+            <picture>
+              <source srcset="img/logo-mobile.png" media="(min-width: 768px)">
+              <img src="img/logo-desktop.png" width="102" height="51" alt="Логотип магазина Запчасти">
+            </picture>
+          </a>
+        </div>
+        <p class="navigation__adress">
+          <svg width="35" height="35">
+            <use xlink:href="img/sprite.svg#navigate-icon"></use>
+          </svg>
+          Санкт-Петербург, ул Большая&nbsp;Конюшенная, д 19
+        </p>
+        <div class="navigation__user-navigation user-navigation">
+          <button type="button" class="user-navigation__button button">
+            <svg width="29" height="24">
+              <use xlink:href="img/sprite.svg#heart-icon"></use>
+            </svg>
+          </button>
+          <button type="button" class="user-navigation__button button">
+            <svg width="24" height="25">
+              <use xlink:href="img/sprite.svg#user-icon"></use>
+            </svg>
+          </button>
+          <button type="button" class="user-navigation__button button button--cart--full">
+            <svg width="31" height="28">
+              <use xlink:href="img/sprite.svg#cart-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="page-header__navigation-wrapper">
+      <!-- Slider main container -->
+      <div  class="page-header__product-navigation product-navigation container">
+        <div class="swiper swiper--product-navigation">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Каталог запчастей</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Каталог ТО</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link product-navigation__link--active" href="catalog.html">Шины</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Диски</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Аккумуляторы</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Автомасла</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Автолампы</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Аксессуары</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main class="main">
+
+    <ul class="breadcrumbs container">
+      <li>
+        <a href="index.html">Главная</a>
+      </li>
+      <li>
+        <a href="catalog.html">Шины</a>
+      </li>
+      <li  class="breadcrumbs-current">
+        <a href="catalog.html">Шины зимние</a>
+      </li>
+    </ul>
+
     <section class="product container">
       <!-- <h2 class="visually-hidden">Страница Продукта</h2> -->
       <div class="product__wrapper">
@@ -213,11 +305,214 @@
         </table>
       </div>
     </section>
+
+    <section class="relevants sliders-container">
+      <h2 class="relevants__title container">С этим товаром покупают</h2>
+      <div class="relevants__filter filter filter--relevants">
+        <div class="swiper swiper--relevants relevants__categories categories container">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><button type="button" class="categories__button button">запчасти</button></div>
+            <div class="swiper-slide"><button type="button" class="categories__button button">автохимия</button></div>
+            <div class="swiper-slide"><button type="button" class="categories__button button categories__button--active">шины и диски</button></div>
+            <div class="swiper-slide"><button type="button" class="categories__button button">автоэлектроника</button></div>
+            <div class="swiper-slide"><button type="button" class="categories__button button">инструменты</button></div>
+            <div class="swiper-slide"><button type="button" class="categories__button button">аксессуары и другое</button></div>
+          </div>
+        </div>
+
+        <div class="swiper swiper--relevants-list relevants__list">
+          <div class="swiper-wrapper container">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="relevants__product-card product-card">
+                <a href="product-page.html" class="product-card__link">
+                  <figure>
+                    <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                      height="181">
+                    <figcaption>
+                      Шина 205/80 R16 104Q Misha RF Power Grum
+                    </figcaption>
+                  </figure>
+                  <span class="product-card__price product-price">
+                    <!-- <span class="product-price__full">440&nbsp;&#x20bd;</span> -->
+                    <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
+                  </span>
+                </a>
+                <div class="product-card__lable promo-label promo-label--active">
+                  sale
+                </div>
+                <!-- <button type="button" class="product-card__buy button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="22" height="26">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button> -->
+                <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
+                <button class="product-card__quick-view button button--quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <button class="product-card__like button button--like">
+                    <svg width="27" height="25">
+                      <use xlink:href="img/sprite.svg#heart-icon"></use>
+                    </svg>
+                  </button>
+                  <svg width="31" height="31">
+                    <use xlink:href="img/sprite.svg#sun-icon"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relevants__product-card product-card">
+                <a href="product-page.html" class="product-card__link">
+                  <figure>
+                    <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                      height="181">
+                    <figcaption>
+                      Шина 205/80 R16 104Q Misha RF Power Grum
+                    </figcaption>
+                  </figure>
+                  <span class="product-card__price product-price">
+                    <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
+                    <span class="product-price__notavailable">нет в наличии</span>
+                  </span>
+                </a>
+                <div class="product-card__lable promo-label">
+                  sale
+                </div>
+                <button type="button" class="product-card__buy button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="22" height="26">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button type="button" class="product-card__inform button">сообщить о поступлении</button>
+                <button class="product-card__quick-view button button--quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <button class="product-card__like button button--like">
+                    <svg width="27" height="25">
+                      <use xlink:href="img/sprite.svg#heart-icon"></use>
+                    </svg>
+                  </button>
+                  <svg width="28" height="31">
+                    <use xlink:href="img/sprite.svg#snowflake-icon"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relevants__product-card product-card">
+                <a href="product-page.html" class="product-card__link">
+                  <figure>
+                    <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151"
+                      height="181">
+                    <figcaption>
+                      Шина 205/80 R16 104Q Misha RF Power Grum
+                    </figcaption>
+                  </figure>
+                  <span class="product-card__price product-price">
+                    <!-- <span class="product-price__full">440&nbsp;&#x20bd;</span> -->
+                    <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
+                  </span>
+                </a>
+                <div class="product-card__lable promo-label  promo-label--active">
+                  sale
+                </div>
+                <!-- <button type="button" class="product-card__buy button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="22" height="26">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button> -->
+                <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
+                <button class="product-card__quick-view button button--quick-view" type="button">
+                  быстрый просмотр
+                </button>
+                <div class="product-card__icon-box">
+                  <button class="product-card__like button button--like button--like--active">
+                    <svg width="27" height="25">
+                      <use xlink:href="img/sprite.svg#heart-icon"></use>
+                    </svg>
+                  </button>
+                  <svg width="31" height="31">
+                    <use xlink:href="img/sprite.svg#sun-icon"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="relevants__product-card product-card">
+                <a href="product-page.html" class="product-card__link">
+                  <figure>
+                    <img src="img/tire-contyther-desktop@1x.png" alt="Шина 245/60 R18 105T Contyther Crosh Conta..."
+                      width="151" height="181">
+                    <figcaption>
+                      Шина 245/60 R18 105T Contyther Crosh Conta...
+                    </figcaption>
+                  </figure>
+                  <span class="product-card__price product-price">
+                    <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
+                    <span class="product-price__notavailable">нет в наличии</span>
+                  </span>
+                </a>
+                <div class="product-card__lable promo-label">
+                  sale
+                </div>
+                <button type="button" class="product-card__buy button">
+                  <span class="visually-hidden">Положить в корзину</span>
+                  <svg width="22" height="26">
+                    <use xlink:href="img/sprite.svg#bag-icon"></use>
+                  </svg>
+                </button>
+                <button type="button" class="product-card__inform button button--inform">сообщить о поступлении</button>
+                <button class="product-card__quick-view button button--quick-view" type="button">быстрый просмотр</button>
+                <div class="product-card__icon-box">
+                  <button class="product-card__like button button--like">
+                    <svg width="27" height="25">
+                      <use xlink:href="img/sprite.svg#heart-icon"></use>
+                    </svg>
+                  </button>
+                  <svg width="31" height="31">
+                    <use xlink:href="img/sprite.svg#sun-icon"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <!-- navigation buttons -->
+          <div class="swiper-button-next button button--slider-next">
+            <svg width="15" height="19">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-prev button button--slider-prev">
+            <svg width="15" height="19">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
+          </div>
+        </div>
+        <button type="submit" class="relevants__button button button--more">Показать еще</button>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
   </footer>
 
+  <!-- Swiper JS -->
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/sliders.js"></script>
 </body>
 
 </html>

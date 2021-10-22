@@ -65,7 +65,7 @@
               <use xlink:href="img/sprite.svg#user-icon"></use>
             </svg>
           </button>
-          <button type="button" class="user-navigation__button button">
+          <button type="button" class="user-navigation__button button button--cart--full">
             <svg width="31" height="28">
               <use xlink:href="img/sprite.svg#cart-icon"></use>
             </svg>
@@ -80,14 +80,14 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><a href="#">Каталог запчастей</a></div>
-            <div class="swiper-slide"><a href="#">Каталог ТО</a></div>
-            <div class="swiper-slide"><a href="catalog.html">Шины</a></div>
-            <div class="swiper-slide"><a href="#">Диски</a></div>
-            <div class="swiper-slide"><a href="#">Аккумуляторы</a></div>
-            <div class="swiper-slide"><a href="#">Автомасла</a></div>
-            <div class="swiper-slide"><a href="#">Автолампы</a></div>
-            <div class="swiper-slide"><a href="#">Аксессуары</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Каталог запчастей</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Каталог ТО</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link product-navigation__link--active" href="catalog.html">Шины</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Диски</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Аккумуляторы</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Автомасла</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Автолампы</a></div>
+            <div class="swiper-slide"><a class="product-navigation__link" href="#">Аксессуары</a></div>
           </div>
         </div>
       </div>
@@ -168,8 +168,16 @@
           <div class="swiper-pagination"></div>
 
           <!-- navigation buttons -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next">
+            <svg width="15" height="19">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-prev">
+            <svg width="15" height="19">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
+          </div>
         </div>
 
         <!-- Slider main container -->
@@ -536,8 +544,16 @@
           <div class="swiper-pagination"></div>
 
           <!-- navigation buttons -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next button button--slider-next">
+            <svg width="15" height="19">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-prev button button--slider-prev">
+            <svg width="15" height="19">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
+          </div>
         </div>
         <button type="submit" class="button bestsellers__button button--more">Смотреть еще</button>
       </div>
@@ -739,8 +755,16 @@
           <div class="swiper-pagination"></div>
           <!-- If we need navigation buttons -->
           <!-- navigation buttons -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next button button--slider-next">
+            <svg width="15" height="19">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
+          </div>
+          <div class="swiper-button-prev button button--slider-prev">
+            <svg width="15" height="19">
+              <use xlink:href="img/sprite.svg#arrow-next"></use>
+            </svg>
+          </div>
         </div>
         <button type="submit" class="relevants__button button button--more">Показать еще</button>
       </div>

@@ -16,7 +16,40 @@
 
 .promo-slider .swiper-button-next,
 .promo-slider .swiper-button-prev {
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  //transform: matrix(-1, 0, 0, 1, 0, 0);
+  //content: url("../img/arrow-next.svg");
+
+  svg {
+    padding-top: 5px;
+    stroke: $white;
+    position: absolute;
+  }
+
+  &::after {
+    display: none;
+  }
+
   @media (max-width: $viewport--md) {
     display: none;
   }
+}
+
+.promo-slider .swiper-button-prev {
+  transform: rotate(-180deg);
+}
+
+.promo-slider .swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  background-color: transparent;
+  border: 1px solid $white;
+}
+
+.promo-slider .swiper-pagination-bullet-active {
+  background-color: $white;
 }

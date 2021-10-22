@@ -30,3 +30,12 @@
     margin-right: 13px;
   }
 }
+
+.product-navigation__link {
+  padding: 15px;
+  display: block;
+
+  &--active {
+    border-bottom: 3px solid $crusta;
+  }
+}

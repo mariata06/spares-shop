@@ -91,6 +91,8 @@
 
 .product-card__link {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .product-card__like {
@@ -100,8 +102,7 @@
 .product-card__inform {
   display: none;
   width: 190px;
-  margin: 0 auto;
-  margin-top: 17px;
+  margin: 17px auto;
 
   &--active {
     display: inline;
