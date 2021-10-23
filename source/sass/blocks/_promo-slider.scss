@@ -12,6 +12,13 @@
     width: 100%;
     height: 164px;
   }
+
+  img {
+    @media (max-width: $viewport--sm) {
+      width: 100%;
+      height: 164px;
+    }
+  }
 }
 
 .promo-slider .swiper-button-next,
@@ -48,6 +55,12 @@
   height: 11px;
   background-color: transparent;
   border: 1px solid $white;
+  margin: 0 3px;
+
+  @media (max-width: $viewport--sm) {
+    width: 7px;
+    height: 7px;
+  }
 }
 
 .promo-slider .swiper-pagination-bullet-active {

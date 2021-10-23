@@ -7,13 +7,37 @@
 .page-footer__wrapper {
   display: flex;
   justify-content: space-between;
+  width: 1170px;
+
+  @media (max-width: $viewport--sm) {
+    flex-wrap: wrap;
+    width: 320px;
+  }
 }
 
 .page-footer__navigation {
   width: 718px;
+
+  @media (max-width: $viewport--sm) {
+    margin-top: 40px;
+  }
+}
+
+.page-footer__navigation-accordeon {
+  @media (max-width: $viewport--sm) {
+    flex-direction: column;
+  }
 }
 
 .page-footer__copyright {
   font-size: 14px;
   margin-top: 33px;
+  display: flex;
+
+  span {
+    display: none;
+    @media (max-width: $viewport--sm) {
+      display: block;
+    }
+  }
 }

@@ -2,11 +2,15 @@
   width: 1302px;
   margin: 0 auto;
 
-  @media (max-width: 1280px) {
-    width: 100%;
-  }
+  // @media (max-width: 1280px) {
+  //   width: 100%;
+  // }
 
-  @media (max-width: $viewport--md) {
-    width: 736px;
+  // @media (max-width: $viewport--md) {
+  //   width: 736px;
+  // }
+
+  @media (max-width: $viewport--sm) {
+    width: 320px;
   }
 }

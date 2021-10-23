@@ -8,12 +8,6 @@
     margin-bottom: 5px;
   }
 
-  h3 {
-    font-weight: 700;
-    margin: 0;
-    margin-bottom: 5px;
-  }
-
   ul:first-child {
     width: 97px;
   }
@@ -25,14 +19,67 @@
   }
 }
 
+.accordeon__item {
+  @media (max-width: $viewport--sm) {
+    width: 100%;
+  }
+}
+
 .accordeon__item:first-child {
   width: 97px;
+
+  @media (max-width: $viewport--sm) {
+    width: 100%;
+  }
 }
 
 .accordeon__item:last-child {
   align-self: flex-end;
+
+  @media (max-width: $viewport--sm) {
+    display: none;
+  }
 }
 
 .accordeon__content {
   margin: 0;
+
+  @media (max-width: $viewport--sm) {
+    display: none;
+  }
+}
+
+.accordeon__heading {
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 5px;
+  position: relative;
+  @media (max-width: $viewport--sm) {
+    color: $grey;
+    font-weight: 400;
+    width: 100%;
+    display: block;
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $light-grey;
+    padding-left: 16px;
+
+    &::after {
+      content: url("../img/arrowdown-icon.svg");
+      display: block;
+      width: 12px;
+      height: 8px;
+      position: absolute;
+      top: 15px;
+      right: 16px;
+      fill: $grey;
+    }
+  }
+}
+
+.accordeon__item:first-child>.accordeon__heading {
+  @media (max-width: $viewport--sm) {
+    border-top: 1px solid $light-grey;
+  }
 }

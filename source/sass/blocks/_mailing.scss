@@ -1,11 +1,21 @@
 .mailing {
   width: 294px;
+  @media (max-width: $viewport--sm) {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
   h2 {
     font-size: 14px;
     font-weight: 700;
     margin: 0;
     margin-bottom: 35px;
+
+    @media (max-width: $viewport--sm) {
+      text-align: center;
+      font-size: 17px;
+    }
   }
 
   form {

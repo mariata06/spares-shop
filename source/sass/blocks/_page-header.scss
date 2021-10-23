@@ -6,6 +6,10 @@
 
 .page-header__navigation-wrapper {
   border-bottom: 1px solid rgba(00, 00, 00, 0.1);
+
+  @media (max-width: $viewport--sm) {
+    border-color: $white;
+  }
 }
 
 .page-header__product-navigation {

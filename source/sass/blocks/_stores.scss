@@ -33,6 +33,10 @@
   font-weight: 700;
   width: 198px;
   margin-bottom: 12px;
+
+  @media (max-width: $viewport--sm) {
+    width: 165px;
+  }
 }
 
 .stores__link {
@@ -54,11 +58,24 @@
   position: absolute;
   top: 16px;
   right: 25px;
+
+  @media (max-width: $viewport--sm) {
+    top: unset;
+    right: 20px;
+    bottom: 20px;
+  }
 }
 
 .stores__img-label--shampoo {
   &::before {
     content: url("../img/shampoo.svg");
+  }
+
+  @media (max-width: $viewport--sm) {
+    &::before {
+      height: 41px;
+      content: url("../img/shampoo-small.svg");
+    }
   }
 }
 
@@ -66,17 +83,25 @@
   &::before {
     content: url("../img/tires.svg");
   }
+
+  @media (max-width: $viewport--sm) {
+    &::before {
+      height: 42px;
+      content: url("../img/tires-small.svg");
+    }
+  }
 }
 
 .stores__img-label--tools {
   &::before {
     content: url("../img/tools.svg");
   }
-}
 
-.stores__img-label--shampoo {
-  &::before {
-    content: url("../img/shampoo.svg");
+  @media (max-width: $viewport--sm) {
+    &::before {
+      height: 52px;
+      content: url("../img/tools-small.svg");
+    }
   }
 }
 
@@ -84,16 +109,37 @@
   &::before {
     content: url("../img/spares.svg");
   }
+
+  @media (max-width: $viewport--sm) {
+    &::before {
+      height: 36px;
+      content: url("../img/spares-small.svg");
+    }
+  }
 }
 
 .stores__img-label--battery {
   &::before {
     content: url("../img/battery.svg");
   }
+
+  @media (max-width: $viewport--sm) {
+    &::before {
+      height: 31px;
+      content: url("../img/battery-small.svg");
+    }
+  }
 }
 
 .stores__img-label--accessoire {
   &::before {
     content: url("../img/accessoire.svg");
+  }
+
+  @media (max-width: $viewport--sm) {
+    &::before {
+      height: 42px;
+    content: url("../img/accessoire-small.svg");
+    }
   }
 }

@@ -1,6 +1,10 @@
 .promo {
   padding-top: 78px;
   padding-bottom: 40px;
+
+  @media (max-width: $viewport--sm) {
+    padding-top: 10px;
+  }
 }
 
 .promo__wrapper {

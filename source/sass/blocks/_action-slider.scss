@@ -9,6 +9,10 @@
     height: 431px;
   }
 
+  @media (max-width: $viewport--md) {
+    height: 450px;
+  }
+
   .swiper-slide {
     width: 100%;
   }
@@ -17,8 +21,22 @@
 .action-slider .swiper-pagination {
   display: none;
 
-  @media (max-width: $viewport--md) {
+  @media (max-width: $viewport--sm) {
     display: block;
-    bottom: 0;
   }
+}
+
+.action-slider .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.action-slider .swiper-pagination-bullet-active {
+  background-color: $crusta;
+}
+
+.action-slider .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.action-slider .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 14px;
 }
