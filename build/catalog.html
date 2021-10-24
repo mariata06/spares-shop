@@ -1,1047 +1,1403 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Интернет-магазин Автозапчестей. Каталог товаров">
+    <title>Интернет-магазин Автозапчастей: Каталог</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Интернет-магазин Автозапчестей. Каталог товаров">
-  <title>Интернет-магазин Автозапчастей: Каталог</title>
+    <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
 
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body>
-
-  <header class="page-header">
-    <div class="page-header__navigation-wrapper">
-      <nav class="page-header__navigation navigation navigation--main container">
-        <div class="navigation__mobile-menu mobile-menu">
-          <ul class="mobile-menu__list">
-            <li class="mobile-menu__list-item"><a href="#">Войти</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Регистрация</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Избранное</a></li>
-            <li class="mobile-menu__list-item mobile-menu__list-item--stores"><a href="#">Магазины</a></li>
-            <li class="mobile-menu__list-item mobile-menu__list-item--promo"><a href="#">Акции</a></li>
-            <li class="mobile-menu__list-item mobile-menu__list-item--delivery"><a href="#">Доставка и оплата</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Каталог запчастей</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Каталог ТО</a></li>
-            <li class="mobile-menu__list-item"><a href="catalog.html">Шины</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Диски</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Аккумуляторы</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Автомасла</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Автолампы</a></li>
-            <li class="mobile-menu__list-item"><a href="#">Аксессуары</a></li>
-            <li class="mobile-menu__list-item">Санкт-Петербург, ул Большая Конюшенная, д 19</li>
-          </ul>
-          <button class="mobile-menu__button button">
-            <svg width="33" height="27">
-              <use xlink:href="img/sprite.svg#burger-icon"></use>
+  <body>
+    <header class="page-header">
+      <div class="page-header__navigation-wrapper">
+        <nav class="page-header__navigation navigation navigation--main container">
+          <div class="navigation__mobile-menu mobile-menu">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__list-item"><a href="#">Войти</a></li>
+              <li class="mobile-menu__list-item">
+                <a href="#">Регистрация</a>
+              </li>
+              <li class="mobile-menu__list-item"><a href="#">Избранное</a></li>
+              <li class="mobile-menu__list-item mobile-menu__list-item--stores">
+                <a href="#">Магазины</a>
+              </li>
+              <li class="mobile-menu__list-item mobile-menu__list-item--promo">
+                <a href="#">Акции</a>
+              </li>
+              <li class="mobile-menu__list-item mobile-menu__list-item--delivery">
+                <a href="#">Доставка и оплата</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a href="#">Каталог запчастей</a>
+              </li>
+              <li class="mobile-menu__list-item"><a href="#">Каталог ТО</a></li>
+              <li class="mobile-menu__list-item">
+                <a href="catalog.html">Шины</a>
+              </li>
+              <li class="mobile-menu__list-item"><a href="#">Диски</a></li>
+              <li class="mobile-menu__list-item">
+                <a href="#">Аккумуляторы</a>
+              </li>
+              <li class="mobile-menu__list-item"><a href="#">Автомасла</a></li>
+              <li class="mobile-menu__list-item"><a href="#">Автолампы</a></li>
+              <li class="mobile-menu__list-item"><a href="#">Аксессуары</a></li>
+              <li class="mobile-menu__list-item">
+                Санкт-Петербург, ул Большая Конюшенная, д 19
+              </li>
+            </ul>
+            <button class="mobile-menu__button button">
+              <svg width="33" height="27">
+                <use xlink:href="img/sprite.svg#burger-icon"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="navigation__logo logo">
+            <a href="index.html">
+              <picture>
+                <source srcset="img/logo-mobile.png" media="(min-width: 768px)">
+                <img src="img/logo-desktop.png" width="102" height="51" alt="Логотип магазина Запчасти">
+              </picture>
+            </a>
+          </div>
+          <p class="navigation__adress">
+            <svg width="35" height="35">
+              <use xlink:href="img/sprite.svg#navigate-icon"></use>
             </svg>
-          </button>
-        </div>
-        <div class="navigation__logo logo">
-          <a href="index.html">
-            <picture>
-              <source srcset="img/logo-mobile.png" media="(min-width: 768px)">
-              <img src="img/logo-desktop.png" width="102" height="51" alt="Логотип магазина Запчасти">
-            </picture>
-          </a>
-        </div>
-        <p class="navigation__adress">
-          <svg width="35" height="35">
-            <use xlink:href="img/sprite.svg#navigate-icon"></use>
-          </svg>
-          Санкт-Петербург, ул Большая&nbsp;Конюшенная, д 19
-        </p>
-        <div class="navigation__user-navigation user-navigation">
-          <button type="button" class="user-navigation__button button">
-            <svg width="29" height="24">
-              <use xlink:href="img/sprite.svg#heart-icon"></use>
-            </svg>
-          </button>
-          <button type="button" class="user-navigation__button button">
-            <svg width="24" height="25">
-              <use xlink:href="img/sprite.svg#user-icon"></use>
-            </svg>
-          </button>
-          <button type="button" class="user-navigation__button button button--cart--full">
-            <svg width="31" height="28">
-              <use xlink:href="img/sprite.svg#cart-icon"></use>
-            </svg>
-          </button>
-        </div>
-      </nav>
-    </div>
-    <div class="page-header__navigation-wrapper">
-      <!-- Slider main container -->
-      <div class="page-header__product-navigation product-navigation container">
-        <div class="swiper swiper--product-navigation">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><a class="product-navigation__link" href="#">Каталог запчастей</a></div>
-            <div class="swiper-slide"><a class="product-navigation__link" href="#">Каталог ТО</a></div>
-            <div class="swiper-slide"><a class="product-navigation__link product-navigation__link--active" href="catalog.html">Шины</a></div>
-            <div class="swiper-slide"><a class="product-navigation__link" href="#">Диски</a></div>
-            <div class="swiper-slide"><a class="product-navigation__link" href="#">Аккумуляторы</a></div>
-            <div class="swiper-slide"><a class="product-navigation__link" href="#">Автомасла</a></div>
-            <div class="swiper-slide"><a class="product-navigation__link" href="#">Автолампы</a></div>
-            <div class="swiper-slide"><a class="product-navigation__link" href="#">Аксессуары</a></div>
+            Санкт-Петербург, ул Большая&nbsp;Конюшенная, д 19
+          </p>
+          <div class="navigation__user-navigation user-navigation">
+            <button type="button" class="user-navigation__button button">
+              <svg width="29" height="24">
+                <use xlink:href="img/sprite.svg#heart-icon"></use>
+              </svg>
+            </button>
+            <button type="button" class="user-navigation__button button">
+              <svg width="24" height="25">
+                <use xlink:href="img/sprite.svg#user-icon"></use>
+              </svg>
+            </button>
+            <button type="button" class="user-navigation__button button button--cart--full">
+              <svg width="31" height="28">
+                <use xlink:href="img/sprite.svg#cart-icon"></use>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </div>
+      <div class="page-header__navigation-wrapper">
+        <!-- Slider main container -->
+        <div class="page-header__product-navigation product-navigation container">
+          <div class="swiper swiper--product-navigation">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <a class="product-navigation__link" href="#">Каталог запчастей</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="product-navigation__link" href="#">Каталог ТО</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="
+                    product-navigation__link product-navigation__link--active
+                  " href="catalog.html">Шины</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="product-navigation__link" href="#">Диски</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="product-navigation__link" href="#">Аккумуляторы</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="product-navigation__link" href="#">Автомасла</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="product-navigation__link" href="#">Автолампы</a>
+              </div>
+              <div class="swiper-slide">
+                <a class="product-navigation__link" href="#">Аксессуары</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="main">
-    <ul class="breadcrumbs container">
-      <li>
-        <a href="index.html">Главная</a>
-      </li>
-      <li>
-        <a href="catalog.html">Шины</a>
-      </li>
-      <li class="breadcrumbs-current">
-        <a href="catalog.html">Шины зимние</a>
-      </li>
-    </ul>
+    <main class="main">
+      <ul class="breadcrumbs container">
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="catalog.html">Шины</a>
+        </li>
+        <li class="breadcrumbs-current">
+          <a href="catalog.html">Шины зимние</a>
+        </li>
+      </ul>
 
-    <section class="sort container">
-      <h1 class="container">Нешипованные шины</h1>
-      <div class="sort__wrapper">
-        <div class="sort__class">
-          <button class="button button--sort-class">Поноприводные</button>
-          <button class="button button--sort-class">от 5000</button>
-          <button class="button button--sort-class">Nokian</button>
-          <button class="button button--sort-class">от 5000</button>
-          <button class="button button--sort-class">еще</button>
+      <section class="sort container">
+        <h1 class="container">Нешипованные шины</h1>
+        <div class="sort__wrapper">
+          <!-- Slider main container -->
+          <div class="swiper swiper--sort">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper sort__class">
+              <!-- Slides -->
+              <div class="swiper-slide"><button class="button button--sort-class">Поноприводные</button></div>
+              <div class="swiper-slide"><button class="button button--sort-class">от 5000</button></div>
+              <div class="swiper-slide"><button class="button button--sort-class">Nokian</button></div>
+              <div class="swiper-slide"><button class="button button--sort-class">от 5000</button></div>
+              <div class="swiper-slide"><button class="button button--sort-class">еще</button></div>
+            </div>
+          </div>
+
+          <select name="sort-types" id="sort-types" class="sort__types">
+            <option selected="" value="По популярности">По популярности</option>
+            <option value="В алфавитном порядке">В алфавитном порядке</option>
+            <option value="По размеру скидки">По размеру скидки</option>
+            <option value="По цене по возрастанию">
+              По цене по возрастанию
+            </option>
+            <option value="По цене по убыванию">По цене по убыванию</option>
+          </select>
+          <button class="button sort__table">
+            <svg width="23" height="21">
+              <use xlink:href="img/sprite.svg#table-icon"></use>
+            </svg>
+          </button>
+          <button class="button sort__list">
+            <svg width="25" height="19">
+              <use xlink:href="img/sprite.svg#list-icon"></use>
+            </svg>
+          </button>
         </div>
+      </section>
 
-        <select name="sort-types" id="sort-types" class="sort__types">
-          <option selected="" value="По популярности">По популярности</option>
-          <option value="В алфавитном порядке">В алфавитном порядке</option>
-          <option value="По размеру скидки">По размеру скидки</option>
-          <option value="По цене по возрастанию">По цене по возрастанию</option>
-          <option value="По цене по убыванию">По цене по убыванию</option>
-        </select>
-        <button class="button sort__table">
-          <svg width="23" height="21">
-            <use xlink:href="img/sprite.svg#table-icon"></use>
-          </svg>
-        </button>
-        <button class="button sort__list">
-          <svg width="25" height="19">
-            <use xlink:href="img/sprite.svg#list-icon"></use>
-          </svg>
-        </button>
-      </div>
-    </section>
-
-    <section class="tire-catalog container">
-      <h2 class="visually-hidden">Каталог шин</h2>
-      <div class="tire-catalog__filter tire-filter">
-        <form action="/" method="POST">
-          <div class="tire-filter__params">
-            <button class="tire-filter__params-button button">Параметры</button>
-            <div class="tire-filter__season">
-              <div class="tire-filter__season-trigger">
-                <svg width="12" height="8">
-                  <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
-                </svg>
-                Сезонность
-              </div>
-              <div class="tire-filter__season-content">
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Зимние</label>
+      <section class="tire-catalog container">
+        <h2 class="visually-hidden">Каталог шин</h2>
+        <div class="tire-catalog__filter tire-filter">
+          <form action="/" method="POST">
+            <div class="tire-filter__params">
+              <button class="tire-filter__params-button button">
+                Параметры
+              </button>
+              <div class="tire-filter__season">
+                <div class="tire-filter__season-trigger">
+                  <svg width="12" height="8">
+                    <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
+                  </svg>
+                  Сезонность
                 </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Летние</label>
-                </div>
-              </div>
-            </div>
-            <div class="tire-filter__tiretype">
-              <div class="tire-filter__tiretype-trigger">
-                <svg width="12" height="8">
-                  <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
-                </svg>
-                Тип шин
-              </div>
-              <div class="tire-filter__tiretype-content">
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Все</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Шипованные</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Нешипованные</label>
-                </div>
-              </div>
-            </div>
-            <div class="tire-filter__price-range">
-              <div class="tire-filter__price-trigger">
-                <svg width="12" height="8">
-                  <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
-                </svg>
-                Цена
-              </div>
-              <div class="tire-filter__price-content range">
-                <div class="range__controls">
-                  <div class="range__scale">
-                    <div class="range__bar"></div>
+                <div class="tire-filter__season-content">
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Зимние</label>
                   </div>
-                  <div class="range__toggle range__toggle-min"></div>
-                  <div class="range__toggle range__toggle-max"></div>
-                </div>
-                <div class="range__price-controls">
-                  <label class="range__min-price">от <input type="number" name="min-price" value="2000"></label>
-                  <label class="range__max-price">до <input type="number" name="max-price" value="12000"></label>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Летние</label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="tire-filter__diametr">
-              Диаметр
-              <select name="tire-diametr" id="tire-diametr">
-                <option selected="" value="16">16</option>
-                <option value="10">10</option>
-                <option value="12">12</option>
-                <option value="12C">12C</option>
-                <option value="14">14</option>
-                <option value="14C">14C</option>
-                <option value="15">15</option>
-                <option value="15C">15C</option>
-                <option value="16">16</option>
-                <option value="16C">16C</option>
-                <option value="17">17</option>
-                <option value="17C">17C</option>
-                <option value="18">18</option>
-                <option value="18C">18C</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="8">8</option>
-              </select>
-            </div>
-            <div class="tire-filter__profile">
-              Профиль
-              <select name="tire-profile" id="tire-profile">
-                <option selected="" value="35">35</option>
-                <option value="40">40</option>
-                <option value="45">45</option>
-                <option value="50">50</option>
-                <option value="55">55</option>
-                <option value="60">60</option>
-                <option value="65">65</option>
-              </select>
-            </div>
-            <div class="tire-filter__width">
-              Ширина
-              <select name="tire-width" id="tire-width">
-                <option selected="" value="155">155</option>
-                <option value="165">165</option>
-                <option value="175">175</option>
-                <option value="185">185</option>
-                <option value="195">195</option>
-                <option value="205">205</option>
-                <option value="215">215</option>
-                <option value="225">225</option>
-                <option value="235">235</option>
-                <option value="245">245</option>
-                <option value="255">255</option>
-                <option value="265">265</option>
-                <option value="275">275</option>
-                <option value="285">285</option>
-                <option value="295">295</option>
-                <option value="305">305</option>
-                <option value="315">315</option>
-                <option value="325">325</option>
-              </select>
-            </div>
-            <div class="tire-filter__tirebrand">
-              <div class="tire-filter__tirebrand-trigger">
-                <svg width="12" height="8">
-                  <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
-                </svg>
-                Бренд
-              </div>
-              <div class="tire-filter__tirebrand-content">
-                <div class="tire-filter__input-wrapper tire-filter__input-wrapper--search">
-                  <input id="tirebrand-search" type="search" placeholder="Введите бренд шины">
+              <div class="tire-filter__tiretype">
+                <div class="tire-filter__tiretype-trigger">
+                  <svg width="12" height="8">
+                    <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
+                  </svg>
+                  Тип шин
                 </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>B Gudrich</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Rarym</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Wridrestone</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>BF hide</label>
-                </div>
-                <button class="button button--loadmore" type="button">Показать еще</button>
-              </div>
-            </div>
-            <div class="tire-filter__tiremodel">
-              <div class="tire-filter__tiremodel-trigger">
-                <svg width="12" height="8">
-                  <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
-                </svg>
-                Модель
-              </div>
-              <div class="tire-filter__tiremodel-content">
-                <div class="tire-filter__input-wrapper tire-filter__input-wrapper--search">
-                  <input id="tiremodel-search" type="search" placeholder="Введите модель шины">
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>ALINA</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>FORCE Moode</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>BLIWWAS</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>ICE Gide</label>
-                </div>
-                <button class="button button--loadmore" type="button">Показать еще</button>
-              </div>
-            </div>
-            <div class="tire-filter__tiretech">
-              <div class="tire-filter__tirebrand-trigger">
-                Технология
-              </div>
-              <div class="tire-filter__tiretech-content">
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Да</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Нет</label>
+                <div class="tire-filter__tiretype-content">
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Все</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Шипованные</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Нешипованные</label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="tire-filter__tirepromo">
-              <div class="tire-filter__tirepromo-trigger">
-                Акции
-              </div>
-              <div class="tire-filter__tirepromo-content">
-                <button type="button" class="button button--promo button--promo--active">Sale</button>
-                <button type="button" class="button button--promo">New</button>
-                <button type="button" class="button button--promo">Hit</button>
-                <button type="button" class="button button--promo button--promo--active">Подарок</button>
-              </div>
-            </div>
-            <div class="tire-filter__tirecountry">
-              <div class="tire-filter__tirecountry-trigger">
-                <svg width="12" height="8">
-                  <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
-                </svg>
-                Страны
-              </div>
-              <div class="tire-filter__tirecountry-content">
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Россия</label>
+              <div class="tire-filter__price-range">
+                <div class="tire-filter__price-trigger">
+                  <svg width="12" height="8">
+                    <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
+                  </svg>
+                  Цена
                 </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Россия</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Германия</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Германия</label>
-                </div>
-                <button class="button button--loadmore" type="button">Показать еще</button>
-              </div>
-            </div>
-          </div>
-          <div class="tire-filter__carbrand">
-            <button class="tire-filter__carbrand-button button">
-              По марке
-            </button>
-            <div class="tire-filter__season">
-              <div class="tire-filter__season-trigger">
-                <svg width="12" height="8">
-                  <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
-                </svg>
-                Сезонность
-              </div>
-              <div class="tire-filter__season-content">
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Зимние</label>
-                </div>
-                <div class="tire-filter__input-wrapper">
-                  <input type="checkbox">
-                  <label>Летние</label>
+                <div class="tire-filter__price-content range">
+                  <div class="range__controls">
+                    <div class="range__scale">
+                      <div class="range__bar"></div>
+                    </div>
+                    <div class="range__toggle range__toggle-min"></div>
+                    <div class="range__toggle range__toggle-max"></div>
+                  </div>
+                  <div class="range__price-controls">
+                    <label class="range__min-price">от <input type="number" name="min-price" value="2000"></label>
+                    <label class="range__max-price">до <input type="number" name="max-price" value="12000"></label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="tire-filter__autobrand">
-              <div class="tire-filter__autobrand-trigger">
-                Марка
-              </div>
-              <div class="tire-filter__autobrand-content">
-                <select name="tire-autobrand" id="tire-autobrand">
-                  <option selected="" value="BMW">BMW</option>
-                  <option value="Audi">Audi</option>
-                  <option value="Mazda">Mazda</option>
-                  <option value="Kia">Kia</option>
-                  <option value="Renault">Renault</option>
+              <div class="tire-filter__diametr">
+                Диаметр
+                <select name="tire-diametr" id="tire-diametr">
+                  <option selected="" value="16">16</option>
+                  <option value="10">10</option>
+                  <option value="12">12</option>
+                  <option value="12C">12C</option>
+                  <option value="14">14</option>
+                  <option value="14C">14C</option>
+                  <option value="15">15</option>
+                  <option value="15C">15C</option>
+                  <option value="16">16</option>
+                  <option value="16C">16C</option>
+                  <option value="17">17</option>
+                  <option value="17C">17C</option>
+                  <option value="18">18</option>
+                  <option value="18C">18C</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="8">8</option>
                 </select>
               </div>
-            </div>
-            <div class="tire-filter__automodel">
-              <div class="tire-filter__automodel-trigger">
-                Марка
-              </div>
-              <div class="tire-filter__automodel-content">
-                <select name="tire-automodel" id="tire-automodel">
-                  <option selected="" value="1-series">1-series</option>
-                  <option value="X5">X5</option>
-                  <option value="3">3</option>
-                  <option value="Axela">Axela</option>
-                  <option value="Megan">Megan</option>
+              <div class="tire-filter__profile">
+                Профиль
+                <select name="tire-profile" id="tire-profile">
+                  <option selected="" value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                  <option value="60">60</option>
+                  <option value="65">65</option>
                 </select>
               </div>
-            </div>
-            <div class="tire-filter__carcase">
-              <div class="tire-filter__carcase-trigger">
-                Кузов
-              </div>
-              <div class="tire-filter__carcase-content">
-                <select name="tire-carcase" id="tire-carcase">
-                  <option selected="" value="E81 3d">E81 3d</option>
-                  <option value="E81 3d">E81 3d</option>
-                  <option value="E81 3d">E81 3d</option>
+              <div class="tire-filter__width">
+                Ширина
+                <select name="tire-width" id="tire-width">
+                  <option selected="" value="155">155</option>
+                  <option value="165">165</option>
+                  <option value="175">175</option>
+                  <option value="185">185</option>
+                  <option value="195">195</option>
+                  <option value="205">205</option>
+                  <option value="215">215</option>
+                  <option value="225">225</option>
+                  <option value="235">235</option>
+                  <option value="245">245</option>
+                  <option value="255">255</option>
+                  <option value="265">265</option>
+                  <option value="275">275</option>
+                  <option value="285">285</option>
+                  <option value="295">295</option>
+                  <option value="305">305</option>
+                  <option value="315">315</option>
+                  <option value="325">325</option>
                 </select>
               </div>
-            </div>
-            <div class="tire-filter__automodification">
-              <div class="tire-filter__automodification-trigger">
-                Модификация
-              </div>
-              <div class="tire-filter__automodification-content">
-                <select name="tire-automodif" id="tire-automodif">
-                  <option selected="" value="116 d">116 d</option>
-                  <option value="116 d">116 d</option>
-                  <option value="116 d">116 d</option>
-                </select>
-              </div>
-            </div>
-            <div class="tire-filter__tireradius tire-filter__tireradius--R16">
-              <div class="tire-filter__tireradius-trigger">
-                R16
-              </div>
-              <button type="button" class="button button--tireradius">205/55 R17</button>
-              <button type="button" class="button button--tireradius">205/55 R17</button>
-              <button type="button" class="button button--tireradius">205/55 R17</button>
-              <button type="button" class="button button--tireradius">205/55 R17</button>
-            </div>
-            <div class="tire-filter__tireradius tire-filter__tireradius--R17">
-              <div class="tire-filter__tireradius-trigger">
-                R17
-              </div>
-              <div class="tire-filter__radius-buttons">
-                <button type="button" class="button button--axis">Передняя ось</button>
-                <button type="button" class="button button--tireradius">215/45 R17</button>
-                <button type="button" class="button button--tireradius">215/50 R17</button>
-                <button type="button" class="button button--tireradius">205/50 R17</button>
-                <button type="button" class="button button--tireradius">195/55 R17</button>
-                <button type="button" class="button button--tireradius">225/55 R17</button>
-              </div>
-              <div class="tire-filter__radius-buttons">
-                <button type="button" class="button button--axis">Задняя ось</button>
-                <button type="button" class="button button--tireradius">225/45 R17</button>
-                <button type="button" class="button button--tireradius button--tireradius--active">225/50 R17</button>
-                <button type="button" class="button button--tireradius">245/50 R17</button>
-                <button type="button" class="button button--tireradius">205/55 R17</button>
-              </div>
-
-            </div>
-            <div class="tire-filter__tireradius tire-filter__tireradius--R18">
-              <div class="tire-filter__tireradius-trigger">
-                R18
-              </div>
-              <button type="button" class="button button--tireradius">255/40 R18</button>
-              <button type="button" class="button button--tireradius">245/45 R18</button>
-            </div>
-          </div>
-          <button type="button" class="button button--more">
-            Подобрать
-          </button>
-          <div class="tire-filter__extraparams">
-            Дополнительные параметры
-            <svg width="12" height="8">
-              <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
-            </svg>
-          </div>
-          <button class="button button--reset" type="button">Сбросить фильтр</button>
-        </form>
-      </div>
-
-      <div class="tire-catalog__wrapper">
-        <div class="tire-catalog__list tire-list">
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
-                <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              </span>
-            </a>
-            <div class="product-card__lable promo-label promo-label--active">
-              sale
-            </div>
-            <!-- <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button> -->
-            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
-                </svg>
-              </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
-                <span class="product-price__notavailable">нет в наличии</span>
-              </span>
-            </a>
-            <!-- <div class="product-card__lable promo-label promo-label--active">
-                sale
-              </div> -->
-              <button type="button" class="product-card__buy button">
-                <span class="visually-hidden">Положить в корзину</span>
-                <svg width="22" height="26">
-                  <use xlink:href="img/sprite.svg#bag-icon"></use>
-                </svg>
-              </button>
-              <button type="button" class="product-card__inform button">сообщить о поступлении</button>
-              <button class="product-card__quick-view button button--quick-view" type="button">
-                быстрый просмотр
-              </button>
-              <div class="product-card__icon-box">
-                <button class="product-card__like button button--like">
-                  <svg width="27" height="25">
-                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+              <div class="tire-filter__tirebrand">
+                <div class="tire-filter__tirebrand-trigger">
+                  <svg width="12" height="8">
+                    <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
-                </button>
-                <svg width="31" height="31">
-                  <use xlink:href="img/sprite.svg#sun-icon"></use>
-                </svg>
+                  Бренд
+                </div>
+                <div class="tire-filter__tirebrand-content">
+                  <div class="
+                      tire-filter__input-wrapper
+                      tire-filter__input-wrapper--search
+                    ">
+                    <input id="tirebrand-search" type="search" placeholder="Введите бренд шины">
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>B Gudrich</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Rarym</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Wridrestone</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>BF hide</label>
+                  </div>
+                  <button class="button button--loadmore" type="button">
+                    Показать еще
+                  </button>
+                </div>
               </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
-                <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              </span>
-            </a>
-            <div class="product-card__lable promo-label promo-label--active">
-              sale
-            </div>
-            <!-- <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button> -->
-            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
-                </svg>
-              </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
-                <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              </span>
-            </a>
-            <div class="product-card__lable promo-label promo-label--active">
-              sale
-            </div>
-            <!-- <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button> -->
-            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
-                </svg>
-              </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
-                <span class="product-price__notavailable">нет в наличии</span>
-              </span>
-            </a>
-            <!-- <div class="product-card__lable promo-label promo-label--active">
-                sale
-              </div> -->
-              <button type="button" class="product-card__buy button">
-                <span class="visually-hidden">Положить в корзину</span>
-                <svg width="22" height="26">
-                  <use xlink:href="img/sprite.svg#bag-icon"></use>
-                </svg>
-              </button>
-              <button type="button" class="product-card__inform button">сообщить о поступлении</button>
-              <button class="product-card__quick-view button button--quick-view" type="button">
-                быстрый просмотр
-              </button>
-              <div class="product-card__icon-box">
-                <button class="product-card__like button button--like">
-                  <svg width="27" height="25">
-                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+              <div class="tire-filter__tiremodel">
+                <div class="tire-filter__tiremodel-trigger">
+                  <svg width="12" height="8">
+                    <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
-                </button>
-                <svg width="31" height="31">
-                  <use xlink:href="img/sprite.svg#sun-icon"></use>
-                </svg>
+                  Модель
+                </div>
+                <div class="tire-filter__tiremodel-content">
+                  <div class="
+                      tire-filter__input-wrapper
+                      tire-filter__input-wrapper--search
+                    ">
+                    <input id="tiremodel-search" type="search" placeholder="Введите модель шины">
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>ALINA</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>FORCE Moode</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>BLIWWAS</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>ICE Gide</label>
+                  </div>
+                  <button class="button button--loadmore" type="button">
+                    Показать еще
+                  </button>
+                </div>
               </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
-                <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              </span>
-            </a>
-            <div class="product-card__lable promo-label promo-label--active">
-              sale
-            </div>
-            <!-- <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button> -->
-            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
-                </svg>
-              </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
-                <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              </span>
-            </a>
-            <div class="product-card__lable promo-label promo-label--active">
-              sale
-            </div>
-            <!-- <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button> -->
-            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
-                </svg>
-              </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
-                <span class="product-price__notavailable">нет в наличии</span>
-              </span>
-            </a>
-            <!-- <div class="product-card__lable promo-label promo-label--active">
-                sale
-              </div> -->
-              <button type="button" class="product-card__buy button">
-                <span class="visually-hidden">Положить в корзину</span>
-                <svg width="22" height="26">
-                  <use xlink:href="img/sprite.svg#bag-icon"></use>
-                </svg>
-              </button>
-              <button type="button" class="product-card__inform button">сообщить о поступлении</button>
-              <button class="product-card__quick-view button button--quick-view" type="button">
-                быстрый просмотр
-              </button>
-              <div class="product-card__icon-box">
-                <button class="product-card__like button button--like">
-                  <svg width="27" height="25">
-                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+              <div class="tire-filter__tiretech">
+                <div class="tire-filter__tirebrand-trigger">Технология</div>
+                <div class="tire-filter__tiretech-content">
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Да</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Нет</label>
+                  </div>
+                </div>
+              </div>
+              <div class="tire-filter__tirepromo">
+                <div class="tire-filter__tirepromo-trigger">Акции</div>
+                <div class="tire-filter__tirepromo-content">
+                  <button type="button" class="button button--promo button--promo--active">
+                    Sale
+                  </button>
+                  <button type="button" class="button button--promo">
+                    New
+                  </button>
+                  <button type="button" class="button button--promo">
+                    Hit
+                  </button>
+                  <button type="button" class="button button--promo button--promo--active">
+                    Подарок
+                  </button>
+                </div>
+              </div>
+              <div class="tire-filter__tirecountry">
+                <div class="tire-filter__tirecountry-trigger">
+                  <svg width="12" height="8">
+                    <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
-                </button>
-                <svg width="31" height="31">
-                  <use xlink:href="img/sprite.svg#sun-icon"></use>
-                </svg>
+                  Страны
+                </div>
+                <div class="tire-filter__tirecountry-content">
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Россия</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Россия</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Германия</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Германия</label>
+                  </div>
+                  <button class="button button--loadmore" type="button">
+                    Показать еще
+                  </button>
+                </div>
               </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
-                <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              </span>
-            </a>
-            <div class="product-card__lable promo-label promo-label--active">
-              sale
             </div>
-            <!-- <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button> -->
-            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
-                </svg>
+            <div class="tire-filter__carbrand">
+              <button class="tire-filter__carbrand-button button">
+                По марке
               </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
-                <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              </span>
-            </a>
-            <div class="product-card__lable promo-label promo-label--active">
-              sale
-            </div>
-            <!-- <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
-              </svg>
-            </button> -->
-            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
-            </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
-                </svg>
-              </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
-                <span class="product-price__notavailable">нет в наличии</span>
-              </span>
-            </a>
-            <!-- <div class="product-card__lable promo-label promo-label--active">
-                sale
-              </div> -->
-              <button type="button" class="product-card__buy button">
-                <span class="visually-hidden">Положить в корзину</span>
-                <svg width="22" height="26">
-                  <use xlink:href="img/sprite.svg#bag-icon"></use>
-                </svg>
-              </button>
-              <button type="button" class="product-card__inform button">сообщить о поступлении</button>
-              <button class="product-card__quick-view button button--quick-view" type="button">
-                быстрый просмотр
-              </button>
-              <div class="product-card__icon-box">
-                <button class="product-card__like button button--like">
-                  <svg width="27" height="25">
-                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+              <div class="tire-filter__season">
+                <div class="tire-filter__season-trigger">
+                  <svg width="12" height="8">
+                    <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
-                </button>
-                <svg width="31" height="31">
-                  <use xlink:href="img/sprite.svg#sun-icon"></use>
-                </svg>
+                  Сезонность
+                </div>
+                <div class="tire-filter__season-content">
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Зимние</label>
+                  </div>
+                  <div class="tire-filter__input-wrapper">
+                    <input type="checkbox">
+                    <label>Летние</label>
+                  </div>
+                </div>
               </div>
-          </div>
-
-          <div class="tire-list__product-card product-card">
-            <a href="product-page.html" class="product-card__link">
-              <figure>
-                <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
-                <figcaption>
-                  Шина 205/80 R16 104Q Misha RF Power Grum
-                </figcaption>
-              </figure>
-              <span class="product-card__price product-price">
-                <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
-                <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
-              </span>
-            </a>
-            <div class="product-card__lable promo-label promo-label--active">
-              sale
+              <div class="tire-filter__autobrand">
+                <div class="tire-filter__autobrand-trigger">Марка</div>
+                <div class="tire-filter__autobrand-content">
+                  <select name="tire-autobrand" id="tire-autobrand">
+                    <option selected="" value="BMW">BMW</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Kia">Kia</option>
+                    <option value="Renault">Renault</option>
+                  </select>
+                </div>
+              </div>
+              <div class="tire-filter__automodel">
+                <div class="tire-filter__automodel-trigger">Марка</div>
+                <div class="tire-filter__automodel-content">
+                  <select name="tire-automodel" id="tire-automodel">
+                    <option selected="" value="1-series">1-series</option>
+                    <option value="X5">X5</option>
+                    <option value="3">3</option>
+                    <option value="Axela">Axela</option>
+                    <option value="Megan">Megan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="tire-filter__carcase">
+                <div class="tire-filter__carcase-trigger">Кузов</div>
+                <div class="tire-filter__carcase-content">
+                  <select name="tire-carcase" id="tire-carcase">
+                    <option selected="" value="E81 3d">E81 3d</option>
+                    <option value="E81 3d">E81 3d</option>
+                    <option value="E81 3d">E81 3d</option>
+                  </select>
+                </div>
+              </div>
+              <div class="tire-filter__automodification">
+                <div class="tire-filter__automodification-trigger">
+                  Модификация
+                </div>
+                <div class="tire-filter__automodification-content">
+                  <select name="tire-automodif" id="tire-automodif">
+                    <option selected="" value="116 d">116 d</option>
+                    <option value="116 d">116 d</option>
+                    <option value="116 d">116 d</option>
+                  </select>
+                </div>
+              </div>
+              <div class="tire-filter__tireradius tire-filter__tireradius--R16">
+                <div class="tire-filter__tireradius-trigger">R16</div>
+                <button type="button" class="button button--tireradius">
+                  205/55 R17
+                </button>
+                <button type="button" class="button button--tireradius">
+                  205/55 R17
+                </button>
+                <button type="button" class="button button--tireradius">
+                  205/55 R17
+                </button>
+                <button type="button" class="button button--tireradius">
+                  205/55 R17
+                </button>
+              </div>
+              <div class="tire-filter__tireradius tire-filter__tireradius--R17">
+                <div class="tire-filter__tireradius-trigger">R17</div>
+                <div class="tire-filter__radius-buttons">
+                  <button type="button" class="button button--axis">
+                    Передняя ось
+                  </button>
+                  <button type="button" class="button button--tireradius">
+                    215/45 R17
+                  </button>
+                  <button type="button" class="button button--tireradius">
+                    215/50 R17
+                  </button>
+                  <button type="button" class="button button--tireradius">
+                    205/50 R17
+                  </button>
+                  <button type="button" class="button button--tireradius">
+                    195/55 R17
+                  </button>
+                  <button type="button" class="button button--tireradius">
+                    225/55 R17
+                  </button>
+                </div>
+                <div class="tire-filter__radius-buttons">
+                  <button type="button" class="button button--axis">
+                    Задняя ось
+                  </button>
+                  <button type="button" class="button button--tireradius">
+                    225/45 R17
+                  </button>
+                  <button type="button" class="button button--tireradius button--tireradius--active">
+                    225/50 R17
+                  </button>
+                  <button type="button" class="button button--tireradius">
+                    245/50 R17
+                  </button>
+                  <button type="button" class="button button--tireradius">
+                    205/55 R17
+                  </button>
+                </div>
+              </div>
+              <div class="tire-filter__tireradius tire-filter__tireradius--R18">
+                <div class="tire-filter__tireradius-trigger">R18</div>
+                <button type="button" class="button button--tireradius">
+                  255/40 R18
+                </button>
+                <button type="button" class="button button--tireradius">
+                  245/45 R18
+                </button>
+              </div>
             </div>
-            <!-- <button type="button" class="product-card__buy button">
-              <span class="visually-hidden">Положить в корзину</span>
-              <svg width="22" height="26">
-                <use xlink:href="img/sprite.svg#bag-icon"></use>
+            <button type="button" class="button button--more">Подобрать</button>
+            <div class="tire-filter__extraparams">
+              Дополнительные параметры
+              <svg width="12" height="8">
+                <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
               </svg>
-            </button> -->
-            <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
-            <button class="product-card__quick-view button button--quick-view" type="button">
-              быстрый просмотр
+            </div>
+            <button class="button button--reset" type="button">
+              Сбросить фильтр
             </button>
-            <div class="product-card__icon-box">
-              <button class="product-card__like button button--like">
-                <svg width="27" height="25">
-                  <use xlink:href="img/sprite.svg#heart-icon"></use>
-                </svg>
-              </button>
-              <svg width="31" height="31">
-                <use xlink:href="img/sprite.svg#sun-icon"></use>
-              </svg>
-            </div>
-          </div>
-
+          </form>
         </div>
-        <div class="tire-catalog__pagination pagination">
-          <ul class="pagination__list">
-            <li><a class="pagination__page pagination__page--active" href="#">1</a></li>
-            <li><a class="pagination__page" href="#">2</a></li>
-            <li><a class="pagination__page" href="#">3</a></li>
-            <li><a class="pagination__page" href="#">4</a></li>
-            <li><a class="pagination__page" href="#">5</a></li>
-            <li><a class="pagination__page" href="#">...</a></li>
-            <li><a class="pagination__page" href="#">11</a></li>
-          </ul>
+
+        <div class="tire-catalog__wrapper">
+          <div class="tire-catalog__list tire-list">
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
+                  <span class="
+                      product-price__notavailable
+                      product-price__notavailable--active
+                    ">нет в наличии</span>
+                </span>
+              </a>
+              <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div>
+              <!-- <button type="button" class="product-card__buy button">
+              <span class="visually-hidden">Положить в корзину</span>
+              <svg width="22" height="26">
+                <use xlink:href="img/sprite.svg#bag-icon"></use>
+              </svg>
+            </button> -->
+              <button type="button" class="
+                  product-card__inform product-card__inform--active
+                  button button--inform
+                ">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
+                  <span class="product-price__notavailable">нет в наличии</span>
+                </span>
+              </a>
+              <!-- <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div> -->
+              <button type="button" class="product-card__buy button">
+                <span class="visually-hidden">Положить в корзину</span>
+                <svg width="22" height="26">
+                  <use xlink:href="img/sprite.svg#bag-icon"></use>
+                </svg>
+              </button>
+              <button type="button" class="product-card__inform button">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
+                  <span class="
+                      product-price__notavailable
+                      product-price__notavailable--active
+                    ">нет в наличии</span>
+                </span>
+              </a>
+              <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div>
+              <!-- <button type="button" class="product-card__buy button">
+              <span class="visually-hidden">Положить в корзину</span>
+              <svg width="22" height="26">
+                <use xlink:href="img/sprite.svg#bag-icon"></use>
+              </svg>
+            </button> -->
+              <button type="button" class="
+                  product-card__inform product-card__inform--active
+                  button button--inform
+                ">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
+                  <span class="
+                      product-price__notavailable
+                      product-price__notavailable--active
+                    ">нет в наличии</span>
+                </span>
+              </a>
+              <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div>
+              <!-- <button type="button" class="product-card__buy button">
+              <span class="visually-hidden">Положить в корзину</span>
+              <svg width="22" height="26">
+                <use xlink:href="img/sprite.svg#bag-icon"></use>
+              </svg>
+            </button> -->
+              <button type="button" class="
+                  product-card__inform product-card__inform--active
+                  button button--inform
+                ">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
+                  <span class="product-price__notavailable">нет в наличии</span>
+                </span>
+              </a>
+              <!-- <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div> -->
+              <button type="button" class="product-card__buy button">
+                <span class="visually-hidden">Положить в корзину</span>
+                <svg width="22" height="26">
+                  <use xlink:href="img/sprite.svg#bag-icon"></use>
+                </svg>
+              </button>
+              <button type="button" class="product-card__inform button">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
+                  <span class="
+                      product-price__notavailable
+                      product-price__notavailable--active
+                    ">нет в наличии</span>
+                </span>
+              </a>
+              <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div>
+              <!-- <button type="button" class="product-card__buy button">
+              <span class="visually-hidden">Положить в корзину</span>
+              <svg width="22" height="26">
+                <use xlink:href="img/sprite.svg#bag-icon"></use>
+              </svg>
+            </button> -->
+              <button type="button" class="
+                  product-card__inform product-card__inform--active
+                  button button--inform
+                ">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
+                  <span class="
+                      product-price__notavailable
+                      product-price__notavailable--active
+                    ">нет в наличии</span>
+                </span>
+              </a>
+              <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div>
+              <!-- <button type="button" class="product-card__buy button">
+              <span class="visually-hidden">Положить в корзину</span>
+              <svg width="22" height="26">
+                <use xlink:href="img/sprite.svg#bag-icon"></use>
+              </svg>
+            </button> -->
+              <button type="button" class="
+                  product-card__inform product-card__inform--active
+                  button button--inform
+                ">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
+                  <span class="product-price__notavailable">нет в наличии</span>
+                </span>
+              </a>
+              <!-- <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div> -->
+              <button type="button" class="product-card__buy button">
+                <span class="visually-hidden">Положить в корзину</span>
+                <svg width="22" height="26">
+                  <use xlink:href="img/sprite.svg#bag-icon"></use>
+                </svg>
+              </button>
+              <button type="button" class="product-card__inform button">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
+                  <span class="
+                      product-price__notavailable
+                      product-price__notavailable--active
+                    ">нет в наличии</span>
+                </span>
+              </a>
+              <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div>
+              <!-- <button type="button" class="product-card__buy button">
+              <span class="visually-hidden">Положить в корзину</span>
+              <svg width="22" height="26">
+                <use xlink:href="img/sprite.svg#bag-icon"></use>
+              </svg>
+            </button> -->
+              <button type="button" class="
+                  product-card__inform product-card__inform--active
+                  button button--inform
+                ">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
+                  <span class="
+                      product-price__notavailable
+                      product-price__notavailable--active
+                    ">нет в наличии</span>
+                </span>
+              </a>
+              <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div>
+              <!-- <button type="button" class="product-card__buy button">
+              <span class="visually-hidden">Положить в корзину</span>
+              <svg width="22" height="26">
+                <use xlink:href="img/sprite.svg#bag-icon"></use>
+              </svg>
+            </button> -->
+              <button type="button" class="
+                  product-card__inform product-card__inform--active
+                  button button--inform
+                ">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
+                  <span class="product-price__notavailable">нет в наличии</span>
+                </span>
+              </a>
+              <!-- <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div> -->
+              <button type="button" class="product-card__buy button">
+                <span class="visually-hidden">Положить в корзину</span>
+                <svg width="22" height="26">
+                  <use xlink:href="img/sprite.svg#bag-icon"></use>
+                </svg>
+              </button>
+              <button type="button" class="product-card__inform button">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="tire-list__product-card product-card">
+              <a href="product-page.html" class="product-card__link">
+                <figure>
+                  <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                  <figcaption>
+                    Шина 205/80 R16 104Q Misha RF Power Grum
+                  </figcaption>
+                </figure>
+                <span class="product-card__price product-price">
+                  <!-- <span class="product-price__full">11 680&nbsp;&#x20bd;</span> -->
+                  <span class="
+                      product-price__notavailable
+                      product-price__notavailable--active
+                    ">нет в наличии</span>
+                </span>
+              </a>
+              <div class="product-card__lable promo-label promo-label--active">
+                sale
+              </div>
+              <!-- <button type="button" class="product-card__buy button">
+              <span class="visually-hidden">Положить в корзину</span>
+              <svg width="22" height="26">
+                <use xlink:href="img/sprite.svg#bag-icon"></use>
+              </svg>
+            </button> -->
+              <button type="button" class="
+                  product-card__inform product-card__inform--active
+                  button button--inform
+                ">
+                сообщить о поступлении
+              </button>
+              <button class="product-card__quick-view button button--quick-view" type="button">
+                быстрый просмотр
+              </button>
+              <div class="product-card__icon-box">
+                <button class="product-card__like button button--like">
+                  <svg width="27" height="25">
+                    <use xlink:href="img/sprite.svg#heart-icon"></use>
+                  </svg>
+                </button>
+                <svg width="31" height="31">
+                  <use xlink:href="img/sprite.svg#sun-icon"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="button tire-catalog__button button--more">Показать еще</button>
+          <div class="tire-catalog__pagination pagination">
+            <ul class="pagination__list">
+              <li>
+                <a class="pagination__page pagination__page--active" href="#">1</a>
+              </li>
+              <li><a class="pagination__page" href="#">2</a></li>
+              <li><a class="pagination__page" href="#">3</a></li>
+              <li><a class="pagination__page" href="#">4</a></li>
+              <li><a class="pagination__page" href="#">5</a></li>
+              <li><a class="pagination__page" href="#">...</a></li>
+              <li><a class="pagination__page" href="#">11</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-
-    </section>
-  </main>
-
-  <footer class="page-footer">
-    <div class="page-footer__wrapper container">
-      <section class="page-footer__mailing mailing">
-        <h2>Подпишитесь на нашу рассылку и узнавайте об акция быстрее</h2>
-        <form action="/" method="POST">
-          <input type="text" placeholder="Введите ваш e-mail:">
-          <button type="submit" class="mailing__button button">Отправить</button>
-        </form>
       </section>
 
-      <section class="page-footer__navigation">
-        <div class="page-footer__navigation-accordeon accordeon">
-          <div class="accordeon__item">
-            <h3 class="accordeon__heading">Информация</h3>
-            <ul class="accordeon__content">
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Реквизиты</a></li>
-              <li><a href="#">Магазины</a></li>
-            </ul>
-          </div>
-          <div class="accordeon__item">
-            <h3 class="accordeon__heading">Сервисный центр</h3>
-            <ul class="accordeon__content">
-              <li><a href="#">Доставка и самовывоз</a></li>
-              <li><a href="#">Оплата</a></li>
-              <li><a href="#">Возврат-обмен</a></li>
-              <li><a href="#">Новости</a></li>
-            </ul>
-          </div>
-          <div class="accordeon__item">
-            <h3 class="accordeon__heading">Интернет-магазин</h3>
-            <ul class="accordeon__content">
-              <li><a href="#">Доставка и самовывоз</a></li>
-              <li><a href="#">Оплата</a></li>
-              <li><a href="#">Возврат-обмен</a></li>
-              <li><a href="#">Новости</a></li>
-            </ul>
-          </div>
-          <div class="accordeon__item">
-            <h3 class="accordeon__heading visually-hidden">Разное</h3>
-            <ul class="accordeon__content">
-              <li><a href="#">Акции</a></li>
-              <li><a href="#">Договор оферты</a></li>
-              <li><a href="#">Политика обработки персональных&nbsp;данных</a></li>
-            </ul>
-          </div>
+      <section class="tirefitting-banner">
+        <div class="tirefitting-banner__wrapper container">
+          <h2 class="tirefitting-banner__title">Шиномонтаж</h2>
+          <p class="tirefitting-banner__paragraph">Любой сложности и без очередей</p>
         </div>
       </section>
-    </div>
-    <div class="page-footer__copyright container">
-      Интернет-магазин автозапчастей
-    </div>
 
-  </footer>
+      <section class="relevants sliders-container relevants--catalog">
+        <h2 class="relevants__title container">С этим товаром покупают</h2>
+        <div class="relevants__filter filter filter--relevants">
+          <div class="swiper swiper--relevants relevants__categories categories categories--catalog container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><button type="button" class="categories__button button">запчасти</button></div>
+              <div class="swiper-slide"><button type="button" class="categories__button button">автохимия</button></div>
+              <div class="swiper-slide"><button type="button" class="categories__button button categories__button--active">шины и диски</button></div>
+              <div class="swiper-slide"><button type="button" class="categories__button button">автоэлектроника</button></div>
+              <div class="swiper-slide"><button type="button" class="categories__button button">инструменты</button></div>
+              <div class="swiper-slide"><button type="button" class="categories__button button">аксессуары и другое</button></div>
+            </div>
+          </div>
 
-  <!-- Swiper JS -->
-  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script src="js/sliders.js"></script>
-</body>
+          <div class="swiper swiper--relevants-list relevants__list relevants__list--catalog">
+            <div class="swiper-wrapper container">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="relevants__product-card product-card">
+                  <a href="product-page.html" class="product-card__link">
+                    <figure>
+                      <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                      <figcaption>
+                        Шина 205/80 R16 104Q Misha RF Power Grum
+                      </figcaption>
+                    </figure>
+                    <span class="product-card__price product-price">
+                      <!-- <span class="product-price__full">440&nbsp;&#x20bd;</span> -->
+                      <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
+                    </span>
+                  </a>
+                  <div class="product-card__lable promo-label promo-label--active">
+                    sale
+                  </div>
+                  <!-- <button type="button" class="product-card__buy button">
+                    <span class="visually-hidden">Положить в корзину</span>
+                    <svg width="22" height="26">
+                      <use xlink:href="img/sprite.svg#bag-icon"></use>
+                    </svg>
+                  </button> -->
+                  <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
+                  <button class="product-card__quick-view button button--quick-view" type="button">
+                    быстрый просмотр
+                  </button>
+                  <div class="product-card__icon-box">
+                    <button class="product-card__like button button--like">
+                      <svg width="27" height="25">
+                        <use xlink:href="img/sprite.svg#heart-icon"></use>
+                      </svg>
+                    </button>
+                    <svg width="31" height="31">
+                      <use xlink:href="img/sprite.svg#sun-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
 
+              <div class="swiper-slide">
+                <div class="relevants__product-card product-card">
+                  <a href="product-page.html" class="product-card__link">
+                    <figure>
+                      <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                      <figcaption>
+                        Шина 205/80 R16 104Q Misha RF Power Grum
+                      </figcaption>
+                    </figure>
+                    <span class="product-card__price product-price">
+                      <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
+                      <span class="product-price__notavailable">нет в наличии</span>
+                    </span>
+                  </a>
+                  <div class="product-card__lable promo-label">
+                    sale
+                  </div>
+                  <button type="button" class="product-card__buy button">
+                    <span class="visually-hidden">Положить в корзину</span>
+                    <svg width="22" height="26">
+                      <use xlink:href="img/sprite.svg#bag-icon"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="product-card__inform button">сообщить о поступлении</button>
+                  <button class="product-card__quick-view button button--quick-view" type="button">
+                    быстрый просмотр
+                  </button>
+                  <div class="product-card__icon-box">
+                    <button class="product-card__like button button--like">
+                      <svg width="27" height="25">
+                        <use xlink:href="img/sprite.svg#heart-icon"></use>
+                      </svg>
+                    </button>
+                    <svg width="28" height="31">
+                      <use xlink:href="img/sprite.svg#snowflake-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="relevants__product-card product-card">
+                  <a href="product-page.html" class="product-card__link">
+                    <figure>
+                      <img src="img/tire-misha-desktop@1x.png" alt="Шина 205/80 R16 104Q Misha RF Power Grum" width="151" height="181">
+                      <figcaption>
+                        Шина 205/80 R16 104Q Misha RF Power Grum
+                      </figcaption>
+                    </figure>
+                    <span class="product-card__price product-price">
+                      <!-- <span class="product-price__full">440&nbsp;&#x20bd;</span> -->
+                      <span class="product-price__notavailable product-price__notavailable--active">нет в наличии</span>
+                    </span>
+                  </a>
+                  <div class="product-card__lable promo-label  promo-label--active">
+                    sale
+                  </div>
+                  <!-- <button type="button" class="product-card__buy button">
+                    <span class="visually-hidden">Положить в корзину</span>
+                    <svg width="22" height="26">
+                      <use xlink:href="img/sprite.svg#bag-icon"></use>
+                    </svg>
+                  </button> -->
+                  <button type="button" class="product-card__inform product-card__inform--active button button--inform">сообщить о поступлении</button>
+                  <button class="product-card__quick-view button button--quick-view" type="button">
+                    быстрый просмотр
+                  </button>
+                  <div class="product-card__icon-box">
+                    <button class="product-card__like button button--like button--like--active">
+                      <svg width="27" height="25">
+                        <use xlink:href="img/sprite.svg#heart-icon"></use>
+                      </svg>
+                    </button>
+                    <svg width="31" height="31">
+                      <use xlink:href="img/sprite.svg#sun-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="relevants__product-card product-card">
+                  <a href="product-page.html" class="product-card__link">
+                    <figure>
+                      <img src="img/tire-contyther-desktop@1x.png" alt="Шина 245/60 R18 105T Contyther Crosh Conta..." width="151" height="181">
+                      <figcaption>
+                        Шина 245/60 R18 105T Contyther Crosh Conta...
+                      </figcaption>
+                    </figure>
+                    <span class="product-card__price product-price">
+                      <span class="product-price__full">11 680&nbsp;&#x20bd;</span>
+                      <span class="product-price__notavailable">нет в наличии</span>
+                    </span>
+                  </a>
+                  <div class="product-card__lable promo-label">
+                    sale
+                  </div>
+                  <button type="button" class="product-card__buy button">
+                    <span class="visually-hidden">Положить в корзину</span>
+                    <svg width="22" height="26">
+                      <use xlink:href="img/sprite.svg#bag-icon"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="product-card__inform button button--inform">сообщить о поступлении</button>
+                  <button class="product-card__quick-view button button--quick-view" type="button">быстрый просмотр</button>
+                  <div class="product-card__icon-box">
+                    <button class="product-card__like button button--like">
+                      <svg width="27" height="25">
+                        <use xlink:href="img/sprite.svg#heart-icon"></use>
+                      </svg>
+                    </button>
+                    <svg width="31" height="31">
+                      <use xlink:href="img/sprite.svg#sun-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <!-- navigation buttons -->
+            <div class="swiper-button-next button button--slider-next">
+              <svg width="15" height="19">
+                <use xlink:href="img/sprite.svg#arrow-next"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-prev button button--slider-prev">
+              <svg width="15" height="19">
+                <use xlink:href="img/sprite.svg#arrow-next"></use>
+              </svg>
+            </div>
+          </div>
+          <button type="button" class="relevants__button relevants__button--catalog button button--more">Показать еще</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper container">
+        <section class="page-footer__mailing mailing">
+          <h2>Подпишитесь на нашу рассылку и узнавайте об акция быстрее</h2>
+          <form action="/" method="POST">
+            <input type="email" placeholder="Введите ваш e-mail:" size="30" required="">
+            <!-- <input type="email" placeholder="Введите ваш e-mail:" pattern=".+@globex\.com" size="30" required> -->
+            <button type="submit" class="mailing__button button">
+              Отправить
+            </button>
+          </form>
+        </section>
+
+        <section class="page-footer__navigation">
+          <div class="page-footer__navigation-accordeon accordeon">
+            <div class="accordeon__item">
+              <h3 class="accordeon__heading">Информация</h3>
+              <ul class="accordeon__content">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Реквизиты</a></li>
+                <li><a href="#">Магазины</a></li>
+              </ul>
+            </div>
+            <div class="accordeon__item">
+              <h3 class="accordeon__heading">Сервисный центр</h3>
+              <ul class="accordeon__content">
+                <li><a href="#">Доставка и самовывоз</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Возврат-обмен</a></li>
+                <li><a href="#">Новости</a></li>
+              </ul>
+            </div>
+            <div class="accordeon__item">
+              <h3 class="accordeon__heading">Интернет-магазин</h3>
+              <ul class="accordeon__content">
+                <li><a href="#">Доставка и самовывоз</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">Возврат-обмен</a></li>
+                <li><a href="#">Новости</a></li>
+              </ul>
+            </div>
+            <div class="accordeon__item">
+              <h3 class="accordeon__heading visually-hidden">Разное</h3>
+              <ul class="accordeon__content">
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Договор оферты</a></li>
+                <li>
+                  <a href="#">Политика обработки персональных&nbsp;данных</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="page-footer__copyright container">
+        Интернет-магазин автозапчастей
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/sliders.js"></script>
+  </body>
 </html>

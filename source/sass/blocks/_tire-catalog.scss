@@ -4,6 +4,21 @@
   justify-content: space-between;
 }
 
+.tire-catalog__wrapper {
+  @media (max-width: $viewport--sm) {
+    width: 100%;
+  }
+}
+
+.tire-catalog__button {
+  display: none;
+  @media (max-width: $viewport--sm) {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+
 .tire-catalog__list {
   margin-left: auto;
 }

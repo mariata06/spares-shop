@@ -34,9 +34,21 @@
 .product-navigation__link {
   padding: 15px 0;
   display: block;
+  transition: text-shadow .3s;
+
+  &:hover,
+  &:focus {
+    //padding: 15px;
+    //text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
+    opacity: 1;
+    text-shadow: 0.25px 0.1px 0px $tuna, -0.25px -0.1px 0px $tuna;
+    //border-bottom: 3px solid $crusta;
+  }
 
   &--active {
     padding: 15px;
+    text-shadow: 0.25px 0.1px 0px #222, -0.25px -0.1px 0px #222;
+    //text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
     border-bottom: 3px solid $crusta;
 
     @media (max-width: $viewport--sm) {

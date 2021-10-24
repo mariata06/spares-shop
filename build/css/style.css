@@ -1102,11 +1102,13 @@ input {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  width: 1170px; }
   @media (max-width: 320px) {
     .page-footer__wrapper {
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
+          flex-wrap: wrap;
+      width: 320px; } }
 
 .page-footer__navigation {
   width: 718px; }
@@ -1123,10 +1125,23 @@ input {
 
 .page-footer__copyright {
   font-size: 14px;
-  margin-top: 33px; }
+  margin-top: 33px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .page-footer__copyright span {
+    display: none; }
+    @media (max-width: 320px) {
+      .page-footer__copyright span {
+        display: block; } }
 
 .mailing {
   width: 294px; }
+  @media (max-width: 320px) {
+    .mailing {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px; } }
   .mailing h2 {
     font-size: 14px;
     font-weight: 700;
@@ -1165,10 +1180,6 @@ input {
   .accordeon li {
     font-size: 14px;
     margin-bottom: 5px; }
-  .accordeon h3 {
-    font-weight: 700;
-    margin: 0;
-    margin-bottom: 5px; }
   .accordeon ul:first-child {
     width: 97px; }
   .accordeon ul {
@@ -1189,25 +1200,45 @@ input {
 .accordeon__item:last-child {
   -ms-flex-item-align: end;
       align-self: flex-end; }
+  @media (max-width: 320px) {
+    .accordeon__item:last-child {
+      display: none; } }
 
 .accordeon__content {
   margin: 0; }
+  @media (max-width: 320px) {
+    .accordeon__content {
+      display: none; } }
 
 .accordeon__heading {
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 5px;
   position: relative; }
   @media (max-width: 320px) {
     .accordeon__heading {
+      color: #7f7f7f;
+      font-weight: 400;
       width: 100%;
       display: block;
-      position: relative; }
+      position: relative;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #d6d6d6;
+      padding-left: 16px; }
       .accordeon__heading::after {
         content: url("../img/arrowdown-icon.svg");
         display: block;
         width: 12px;
         height: 8px;
         position: absolute;
-        right: 0;
+        top: 15px;
+        right: 16px;
         fill: #7f7f7f; } }
+
+@media (max-width: 320px) {
+  .accordeon__item:first-child > .accordeon__heading {
+    border-top: 1px solid #d6d6d6; } }
 
 .promo-banner {
   width: 1170px;

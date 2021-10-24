@@ -34,6 +34,10 @@
   margin-top: 33px;
   display: flex;
 
+  @media (max-width: $viewport--sm) {
+    color: $dark-gray;
+  }
+
   span {
     display: none;
     @media (max-width: $viewport--sm) {

@@ -14,23 +14,26 @@
   font-size: 15px;
   text-align: center;
   padding: 11px 5px;
-  border-bottom: 2px solid transparent;
-  width: auto;
-  border: 2px solid green;
+  border: 2px solid transparent;
   min-width: fit-content;
+  transition: text-shadow .3s;
+
+  @media (max-width: $viewport--sm) {
+    padding: 11px 0;
+  }
 
   &:hover,
   &:focus {
-    font-size: 15px;
-    font-weight: 700;
+    text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
     border-bottom: 2px solid $crusta;
-    left: -2px;
   }
 }
 
 .categories__button--active {
-  font-size: 15px;
-  font-weight: 700;
+  text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
   border-bottom: 2px solid $crusta;
 }
 
+.categories--catalog {
+  display: none;
+}

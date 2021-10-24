@@ -1,0 +1,27 @@
+.tirefitting-banner {
+  padding: 61px 0 46px;
+  background: linear-gradient(91.1deg, #9710E9 1.17%, #FD8D43 99.31%);
+  display: none;
+
+  @media (max-width: $viewport--sm) {
+    display: block;
+  }
+}
+
+.tirefitting-banner__wrapper {
+  text-align: center;
+}
+
+.tirefitting-banner__title {
+  margin: 0;
+  letter-spacing: 2px;
+  font-size: 35px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.tirefitting-banner__paragraph {
+  margin-bottom: 0;
+  font-size: 18px;
+  color: $white;
+}

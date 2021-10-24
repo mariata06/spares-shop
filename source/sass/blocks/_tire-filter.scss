@@ -1,5 +1,13 @@
 .tire-filter {
   width: 281px;
+
+  @media (max-width: $viewport--sm) {
+    display: none;
+
+    &--open {
+      display: block;
+    }
+  }
 }
 
 .tire-filter__params-button,

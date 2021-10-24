@@ -7,6 +7,7 @@
   background-color: $white;
   border-radius: 5px;
   margin-right: 34px;
+  transition: text-shadow .3s;
 
   @media (max-width: $viewport--md) {
     padding: 6px 0;
@@ -16,6 +17,7 @@
   &:hover,
   &:focus {
     background-color: $lavender;
+    text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
 
     @media (max-width: $viewport--md) {
       background-color: transparent;
@@ -26,6 +28,7 @@
 
 .form__button--active {
   @media (max-width: $viewport--md) {
+    text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
     border-bottom: 2px solid $crusta;
   }
 }
