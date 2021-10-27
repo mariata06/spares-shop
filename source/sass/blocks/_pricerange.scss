@@ -1,0 +1,17 @@
+.pricerange__price-controls {
+  display: flex;
+  justify-content: space-between;
+
+  label {
+    font-size: 14px;
+  }
+}
+
+.pricerange__min-price,
+.pricerange__max-price {
+  //width: 50%;
+
+  input {
+    width: 45px;
+  }
+}

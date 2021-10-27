@@ -1,29 +1,117 @@
 .sort {
   padding-bottom: 50px;
+  width: 1170px;
+  margin: 0 auto;
+
+  @media (max-width: $viewport--sm) {
+    width: 100%;
+  }
 }
 
 .sort h1 {
   font-size: 30px;
   margin-bottom: 31px;
+
+  @media (max-width: $viewport--sm) {
+    font-size: 20px;
+  }
 }
 
 .sort__wrapper {
   display: flex;
+  width: 1170px;
 
   @media (max-width: $viewport--sm) {
+    //border-top: 1.5px solid $hawkes-blue;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
     flex-direction: column-reverse;
   }
 }
 
+.sort__class {
+  @media (max-width: $viewport--sm) {
+    width: 100%;
+    padding-left: 16px;
+  }
+}
+
+.sort__container {
+  @media (max-width: $viewport--sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.sort__bytown {
+  display: none;
+  outline: none;
+
+  @media (max-width: $viewport--sm) {
+    font-size: 15px;
+    font-weight: 700;
+    color: $crusta;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    order: 3;
+    border: 0;
+    //border-top: 1.5px solid $hawkes-blue;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    //border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
 .sort__types {
+  width: 178px;
   font-size: 14px;
   margin-right: 21px;
   margin-left: auto;
-  padding: 8px 46px 8px 20px;
+  padding: 8px 10px 8px 20px;
   border: 1.5px solid $hawkes-blue;
+
+  @media (max-width: $viewport--sm) {
+    font-size: 15px;
+    font-weight: 700;
+    width: 210px;
+    position: relative;
+    padding: 15px 20px 16px 27px;
+    padding-left: 52px;
+    padding-right: 0;
+    border: none;
+    margin: 0;
+
+    &::before {
+      content: url("../img/sort-icon.svg");
+      display: block;
+      width: 19px;
+      height: 13px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }
-.sort__table,
-.sort__list {
+
+.sort__filter-button {
+  display: none;
+  svg {
+    fill: none;
+  }
+
+  @media (max-width: $viewport--sm) {
+    font-size: 15px;
+    font-weight: 700;
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+
+.sort__table-button,
+.sort__list-button {
   margin-left: 10px;
 
   @media (max-width: $viewport--sm) {
@@ -31,7 +119,6 @@
   }
 
   svg {
-    fill: $tuna;
     fill: none;
   }
 }

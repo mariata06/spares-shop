@@ -16,11 +16,13 @@
   border-radius: 3px;
 }
 
-.button--more {
+.button--more,
+.button--apply {
   padding: 15px 43px 17px;
   text-transform: uppercase;
   color: $french-grey;
   font-size: 15px;
+  font-weight: 700;
   background-color: $lavender;
 
   &:hover,

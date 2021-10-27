@@ -169,7 +169,7 @@
         </li>
       </ul>
 
-      <section class="sort container">
+      <section class="sort">
         <h1 class="container">Нешипованные шины</h1>
         <div class="sort__wrapper">
           <!-- Slider main container -->
@@ -185,25 +185,44 @@
             </div>
           </div>
 
-          <select name="sort-types" id="sort-types" class="sort__types">
-            <option selected value="По популярности">По популярности</option>
-            <option value="В алфавитном порядке">В алфавитном порядке</option>
-            <option value="По размеру скидки">По размеру скидки</option>
-            <option value="По цене по возрастанию">
-              По цене по возрастанию
-            </option>
-            <option value="По цене по убыванию">По цене по убыванию</option>
-          </select>
-          <button class="button sort__table">
-            <svg width="23" height="21">
-              <use xlink:href="img/sprite.svg#table-icon"></use>
-            </svg>
-          </button>
-          <button class="button sort__list">
-            <svg width="25" height="19">
-              <use xlink:href="img/sprite.svg#list-icon"></use>
-            </svg>
-          </button>
+          <div class="sort__container">
+            <select name="sort-types" id="sort-types" class="sort__types">
+              <!-- <svg width="19" height="13">
+                <use xlink:href="img/sprite.svg#sort-icon"></use>
+              </svg> -->
+              <option selected value="По популярности">По популярности</option>
+              <option value="В алфавитном порядке">В алфавитном порядке</option>
+              <option value="По размеру скидки">По размеру скидки</option>
+              <option value="По цене по возрастанию">
+                По цене по возрастанию
+              </option>
+              <option value="По цене по убыванию">По цене по убыванию</option>
+            </select>
+            <select name="sort-bytown" id="sort-bytown" class="sort__bytown">
+              <option selected value="Набережные Челны">Набережные Челны</option>
+              <option value="Москва">Москва</option>
+              <option value="Санкт-Петербург">Санкт-Петербург</option>
+              <option value="Сочи">Сочи</option>
+              <option value="Ярославль">Ярославль</option>
+            </select>
+            <button class="button sort__filter-button">
+              <svg width="13" height="13">
+                <use xlink:href="img/sprite.svg#filter-icon"></use>
+              </svg>
+              фильтры
+            </button>
+            <button class="button sort__table-button">
+              <svg width="23" height="21">
+                <use xlink:href="img/sprite.svg#table-icon"></use>
+              </svg>
+            </button>
+            <button class="button sort__list-button">
+              <svg width="25" height="19">
+                <use xlink:href="img/sprite.svg#list-icon"></use>
+              </svg>
+            </button>
+          </div>
+
         </div>
       </section>
 
@@ -211,8 +230,15 @@
         <h2 class="visually-hidden">Каталог шин</h2>
         <div class="tire-catalog__filter tire-filter">
           <form action="/" method="POST">
+            <h3 class="tire-filter__title">
+              <button class="button tire-filter__title-button">
+                <svg width="13" height="9">
+                  <use xlink:href="img/sprite.svg#arrowfilter-icon"></use>
+                </svg>
+              </button>
+              Фильтры</h3>
             <div class="tire-filter__params">
-              <button class="tire-filter__params-button button">
+              <button class="tire-filter__params-button tire-filter__params-button--active button">
                 Параметры
               </button>
               <div class="tire-filter__season">
@@ -223,7 +249,7 @@
                   Сезонность
                 </div>
                 <div class="tire-filter__season-content">
-                  <div class="tire-filter__input-wrapper">
+                  <div class="tire-filter__input-wrapper tire-filter__input-wrapper--winter">
                     <input type="checkbox" />
                     <label>Зимние</label>
                   </div>
@@ -245,11 +271,11 @@
                     <input type="checkbox" />
                     <label>Все</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
+                  <div class="tire-filter__input-wrapper tire-filter__input-wrapper--studded">
                     <input type="checkbox" />
                     <label>Шипованные</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
+                  <div class="tire-filter__input-wrapper tire-filter__input-wrapper--studless">
                     <input type="checkbox" />
                     <label>Нешипованные</label>
                   </div>
@@ -262,19 +288,19 @@
                   </svg>
                   Цена
                 </div>
-                <div class="tire-filter__price-content range">
-                  <div class="range__controls">
-                    <div class="range__scale">
-                      <div class="range__bar"></div>
+                <div class="tire-filter__price-content pricerange">
+                  <div class="pricerange__controls">
+                    <div class="pricerange__scale">
+                      <div class="pricerange__bar"></div>
                     </div>
-                    <div class="range__toggle range__toggle-min"></div>
-                    <div class="range__toggle range__toggle-max"></div>
+                    <div class="pricerange__toggle pricerange__toggle-min"></div>
+                    <div class="pricerange__toggle pricerange__toggle-max"></div>
                   </div>
-                  <div class="range__price-controls">
-                    <label class="range__min-price"
+                  <div class="pricerange__price-controls">
+                    <label class="pricerange__min-price"
                       >от <input type="number" name="min-price" value="2000"
                     /></label>
-                    <label class="range__max-price"
+                    <label class="pricerange__max-price"
                       >до <input type="number" name="max-price" value="12000"
                     /></label>
                   </div>
@@ -378,7 +404,7 @@
                     <input type="checkbox" />
                     <label>BF hide</label>
                   </div>
-                  <button class="button button--loadmore" type="button">
+                  <button class="tire-filter__button--loadmore button button--loadmore" type="button">
                     Показать еще
                   </button>
                 </div>
@@ -419,13 +445,13 @@
                     <input type="checkbox" />
                     <label>ICE Gide</label>
                   </div>
-                  <button class="button button--loadmore" type="button">
+                  <button class="tire-filter__button--loadmore button button--loadmore" type="button">
                     Показать еще
                   </button>
                 </div>
               </div>
               <div class="tire-filter__tiretech">
-                <div class="tire-filter__tirebrand-trigger">Технология</div>
+                <div class="tire-filter__tiretech-trigger">Технология</div>
                 <div class="tire-filter__tiretech-content">
                   <div class="tire-filter__input-wrapper">
                     <input type="checkbox" />
@@ -484,7 +510,7 @@
                     <input type="checkbox" />
                     <label>Германия</label>
                   </div>
-                  <button class="button button--loadmore" type="button">
+                  <button class="tire-filter__button--loadmore button button--loadmore" type="button">
                     Показать еще
                   </button>
                 </div>
@@ -525,7 +551,7 @@
                 </div>
               </div>
               <div class="tire-filter__automodel">
-                <div class="tire-filter__automodel-trigger">Марка</div>
+                <div class="tire-filter__automodel-trigger">Модель</div>
                 <div class="tire-filter__automodel-content">
                   <select name="tire-automodel" id="tire-automodel">
                     <option selected value="1-series">1-series</option>
@@ -626,14 +652,14 @@
                 </button>
               </div>
             </div>
-            <button type="button" class="button button--more">Подобрать</button>
+            <button type="button" class="tire-filter__button--apply button button--apply">Подобрать</button>
             <div class="tire-filter__extraparams">
               Дополнительные параметры
               <svg width="12" height="8">
                 <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
               </svg>
             </div>
-            <button class="button button--reset" type="button">
+            <button class="tire-filter__button--reset button button--reset" type="button">
               Сбросить фильтр
             </button>
           </form>

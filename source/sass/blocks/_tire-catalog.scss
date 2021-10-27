@@ -22,3 +22,11 @@
 .tire-catalog__list {
   margin-left: auto;
 }
+
+.tire-catalog__filter {
+  @media (max-width: $viewport--sm) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
