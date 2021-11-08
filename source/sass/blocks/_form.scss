@@ -3,34 +3,7 @@
 }
 
 .form__button {
-  padding: 11px 20px 13px;
-  background-color: $white;
-  border-radius: 5px;
   margin-right: 34px;
-  transition: text-shadow .3s;
-
-  @media (max-width: $viewport--md) {
-    padding: 6px 0;
-    border-radius: 0;
-  }
-
-  &:hover,
-  &:focus {
-    background-color: $lavender;
-    text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
-
-    @media (max-width: $viewport--md) {
-      background-color: transparent;
-      opacity: 0.8;
-    }
-  }
-}
-
-.form__button--active {
-  @media (max-width: $viewport--md) {
-    text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
-    border-bottom: 2px solid $crusta;
-  }
 }
 
 .form__button--search {
@@ -53,7 +26,6 @@
     margin: 0 auto;
     background-color: transparent;
     right: 10px;
-    //top: 50%;
   }
 
   span {

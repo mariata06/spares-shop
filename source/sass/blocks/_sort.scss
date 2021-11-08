@@ -46,6 +46,7 @@
 .sort__bytown {
   display: none;
   outline: none;
+  background-color: transparent;
 
   @media (max-width: $viewport--sm) {
     font-size: 15px;
@@ -71,6 +72,7 @@
   margin-left: auto;
   padding: 8px 10px 8px 20px;
   border: 1.5px solid $hawkes-blue;
+  background-color: transparent;
 
   @media (max-width: $viewport--sm) {
     font-size: 15px;

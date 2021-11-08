@@ -1,9 +1,15 @@
 .pricerange__price-controls {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
   label {
     font-size: 14px;
+  }
+
+  input[type="number"] {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
@@ -11,7 +17,10 @@
 .pricerange__max-price {
   //width: 50%;
 
-  input {
+  input[type="number"] {
     width: 45px;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
   }
 }

@@ -2,3 +2,89 @@ input {
   outline: none;
   border: none;
 }
+
+input[type="number"] {
+  width: 45px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+input[type="search"] {
+  width: 100%;
+  font-size: 12px;
+  color: $french-grey;
+  padding: 8px 0 8px 20px;
+  border: 1px solid $gray88;
+}
+
+.tire-filter__checkbox-wrapper,
+.tire-filter__radio-wrapper {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+
+  label {
+    padding-left: 29px;
+  }
+}
+
+input[type="checkbox"]+label::before,
+input[type="radio"]+label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 1px solid $very-light-grey;
+  border-radius: 1px;
+}
+
+input[type="checkbox"]:checked+label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: $crusta;
+  border: unset;
+  border-radius: unset;
+}
+
+input[type="checkbox"]:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  width: 8px;
+  height: 3px;
+  border-bottom: 1px solid $white;
+  border-left: 1px solid $white;
+  transform: rotate(-50deg);
+}
+
+input[type="radio"]:checked+label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 2px solid $crusta;
+  border-radius: 2px;
+}
+
+input[type="radio"]:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  background-color: $crusta;
+  border-radius: 2px;
+}

@@ -77,17 +77,23 @@
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-}
 
-.button--promo--active {
-  background: linear-gradient(91.1deg, #9710E9 1.17%, #FD8D43 99.31%);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  color: $white;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active,
+  &--active {
+    background: linear-gradient(91.1deg, #9710E9 1.17%, #FD8D43 99.31%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: $white;
+  }
 }
 
 .button--sort-class,
 .button--tireradius {
-  padding: 4px 22px;
+  padding: 4px 12px 4px 15px;
   font-size: 14px;
   color: $tuna;
   border-radius: 150px;
@@ -106,7 +112,8 @@
 
 .button--axis {
   font-size: 14px;
-  padding: 4px 12px;
+  padding: 4px 0;
+  margin-right: 0;
 }
 
 .button--cart--full  {
@@ -140,13 +147,8 @@
   width: 36px;
   height: 36px;
   border-radius: 100px;
-  //background: rgba(255, 255, 255, 0.3);
-  //box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  //transform: matrix(-1, 0, 0, 1, 0, 0);
-  //content: url("../img/arrow-next.svg");
   background: $white;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  //transform: matrix(-1, 0, 0, 1, 0, 0);
 
   svg {
     padding-top: 5px;
@@ -169,4 +171,31 @@
 
 .button--slider-prev {
   transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.button--searchtype {
+  padding: 11px 20px 13px;
+  background-color: $white;
+  border-radius: 5px;
+  transition: text-shadow .3s;
+
+  @media (max-width: $viewport--md) {
+    padding: 6px 0;
+    border-radius: 0;
+    text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &--active {
+    background-color: $lavender;
+    text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
+
+    @media (max-width: $viewport--md) {
+      background-color: transparent;
+      opacity: 0.8;
+      border-bottom: 2px solid $crusta;
+    }
+  }
 }

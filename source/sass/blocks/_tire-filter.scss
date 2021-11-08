@@ -5,10 +5,7 @@
 
   @media (max-width: $viewport--sm) {
     display: none;
-    display: block;
     width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
 
     &--open {
       display: block;
@@ -28,6 +25,16 @@
     font-size: 15px;
     margin-top: 18px;
     margin-bottom: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.tire-filter__choice-item {
+  display: none;
+
+  &--active {
+    display: block;
   }
 }
 
@@ -37,55 +44,59 @@
   margin-right: 99px;
 }
 
-.tire-filter__params-button,
-.tire-filter__carbrand-button {
-  //width: 50%;
+.tire-filter__choice-button {
   padding: 8px 0;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  //display: inline-block;
   margin: 0 auto;
   margin-right: 39px;
   margin-bottom: 23px;
+  border-bottom: 2px solid transparent;
+
+  @media (max-width: $viewport--sm) {
+    border: 1px solid $gray88;
+    background-color: $white;
+    padding: 9px 27px 10px;
+    text-transform: none;
+    font-size: 15px;
+  }
+
+  &--active {
+    border-bottom: 2px solid $crusta;
+
+    @media (max-width: $viewport--sm) {
+      border: 1px solid $crusta;
+      background-color: $crusta;
+      color: $white;
+    }
+  }
 }
 
-.tire-filter__params-button--active {
-  border-bottom: 2px solid $crusta;
+.tire-filter__params-button {
+  @media (max-width: $viewport--sm) {
+    margin: 0;
+    margin-left: 16px;
+    margin-bottom: 30px;
+  }
 }
 
-// input[type="checkbox"] {
-//   background-color: $crusta;
-// }
+.tire-filter__params-trigger {
+  &--active {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
 
-// select {
-//   // A reset of styles, including removing the default dropdown arrow
-//   appearance: none;
-//   // Additional resets for further consistency
-//   background-color: transparent;
-//   border: none;
-//   padding: 0 1em 0 0;
-//   margin: 0;
-//   width: 100%;
-//   font-family: inherit;
-//   //font-size: inherit;
-//   font-size: 14px;
-//   cursor: inherit;
-//   line-height: inherit;
-//   overflow-y: auto;
-//   scrollbar-width: none; /*For Firefox*/;
-//   -ms-overflow-style: none;  /*For Internet Explorer 10+*/;
-// }
+.tire-filter__params-content {
+  display: none;
 
-// select {
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   appearance: none;
-// }
-
-// select::-ms-expand {
-//   display: none;
-// }
+  &--active {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 
 .tire-filter__tirepromo-content {
   display: flex;
@@ -101,11 +112,10 @@
   width: 100%;
 }
 
-.tire-filter__tireradius  {
+.tire-filter__tireradius--R16  {
   display: flex;
   flex-wrap: wrap;
-  //justify-content: space-between;
-  button {
+  .button--tireradius {
     margin-bottom: 15px;
     margin-right: 20px;
   }
@@ -119,9 +129,14 @@
     width: 100%;
   }
 
+  .button--tireradius {
+    margin-bottom: 15px;
+  }
+
   .tire-filter__radius-buttons {
-    padding: 0;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
   }
 }
 
@@ -140,15 +155,50 @@
   }
 }
 
-.tire-filter__season-content,
-.tire-filter__tiretype-content,
-.tire-filter__tirebrand-content,
-.tire-filter__tiremodel-content,
-.tire-filter__tiretech-content,
-.tire-filter__tirecountry-content {
+.tire-filter__tirebrand,
+.tire-filter__tiremodel {
   display: flex;
   flex-wrap: wrap;
-  //justify-content: space-between;
+}
+
+.tire-filter__tirebrand .tire-filter__input-wrapper,
+.tire-filter__tiremodel .tire-filter__input-wrapper,
+.tire-filter__tirecountry .tire-filter__input-wrapper,
+.tire-filter__tiretech .tire-filter__input-wrapper {
+  display: flex;
+  align-items: baseline;
+  width: 105px;
+  margin-right: 0;
+  margin-bottom: 15px;
+
+  label {
+    width: 80px;
+  }
+}
+
+.tire-filter__tirebrand .tire-filter__input-wrapper--search,
+.tire-filter__tiremodel .tire-filter__input-wrapper--search {
+  width: 100%;
+}
+
+.tire-filter__season-content .tire-filter__input-wrapper,
+.tire-filter__tiretype-content .tire-filter__input-wrapper {
+  margin-bottom: 15px;
+  @media (max-width: $viewport--sm) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  label {
+    @media (max-width: $viewport--sm) {
+      padding-left: 50px;
+    }
+  }
+}
+
+.tire-filter__tiretype-content {
+  justify-content: space-between;
 }
 
 .tire-filter__input-wrapper--search {
@@ -156,31 +206,55 @@
   margin-bottom: 20px;
 }
 
-.tire-filter__input-wrapper:not(.tire-filter__input-wrapper--search) {
-  //margin-right: 10px;
-  margin-right: 50px;
-}
-
 select>option {
   font-size: 14px;
 }
-
-// select::-ms-expand {
-//   display: none;
-//   border-radius: 0;
-//   background-color: $white;
-// }
 
 option {
   padding: 0;
 }
 
+.tire-filter__diametr-trigger,
+.tire-filter__profile-trigger,
+.tire-filter__width-trigger {
+  padding: 9px 0;
+  position: relative;
+  &::after {
+    content: url("../img/question-icon.png");
+    position: absolute;
+    right: -30px;
+    top: 10px;
+  }
+}
+
+.tire-filter__params-trigger {
+  font-size: 16px;
+  font-weight: 700;
+
+  @media (max-width: $viewport--sm) {
+    padding-left: 26px;
+  }
+}
+
+.tire-filter__price-trigger {
+  @media (max-width: $viewport--sm) {
+    padding-left: 0;
+  }
+}
+
 .tire-filter__season-trigger,
 .tire-filter__tiretype-trigger,
 .tire-filter__price-trigger,
-.tire-filter__diametr,
-.tire-filter__profile,
-.tire-filter__width,
+.tire-filter__tirebrand-trigger,
+.tire-filter__tiremodel-trigger,
+.tire-filter__tirecountry-trigger {
+  @media (max-width: $viewport--sm) {
+    svg {
+      display: none;
+    }
+  }
+}
+
 .tire-filter__tirebrand-trigger,
 .tire-filter__tiremodel-trigger,
 .tire-filter__tiretech-trigger,
@@ -191,36 +265,83 @@ option {
 .tire-filter__carcase-trigger,
 .tire-filter__automodification-trigger,
 .tire-filter__tireradius-trigger {
-  //padding-top: 23px;
-  padding-bottom: 23px;
-  font-size: 16px;
-  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+.tire-filter__season-trigger,
+.tire-filter__tiretype-trigger,
+.tire-filter__price-trigger {
+  padding-bottom: 20px;
+}
+
+.tire-filter__diametr,
+.tire-filter__profile,
+.tire-filter__width {
+  margin-bottom: 21px;
+  @media (max-width: $viewport--sm) {
+    padding: 9px 0;
+  }
 }
 
 .tire-filter__input-wrapper label {
   font-size: 14px;
 }
-.tire-filter__input-wrapper--winter {
+.tire-filter__input-wrapper--winter,
+.tire-filter__input-wrapper--summer,
+.tire-filter__input-wrapper--studded,
+.tire-filter__input-wrapper--studless,
+.tire-filter__input-wrapper--alltiretypes
+.tire-filter__tiretech-trigger {
   position: relative;
   margin-right: 59px;
+  display: flex;
+  align-items: baseline;
 
   &::after {
     content: url("../img/question-icon.png");
     position: absolute;
     right: -25px;
-    top: 2px;
+    top: 0;
+
+    @media (max-width: $viewport--sm) {
+      right: unset;
+      left: 25px;
+    }
+  }
+}
+
+.tire-filter__tiretech-trigger {
+  display: inline-block;
+
+  &::after {
+    content: url("../img/question-icon.png");
+    position: absolute;
+    right: -35px;
+    top: 0;
+
+    @media (max-width: $viewport--sm) {
+      right: unset;
+      left: 25px;
+    }
   }
 }
 
 .tire-filter__input-wrapper--winter,
+.tire-filter__input-wrapper--summer,
 .tire-filter__input-wrapper--studded,
-.tire-filter__input-wrapper--studless {
-  position: relative;
-  &::after {
-    content: url("../img/question-icon.png");
-    position: absolute;
-    right: -25px;
-    top: 2px;
+.tire-filter__input-wrapper--studless,
+.tire-filter__input-wrapper--alltypes {
+  @media (max-width: $viewport--sm) {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 7px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+  }
+
+  input {
+    @media (max-width: $viewport--sm) {
+      margin-right: 26px;
+    }
   }
 }
 
@@ -240,11 +361,40 @@ option {
   margin-bottom: 31px;
 }
 
+.tire-filter__tirebrand,
+.tire-filter__tiremodel,
+.tire-filter__tiretech,
+.tire-filter__tirepromo,
+.tire-filter__tirecountry,
+.tire-filter__autobrand,
+.tire-filter__automodel,
+.tire-filter__carcase,
+.tire-filter__automodification,
+.tire-filter__tireradius {
+  @media (max-width: $viewport--sm) {
+    margin-left: 26px;
+    margin-right: 26px;
+  }
+}
+
 .tire-filter__diametr,
 .tire-filter__profile,
 .tire-filter__width {
+  border-bottom: 1px solid $gray88;
   select {
     border: 0;
+    background-color: transparent;
+
+    @media (max-width: $viewport--sm) {
+      margin-right: 26px;
+    }
+  }
+}
+
+.tire-filter__price-range {
+  @media (max-width: $viewport--sm) {
+      margin-left: 26px;
+      margin-right: 26px;
   }
 }
 
@@ -257,15 +407,16 @@ option {
     padding: 11px 0 12px 15px;
     width: 100%;
     border: 1px solid $gray88;
+    background-color: transparent;
   }
 }
 
-input[type="search"] {
-  width: 100%;
-  font-size: 12px;
-  color: $french-grey;
-  padding: 8px 0 8px 20px;
-  border: 1px solid $gray88;
+.tire-filter__tiretech .tire-filter__tiretech-content {
+  display: flex;
+}
+
+.tire-filter__tiretech .tire-filter__input-wrapper {
+  width: 87px;
 }
 
 .tire-filter__button--loadmore {
@@ -279,13 +430,25 @@ input[type="search"] {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 11px;
+
+  @media (max-width: $viewport--sm) {
+    display: none;
+  }
 }
 
 .tire-filter__button--reset {
   margin: 0 auto;
   display: block;
+
+  @media (max-width: $viewport--sm) {
+    display: none;
+  }
 }
 
 .tire-filter__button--apply {
   width: 100%;
+
+  @media (max-width: $viewport--sm) {
+    display: none;
+  }
 }

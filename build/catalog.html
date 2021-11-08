@@ -199,67 +199,71 @@
 
       <section class="tire-catalog container">
         <h2 class="visually-hidden">Каталог шин</h2>
-        <div class="tire-catalog__filter tire-filter">
-          <form action="/" method="POST">
+        <div class="tire-catalog__filter tire-filter filter">
+          <form action="https://echo.htmlacademy.ru" method="POST">
             <h3 class="tire-filter__title">
-              <button class="button tire-filter__title-button">
+              <button class="button tire-filter__title-button tire-filter__close">
                 <svg width="13" height="9">
                   <use xlink:href="img/sprite.svg#arrowfilter-icon"></use>
                 </svg>
               </button>
-              Фильтры</h3>
-            <div class="tire-filter__params">
-              <button class="tire-filter__params-button tire-filter__params-button--active button">
-                Параметры
-              </button>
-              <div class="tire-filter__season">
-                <div class="tire-filter__season-trigger">
+              Фильтры
+            </h3>
+            <div class="tire-filter__choice">
+              <button aria-label="поиск по параметрам" type="button" class="tire-filter__choice-button tire-filter__choice-button--active tire-filter__params-button button" data-tab-name="tireparams">Параметры</button>
+              <button aria-label="поиск по марке" type="button" class="tire-filter__choice-button tire-filter__carbrand-button button" data-tab-name="tirebrand">По марке</button>
+            </div>
+            <div class="tire-filter__choice-item tire-filter__choice-item--active tire-filter__choice-item--tireparams">
+              <div class="tire-filter__item tire-filter__season">
+                <button rel="season" class="tire-filter__params-trigger tire-filter__params-trigger--active tire-filter__season-trigger button">
                   <svg width="12" height="8">
                     <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
                   Сезонность
-                </div>
-                <div class="tire-filter__season-content">
-                  <div class="tire-filter__input-wrapper tire-filter__input-wrapper--winter">
-                    <input type="checkbox">
-                    <label>Зимние</label>
+                </button>
+                <div id="season" class="tire-filter__params-content tire-filter__params-content--active tire-filter__season-content">
+                  <div class="tire-filter__input-wrapper tire-filter__radio-wrapper tire-filter__input-wrapper--winter">
+                    <input type="radio" id="wintertires" name="seasontypes" class="visually-hidden">
+                    <label for="wintertires">Зимние</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Летние</label>
+                  <div class="tire-filter__input-wrapper tire-filter__radio-wrapper tire-filter__input-wrapper--summer">
+                    <input type="radio" id="summertires" name="seasontypes" class="visually-hidden">
+                    <label for="summertires">Летние</label>
                   </div>
                 </div>
               </div>
-              <div class="tire-filter__tiretype">
-                <div class="tire-filter__tiretype-trigger">
+              <div class="tire-filter__item tire-filter__tiretype">
+                <button class="tire-filter__params-trigger tire-filter__params-trigger--active tire-filter__tiretype-trigger button" rel="tiretype">
                   <svg width="12" height="8">
                     <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
                   Тип шин
-                </div>
-                <div class="tire-filter__tiretype-content">
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Все</label>
+                </button>
+                <div class="tire-filter__params-content tire-filter__params-content--active tire-filter__tiretype-content" id="tiretype">
+                  <div class="tire-filter__input-wrapper tire-filter__radio-wrapper tire-filter__input-wrapper--alltiretypes">
+                    <input type="radio" id="alltiretypes" name="tiretypes" checked="" class="visually-hidden">
+                    <label for="alltiretypes">Все</label>
                   </div>
-                  <div class="tire-filter__input-wrapper tire-filter__input-wrapper--studded">
-                    <input type="checkbox">
-                    <label>Шипованные</label>
+
+                  <div class="tire-filter__input-wrapper tire-filter__radio-wrapper tire-filter__input-wrapper--studded">
+                    <input type="radio" id="studdedtires" name="tiretypes" class="visually-hidden">
+                    <label for="studdedtires">Шипованные</label>
                   </div>
-                  <div class="tire-filter__input-wrapper tire-filter__input-wrapper--studless">
-                    <input type="checkbox">
-                    <label>Нешипованные</label>
+
+                  <div class="tire-filter__input-wrapper tire-filter__radio-wrapper tire-filter__input-wrapper--studless">
+                    <input type="radio" id="studlesstires" name="tiretypes" class="visually-hidden">
+                    <label for="studlesstires">Нешипованные</label>
                   </div>
                 </div>
               </div>
-              <div class="tire-filter__price-range">
-                <div class="tire-filter__price-trigger">
+              <div class="tire-filter__item tire-filter__price-range">
+                <button class="tire-filter__params-trigger tire-filter__params-trigger--active tire-filter__price-trigger button" rel="price">
                   <svg width="12" height="8">
                     <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
                   Цена
-                </div>
-                <div class="tire-filter__price-content pricerange">
+                </button>
+                <div class="tire-filter__params-content tire-filter__params-content--active tire-filter__price-content pricerange" id="price">
                   <div class="pricerange__controls">
                     <div class="pricerange__scale">
                       <div class="pricerange__bar"></div>
@@ -274,7 +278,9 @@
                 </div>
               </div>
               <div class="tire-filter__diametr">
-                Диаметр
+                <div class="tire-filter__params-trigger  tire-filter__diametr-trigger">
+                  Диаметр
+                </div>
                 <select name="tire-diametr" id="tire-diametr">
                   <option selected="" value="16">16</option>
                   <option value="10">10</option>
@@ -301,7 +307,9 @@
                 </select>
               </div>
               <div class="tire-filter__profile">
-                Профиль
+                <div class="tire-filter__params-trigger tire-filter__profile-trigger">
+                  Профиль
+                </div>
                 <select name="tire-profile" id="tire-profile">
                   <option selected="" value="35">35</option>
                   <option value="40">40</option>
@@ -313,7 +321,9 @@
                 </select>
               </div>
               <div class="tire-filter__width">
-                Ширина
+                <div class="tire-filter__params-trigger tire-filter__width-trigger">
+                  Ширина
+                </div>
                 <select name="tire-width" id="tire-width">
                   <option selected="" value="155">155</option>
                   <option value="165">165</option>
@@ -335,70 +345,76 @@
                   <option value="325">325</option>
                 </select>
               </div>
-              <div class="tire-filter__tirebrand">
-                <div class="tire-filter__tirebrand-trigger">
+              <div class="tire-filter__item tire-filter__tirebrand">
+                <button class="tire-filter__params-trigger tire-filter__params-trigger--active tire-filter__tirebrand-trigger button" rel="tirebrand">
                   <svg width="12" height="8">
                     <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
                   Бренд
-                </div>
-                <div class="tire-filter__tirebrand-content">
+                </button>
+                <div class="tire-filter__params-content tire-filter__params-content--active tire-filter__tirebrand-content" id="tirebrand">
                   <div class="
                       tire-filter__input-wrapper
                       tire-filter__input-wrapper--search
                     ">
-                    <input id="tirebrand-search" type="search" placeholder="Введите бренд шины">
+                    <input id="tirebrand-search" type="search" name="search" placeholder="Введите бренд шины">
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>B Gudrich</label>
+                  <div class="tire-filter__input-wrapper tire-filter__checkbox-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="BGudrich" checked="">
+                    <label for="BGudrich">B&nbsp;Gudrich</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Rarym</label>
+
+                  <div class="tire-filter__input-wrapper tire-filter__checkbox-wrapper">
+                    <input type="checkbox" checked="" class="visually-hidden" id="Wridrestone">
+                    <label for="Wridrestone">Wridrestone</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Wridrestone</label>
+
+                  <div class="tire-filter__input-wrapper tire-filter__checkbox-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="Rarym">
+                    <label for="Rarym">Rarym</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>BF hide</label>
+
+                  <div class="tire-filter__input-wrapper tire-filter__checkbox-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="BFhide">
+                    <label for="BFhide">BF hide</label>
                   </div>
                   <button class="tire-filter__button--loadmore button button--loadmore" type="button">
                     Показать еще
                   </button>
                 </div>
               </div>
-              <div class="tire-filter__tiremodel">
-                <div class="tire-filter__tiremodel-trigger">
+              <div class="tire-filter__item tire-filter__tiremodel">
+                <button class="tire-filter__params-trigger tire-filter__params-trigger--active tire-filter__tiremodel-trigger button" rel="tiremodel">
                   <svg width="12" height="8">
                     <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
                   Модель
-                </div>
-                <div class="tire-filter__tiremodel-content">
+                </button>
+                <div class="tire-filter__params-content tire-filter__params-content--active tire-filter__tiremodel-content" id="tiremodel">
                   <div class="
                       tire-filter__input-wrapper
                       tire-filter__input-wrapper--search
                     ">
-                    <input id="tiremodel-search" type="search" placeholder="Введите модель шины">
+                    <input id="tiremodel-search" type="search" name="search" placeholder="Введите модель шины">
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>ALINA</label>
+                  <div class="tire-filter__input-wrapper tire-filter__checkbox-wrapper">
+                    <input type="checkbox" checked="" class="visually-hidden" id="alina">
+                    <label for="alina">ALINA</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>FORCE Moode</label>
+
+                  <div class="tire-filter__input-wrapper tire-filter__checkbox-wrapper">
+                    <input type="checkbox" checked="" class="visually-hidden" id="bliwwas">
+                    <label for="bliwwas">BLIWWAS</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>BLIWWAS</label>
+
+                  <div class="tire-filter__input-wrapper tire-filter__checkbox-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="forcemode">
+                    <label for="forcemode">FORCE Moode</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>ICE Gide</label>
+
+                  <div class="tire-filter__input-wrapper tire-filter__checkbox-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="icegide">
+                    <label for="icegide">ICE Gide</label>
                   </div>
                   <button class="tire-filter__button--loadmore button button--loadmore" type="button">
                     Показать еще
@@ -406,20 +422,20 @@
                 </div>
               </div>
               <div class="tire-filter__tiretech">
-                <div class="tire-filter__tiretech-trigger">Технология</div>
+                <div class="tire-filter__params-trigger tire-filter__tiretech-trigger">Технология</div>
                 <div class="tire-filter__tiretech-content">
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Да</label>
+                  <div class="tire-filter__checkbox-wrapper tire-filter__input-wrapper">
+                    <input type="checkbox" id="techyes" class="visually-hidden">
+                    <label for="techyes">Да</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Нет</label>
+                  <div class="tire-filter__checkbox-wrapper tire-filter__input-wrapper">
+                    <input type="checkbox" id="techno" class="visually-hidden">
+                    <label for="techno">Нет</label>
                   </div>
                 </div>
               </div>
               <div class="tire-filter__tirepromo">
-                <div class="tire-filter__tirepromo-trigger">Акции</div>
+                <div class="tire-filter__params-trigger tire-filter__tirepromo-trigger">Акции</div>
                 <div class="tire-filter__tirepromo-content">
                   <button type="button" class="button button--promo button--promo--active">
                     Sale
@@ -435,29 +451,29 @@
                   </button>
                 </div>
               </div>
-              <div class="tire-filter__tirecountry">
-                <div class="tire-filter__tirecountry-trigger">
+              <div class="tire-filter__item tire-filter__tirecountry">
+                <button class="tire-filter__params-trigger tire-filter__params-trigger--active tire-filter__tirecountry-trigger button" rel="tirecontry">
                   <svg width="12" height="8">
                     <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
                   Страны
-                </div>
-                <div class="tire-filter__tirecountry-content">
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Россия</label>
+                </button>
+                <div class="tire-filter__params-content tire-filter__params-content--active tire-filter__tirecountry-content" id="tirecountry">
+                  <div class="tire-filter__checkbox-wrapper tire-filter__input-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="russia" checked="">
+                    <label for="russia">Россия</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Россия</label>
+                  <div class="tire-filter__checkbox-wrapper tire-filter__input-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="germany" checked="">
+                    <label for="germany">Германия</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Германия</label>
+                  <div class="tire-filter__checkbox-wrapper tire-filter__input-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="russian">
+                    <label for="russian">Россия</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Германия</label>
+                  <div class="tire-filter__checkbox-wrapper tire-filter__input-wrapper">
+                    <input type="checkbox" class="visually-hidden" id="german">
+                    <label for="german">Германия</label>
                   </div>
                   <button class="tire-filter__button--loadmore button button--loadmore" type="button">
                     Показать еще
@@ -465,30 +481,27 @@
                 </div>
               </div>
             </div>
-            <div class="tire-filter__carbrand">
-              <button class="tire-filter__carbrand-button button">
-                По марке
-              </button>
+            <div class="tire-filter__choice-item tire-filter__choice-item--tirebrand">
               <div class="tire-filter__season">
-                <div class="tire-filter__season-trigger">
+                <button class="tire-filter__params-trigger tire-filter__params-trigger--active tire-filter__season-trigger button">
                   <svg width="12" height="8">
                     <use xlink:href="img/sprite.svg#arrowdown-icon"></use>
                   </svg>
                   Сезонность
-                </div>
-                <div class="tire-filter__season-content">
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Зимние</label>
+                </button>
+                <div class="tire-filter__params-content tire-filter__params-content--active tire-filter__season-content">
+                  <div class="tire-filter__radio-wrapper tire-filter__input-wrapper tire-filter__input-wrapper--winter">
+                    <input type="radio" id="wintertire" class="visually-hidden" checked="">
+                    <label for="wintertire">Зимние</label>
                   </div>
-                  <div class="tire-filter__input-wrapper">
-                    <input type="checkbox">
-                    <label>Летние</label>
+                  <div class="tire-filter__radio-wrapper tire-filter__input-wrapper tire-filter__input-wrapper--summer">
+                    <input type="radio" id="summertire" class="visually-hidden">
+                    <label for="summertire">Летние</label>
                   </div>
                 </div>
               </div>
               <div class="tire-filter__autobrand">
-                <div class="tire-filter__autobrand-trigger">Марка</div>
+                <div class="tire-filter__params-trigger tire-filter__autobrand-trigger">Марка</div>
                 <div class="tire-filter__autobrand-content">
                   <select name="tire-autobrand" id="tire-autobrand">
                     <option selected="" value="BMW">BMW</option>
@@ -500,7 +513,7 @@
                 </div>
               </div>
               <div class="tire-filter__automodel">
-                <div class="tire-filter__automodel-trigger">Модель</div>
+                <div class="tire-filter__params-trigger tire-filter__automodel-trigger">Модель</div>
                 <div class="tire-filter__automodel-content">
                   <select name="tire-automodel" id="tire-automodel">
                     <option selected="" value="1-series">1-series</option>
@@ -512,7 +525,7 @@
                 </div>
               </div>
               <div class="tire-filter__carcase">
-                <div class="tire-filter__carcase-trigger">Кузов</div>
+                <div class="tire-filter__params-trigger tire-filter__carcase-trigger">Кузов</div>
                 <div class="tire-filter__carcase-content">
                   <select name="tire-carcase" id="tire-carcase">
                     <option selected="" value="E81 3d">E81 3d</option>
@@ -522,7 +535,7 @@
                 </div>
               </div>
               <div class="tire-filter__automodification">
-                <div class="tire-filter__automodification-trigger">
+                <div class="tire-filter__params-trigger tire-filter__automodification-trigger">
                   Модификация
                 </div>
                 <div class="tire-filter__automodification-content">
@@ -534,7 +547,7 @@
                 </div>
               </div>
               <div class="tire-filter__tireradius tire-filter__tireradius--R16">
-                <div class="tire-filter__tireradius-trigger">R16</div>
+                <div class="tire-filter__params-trigger tire-filter__tireradius-trigger">R16</div>
                 <button type="button" class="button button--tireradius">
                   205/55 R17
                 </button>
@@ -549,7 +562,7 @@
                 </button>
               </div>
               <div class="tire-filter__tireradius tire-filter__tireradius--R17">
-                <div class="tire-filter__tireradius-trigger">R17</div>
+                <div class="tire-filter__params-trigger tire-filter__tireradius-trigger">R17</div>
                 <div class="tire-filter__radius-buttons">
                   <button type="button" class="button button--axis">
                     Передняя ось
@@ -589,7 +602,7 @@
                 </div>
               </div>
               <div class="tire-filter__tireradius tire-filter__tireradius--R18">
-                <div class="tire-filter__tireradius-trigger">R18</div>
+                <div class="tire-filter__params-trigger tire-filter__tireradius-trigger">R18</div>
                 <button type="button" class="button button--tireradius">
                   255/40 R18
                 </button>
@@ -598,7 +611,7 @@
                 </button>
               </div>
             </div>
-            <button type="button" class="tire-filter__button--apply button button--apply">Подобрать</button>
+            <button type="submit" class="tire-filter__button--apply button button--apply">Подобрать</button>
             <div class="tire-filter__extraparams">
               Дополнительные параметры
               <svg width="12" height="8">
@@ -1425,5 +1438,6 @@
     <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script> -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script>
+    <script src="js/filter.js"></script>
   </body>
 </html>
