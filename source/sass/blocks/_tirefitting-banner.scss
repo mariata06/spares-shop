@@ -3,7 +3,7 @@
   background: linear-gradient(91.1deg, #9710E9 1.17%, #FD8D43 99.31%);
   display: none;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     display: block;
   }
 }

@@ -20,15 +20,18 @@
 }
 
 .accordeon__item {
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     width: 100%;
+    padding: 16px;
+    border-bottom: 1px solid $light-grey;
   }
 }
 
 .accordeon__item:first-child {
   width: 97px;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
+    border-top: 1px solid $light-grey;
     width: 100%;
   }
 }
@@ -36,7 +39,7 @@
 .accordeon__item:last-child {
   align-self: flex-end;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     display: none;
   }
 }
@@ -44,42 +47,74 @@
 .accordeon__content {
   margin: 0;
 
-  @media (max-width: $viewport--sm) {
-    display: none;
+  li {
+    font-size: 14px;
+    margin-bottom: 5px;
   }
-}
 
-.accordeon__heading {
-  font-weight: 700;
-  margin: 0;
-  margin-bottom: 5px;
-  position: relative;
-  @media (max-width: $viewport--sm) {
-    color: $grey;
-    font-weight: 400;
-    width: 100%;
-    display: block;
-    position: relative;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid $light-grey;
-    padding-left: 16px;
+  @media (max-width: $viewport--md) {
+    display: none;
 
-    &::after {
-      content: url("../img/arrowdown-icon.svg");
+    &--active {
       display: block;
-      width: 12px;
-      height: 8px;
-      position: absolute;
-      top: 15px;
-      right: 16px;
-      fill: $grey;
     }
   }
 }
 
-.accordeon__item:first-child>.accordeon__heading {
-  @media (max-width: $viewport--sm) {
-    border-top: 1px solid $light-grey;
+.accordeon__heading {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 5px;
+  position: relative;
+
+  @media (max-width: $viewport--md) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $grey;
   }
+
+  &--active {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  svg {
+    display: none;
+
+    @media (max-width: $viewport--md) {
+      display: block;
+    }
+  }
+  // @media (max-width: $viewport--md) {
+  //   color: $grey;
+  //   font-weight: 400;
+  //   width: 100%;
+  //   display: block;
+  //   position: relative;
+  //   padding-top: 16px;
+  //   padding-bottom: 16px;
+  //   border-bottom: 1px solid $light-grey;
+  //   padding-left: 16px;
+
+  //   &::after {
+  //     content: url("../img/arrowdown-icon.svg");
+  //     display: block;
+  //     width: 12px;
+  //     height: 8px;
+  //     position: absolute;
+  //     top: 15px;
+  //     right: 16px;
+  //     fill: $grey;
+  //   }
+  // }
 }
+
+// .accordeon__item:first-child>.accordeon__heading {
+//   @media (max-width: $viewport--md) {
+//     border-top: 1px solid $light-grey;
+//   }
+// }

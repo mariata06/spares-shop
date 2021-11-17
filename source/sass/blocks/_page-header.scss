@@ -2,16 +2,24 @@
   font-size: 20px;
   font-weight: 700;
   color: $trueblack;
+
+  @media (max-width: $viewport--md) {
+    //padding-left: 16px;
+    //padding-right: 16px;
+  }
 }
 
 .page-header__navigation-wrapper {
   border-bottom: 1px solid rgba(00, 00, 00, 0.1);
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     border-color: $white;
   }
 }
 
-.page-header__product-navigation {
-  //padding: 15px 0;
-}
+// .page-header__navigation {
+//   @media (max-width: $viewport--md) {
+//     padding-left: 16px;
+//     padding-right: 16px;
+//   }
+// }

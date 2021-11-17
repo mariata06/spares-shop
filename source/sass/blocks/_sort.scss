@@ -3,7 +3,7 @@
   width: 1170px;
   margin: 0 auto;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     width: 100%;
   }
 }
@@ -12,7 +12,7 @@
   font-size: 30px;
   margin-bottom: 31px;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     font-size: 20px;
   }
 }
@@ -21,8 +21,7 @@
   display: flex;
   width: 1170px;
 
-  @media (max-width: $viewport--sm) {
-    //border-top: 1.5px solid $hawkes-blue;
+  @media (max-width: $viewport--md) {
     border-top: 0.5px solid rgba(0, 0, 0, 0.1);
     width: 100%;
     flex-direction: column-reverse;
@@ -30,14 +29,18 @@
 }
 
 .sort__class {
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     width: 100%;
     padding-left: 16px;
   }
 }
 
 .sort__container {
-  @media (max-width: $viewport--sm) {
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: $viewport--md) {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -45,23 +48,32 @@
 
 .sort__bytown {
   display: none;
-  outline: none;
-  background-color: transparent;
-
-  @media (max-width: $viewport--sm) {
-    font-size: 15px;
-    font-weight: 700;
-    color: $crusta;
-    width: 100%;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  @media (max-width: $viewport--md) {
+    @include select-arrow(15px, 50px, 10px, 10px);
     display: block;
     order: 3;
-    border: 0;
-    //border-top: 1.5px solid $hawkes-blue;
     border-top: 0.5px solid rgba(0, 0, 0, 0.1);
-    //border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  select {
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+
+    @media (max-width: $viewport--md) {
+      font-size: 15px;
+      font-weight: 700;
+      color: $crusta;
+      width: 100%;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -73,26 +85,39 @@
   padding: 8px 10px 8px 20px;
   border: 1.5px solid $hawkes-blue;
   background-color: transparent;
-
-  @media (max-width: $viewport--sm) {
-    font-size: 15px;
-    font-weight: 700;
+  @include select-arrow(10px, 20px, 10px, 10px);
+  @media (max-width: $viewport--md) {
+    @include select-arrow(15px, 10px, 10px, 10px);
+    display: flex;
+    align-items: center;
     width: 210px;
     position: relative;
-    padding: 15px 20px 16px 27px;
-    padding-left: 52px;
+    padding: 15px 20px 16px 25px;
     padding-right: 0;
     border: none;
     margin: 0;
+  }
 
-    &::before {
-      content: url("../img/sort-icon.svg");
+  select {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    @media (max-width: $viewport--md) {
+      font-size: 15px;
+      font-weight: 700;
+      padding-left: 8px;
+      width: 100%;
+    }
+  }
+
+  svg {
+    display: none;
+    @media (max-width: $viewport--md) {
       display: block;
-      width: 19px;
-      height: 13px;
-      position: absolute;
-      top: 0;
-      left: 0;
     }
   }
 }
@@ -103,12 +128,16 @@
     fill: none;
   }
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     font-size: 15px;
     font-weight: 700;
     display: block;
+    display: flex;
+    align-items: center;
     margin-left: auto;
     margin-right: 20px;
+    min-width: 90px;
+    justify-content: space-between;
   }
 }
 
@@ -116,7 +145,7 @@
 .sort__list-button {
   margin-left: 10px;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     display: none;
   }
 

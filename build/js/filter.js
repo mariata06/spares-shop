@@ -1,3 +1,18 @@
+// Открытие фильтра на мобиле
+var filterOpenBtn = document.querySelector(".sort__filter-button");
+var tireFilter = document.querySelector(".tire-catalog__filter");
+var closeFilterBtn = document.querySelector(".tire-filter__close");
+if (filterOpenBtn) {
+  filterOpenBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    tireFilter.classList.add("tire-catalog__filter--open");
+  });
+  closeFilterBtn.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    tireFilter.classList.remove("tire-catalog__filter--open");
+  });
+}
+
 // Переключение вкладок в фильтре поиска шин - Параметры - по Марке
 var chooseFilterItem = function () {
   var filterChoiceButton = document.querySelectorAll(".tire-filter__choice-button");
@@ -33,7 +48,6 @@ chooseFilterItem();
 
 // Переключение меню - аккордеона в фильтре подбора шин
 var filterItemTriggers = document.querySelectorAll(".tire-filter__params-trigger");
-
 filterItemTriggers.forEach(function (item) {
   item.addEventListener("click", function(evt) {
     evt.preventDefault();
@@ -45,7 +59,7 @@ filterItemTriggers.forEach(function (item) {
 
 // Сброс настроек фильтра после выбранных параметров
 var resetFilterBtn = document.querySelector(".tire-filter__button--reset");
-resetFilterBtn.addEventListener('click', function (evt) {
+if (resetFilterBtn) {resetFilterBtn.addEventListener('click', function (evt) {
   evt.preventDefault();
   document.querySelectorAll("input").forEach(function (item) {
     item.checked = false;
@@ -54,16 +68,14 @@ resetFilterBtn.addEventListener('click', function (evt) {
     item.value = "";
   });
 });
+}
 
-// Открытие фильтра на мобиле
-// var openFilterBtn = document.querySelector(".sort__filter-button");
-// var tireFilter = document.querySelector(".filter");
-// var closeFilterBtn = document.querySelector(".tire-filter__close");
-// openFilterBtn.addEventListener("click", function(evt) {
-//   evt.preventDefault();
-//   tireFilter.classList.add("tire-filter--open");
-// });
-// closeFilterBtn.addEventListener("click", function(evt) {
-//   evt.preventDefault();
-//   tireFilter.classList.remove("tire-filter--open");
-// });
+// Переключение меню - аккордеона в футере
+var footerNavTriggers = document.querySelectorAll(".accordeon__heading");
+footerNavTriggers.forEach(function (item) {
+  item.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    item.classList.toggle("accordeon__heading--active");
+    item.nextElementSibling.classList.toggle("accordeon__content--active");
+  });
+});

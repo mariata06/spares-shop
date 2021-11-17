@@ -4,10 +4,9 @@
   height: 97px;
   border-radius: 100%;
   background-color: $crusta;
-  //position: relative;
   position: absolute;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     width: 60px;
     height: 60px;
   }

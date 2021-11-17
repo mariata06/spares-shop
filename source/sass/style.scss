@@ -1,5 +1,6 @@
 @import "variables";
 @import "base";
+@import "mixins";
 @import "blocks/button";
 @import "blocks/page-header";
 @import "blocks/container";
@@ -41,3 +42,4 @@
 @import "blocks/product-spec";
 @import "blocks/tirefitting-banner";
 @import "blocks/pricerange";
+@import "blocks/swiper";

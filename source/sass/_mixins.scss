@@ -1,0 +1,33 @@
+@mixin expand-interactive-area($width, $height: $width) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $width;
+    height: $height;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin select-arrow($top, $right, $width, $height) {
+  position: relative;
+
+  &::after {
+    content: url("../img/arrowdown-icon.svg");
+    position: absolute;
+    display: block;
+    //top: 5px;
+    top: $top;
+    //right: 10px;
+    right: $right;
+    //width: 5%;
+    width: $width;
+    //height: 100%;
+    height: $height;
+    z-index: 1;
+    box-sizing: border-box;
+  }
+}

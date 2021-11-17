@@ -4,7 +4,7 @@
 }
 
 .bestsellers__list {
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     height: 479px;
   }
 
@@ -73,7 +73,7 @@
   font-size: 25px;
   font-weight: 700;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     text-align: center;
   }
 }

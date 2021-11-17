@@ -20,6 +20,7 @@
 
   @media (max-width: $viewport--md) {
     width: 350px;
+    width: 100%;
   }
 
   &:hover,
@@ -34,7 +35,7 @@
   width: 198px;
   margin-bottom: 12px;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     width: 165px;
   }
 }
@@ -59,7 +60,7 @@
   top: 16px;
   right: 25px;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     top: unset;
     right: 20px;
     bottom: 20px;
@@ -71,7 +72,7 @@
     content: url("../img/shampoo.svg");
   }
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     &::before {
       height: 41px;
       content: url("../img/shampoo-small.svg");
@@ -84,7 +85,7 @@
     content: url("../img/tires.svg");
   }
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     &::before {
       height: 42px;
       content: url("../img/tires-small.svg");
@@ -97,7 +98,7 @@
     content: url("../img/tools.svg");
   }
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     &::before {
       height: 52px;
       content: url("../img/tools-small.svg");

@@ -1,7 +1,7 @@
 .product-navigation {
   position: relative;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     &::after {
       content: "";
       position: absolute;
@@ -51,7 +51,7 @@
     //text-shadow: 0 0 .65px $tuna, 0 0 .65px $tuna;
     border-bottom: 3px solid $crusta;
 
-    @media (max-width: $viewport--sm) {
+    @media (max-width: $viewport--md) {
       padding: 15px 0;
       border-bottom: none;
     }

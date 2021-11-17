@@ -4,7 +4,7 @@
   justify-content: center;
   padding-bottom: 100px;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     width: 100%;
   }
 }
@@ -25,7 +25,7 @@
   font-size: 18px;
   color: $gray66;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     margin: 0;
   }
 }

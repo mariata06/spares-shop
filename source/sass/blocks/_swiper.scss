@@ -1,0 +1,8 @@
+.swiper--sort {
+  margin: 0;
+  margin-right: auto;
+  width: 75%;
+  @media (max-width: $viewport--md) {
+    width: 100%;
+  }
+}

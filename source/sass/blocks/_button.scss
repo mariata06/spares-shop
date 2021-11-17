@@ -114,6 +114,7 @@
   font-size: 14px;
   padding: 4px 0;
   margin-right: 0;
+  margin-bottom: 15px;
 }
 
 .button--cart--full  {
@@ -132,7 +133,7 @@
     background-color: $crusta;
     color: $white;
 
-    @media (max-width: $viewport--sm) {
+    @media (max-width: $viewport--md) {
       top: 17px;
       right: -6px;
       padding-top: 3px;

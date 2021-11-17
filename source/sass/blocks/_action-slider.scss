@@ -21,7 +21,7 @@
 .action-slider .swiper-pagination {
   display: none;
 
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     display: block;
   }
 }

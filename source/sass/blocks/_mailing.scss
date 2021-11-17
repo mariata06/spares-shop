@@ -1,6 +1,6 @@
 .mailing {
   width: 294px;
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     width: 100%;
     padding-left: 16px;
     padding-right: 16px;
@@ -12,7 +12,7 @@
     margin: 0;
     margin-bottom: 35px;
 
-    @media (max-width: $viewport--sm) {
+    @media (max-width: $viewport--md) {
       text-align: center;
       font-size: 17px;
     }

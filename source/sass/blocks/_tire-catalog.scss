@@ -5,14 +5,14 @@
 }
 
 .tire-catalog__wrapper {
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     width: 100%;
   }
 }
 
 .tire-catalog__button {
   display: none;
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     display: block;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -24,9 +24,16 @@
 }
 
 .tire-catalog__filter {
-  @media (max-width: $viewport--sm) {
+  @media (max-width: $viewport--md) {
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
+    width: 100%;
+    z-index: 100;
+
+    &--open {
+      display: block;
+    }
   }
 }
